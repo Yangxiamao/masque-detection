@@ -1,0 +1,86 @@
+% =============================================================================
+%  MASQUE nesting schematic -- shared by paper_conf / paper_draft / thesis.
+%
+%  Usage (inside a figure environment; the host supplies caption + label):
+%      \resizebox{\columnwidth}{!}{\input{../figs/masque_nesting}}
+%
+%  Host preamble must provide:
+%      \usepackage{tikz}
+%      \usetikzlibrary{arrows.meta}
+%      (graphicx for \resizebox -- already loaded in all four versions)
+%
+%  THIS IS A SCHEMATIC, NOT A DATA FIGURE.  Nothing here is measured and the
+%  drawing is not to scale.  The only quantities shown are protocol constants
+%  that the text already states and sources:
+%      +43 B per packet, inner carried whole   -> Sec. "Background" (paired
+%                                                 capture 2026-09-14; RFC 9221/9484).
+%        Label (a) lists only the components whose size is certain (1 B flags,
+%        20 B WARP DCID, 16 B AEAD tag); PN and DATAGRAM/HTTP Datagram framing
+%        are left unsized.  Do NOT write |DCID|+23 here: that is the
+%        minimum ACK-only packet law (P-A), which includes a minimal ACK
+%        frame; 20+23 = 43 is a coincidence, not the encapsulation cost.
+%      outer ACK-only packets 44-46 B          -> same paragraph
+%  If those numbers change in the text, change them here too.
+%
+%  Natural size ~8.7 x 3.2 cm (aspect 2.7).  Scaled to the IEEEtran column the
+%  drawing costs ~93 pt of column height before the caption.
+% =============================================================================
+\definecolor{cfblue}{RGB}{100,149,237}   % Direct / inner QUIC  (project palette)
+\definecolor{tmato}{RGB}{255,99,71}      % MASQUE / outer QUIC  (project palette)
+\begin{tikzpicture}[
+  font=\scriptsize,
+  >={Stealth[length=3.4pt,width=2.6pt]},
+  fld/.style     = {draw=black!65, anchor=west, inner sep=0pt, align=center,
+                    minimum height=4.8mm},
+  ipkt/.style    = {fld, fill=cfblue!25},
+  opkt/.style    = {fld, fill=tmato!20, minimum height=6.0mm},
+  gut/.style     = {anchor=east, align=right, text=black!75},
+  note/.style    = {anchor=west, text=black!80},
+  lead/.style    = {draw=black!55, line width=0.3pt},
+  hostbox/.style = {draw=black!65, rounded corners=1pt, anchor=west,
+                    align=center, minimum height=6.2mm, fill=black!4}
+]
+
+% ---- row A: the inner IP packet the client's own connection produces --------
+\node[gut] at (1.58,1.45) {inner IP\\packet};
+\node[ipkt, minimum width=0.55cm] at (1.70,1.45) {hdr};
+\node[ipkt, minimum width=3.55cm] at (2.25,1.45) {encrypted payload $\rightarrow$ origin};
+
+% ---- encapsulation: all of row A becomes the payload of a DATAGRAM frame ----
+\draw[lead, dashed] (1.70,1.21) -- (4.20,0.65);
+\draw[lead, dashed] (5.80,1.21) -- (7.88,0.65);
+\node[text=black!70, fill=white, inner sep=1pt] at (4.75,0.95)
+     {payload of a DATAGRAM frame};
+
+% ---- row B: the outer QUIC packet carried to the proxy ---------------------
+\node[gut] at (1.58,0.35) {outer QUIC\\packet};
+\node[opkt, minimum width=0.62cm] at (1.70,0.35) {hdr};
+\node[opkt, minimum width=1.75cm] at (2.32,0.35) {DATAGRAM};
+\node[opkt, minimum width=3.94cm] at (4.07,0.35) {};
+\node[ipkt, minimum width=0.42cm, minimum height=3.8mm] at (4.20,0.35) {hdr};
+\node[ipkt, minimum width=3.26cm, minimum height=3.8mm] at (4.62,0.35) {inner IP packet, carried whole};
+
+% ---- (a) the per-packet header cost the nesting adds ------------------------
+\draw[lead] (1.70,-0.01) -- (2.32,-0.01);
+\node[note] at (1.70,-0.19) {\textbf{(a)} $+43$\,B/packet: hdr (1\,B $+$ 20\,B DCID $+$ PN) $+$ DATAGRAM
+                             framing $+$ 16\,B AEAD tag};
+
+% ---- row C: the outer packets a passive observer at the client sees ---------
+\node[hostbox, minimum width=1.00cm] at (0.05,-0.90) {Client};
+\draw[black!55, line width=0.6pt] (1.05,-0.90) -- (5.80,-0.90);
+\draw[black!55, line width=0.6pt, ->] (5.80,-0.90) -- (6.15,-0.90);
+\fill[tmato!35, draw=black!65, line width=0.3pt] (2.20,-1.07) rectangle (3.50,-0.73);
+\fill[tmato!35, draw=black!65, line width=0.3pt] (3.60,-1.07) rectangle (3.93,-0.73);
+\fill[tmato!35, draw=black!65, line width=0.3pt] (4.03,-1.07) rectangle (5.33,-0.73);
+\fill[tmato!35, draw=black!65, line width=0.3pt] (5.43,-1.07) rectangle (5.76,-0.73);
+\node[hostbox, minimum width=1.35cm] at (6.20,-0.90) {WARP\\ingress};
+\draw[lead, dashed, ->] (7.55,-0.90) -- (7.90,-0.90);
+\node[note, text=black!70] at (7.95,-0.90) {origin};
+
+% ---- (c) observation point, and (b) the outer connection's own ACK-only packet
+\draw[lead, dashed] (1.60,-0.62) -- (1.60,-1.30);
+\node[note] at (0.05,-1.45) {\textbf{(c)} observation point};
+\draw[lead] (3.76,-1.07) -- (3.76,-1.30);
+\node[note] at (3.60,-1.45) {\textbf{(b)} outer ACK-only (44--46\,B): no inner twin};
+
+\end{tikzpicture}

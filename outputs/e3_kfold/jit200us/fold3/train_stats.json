@@ -1,0 +1,7 @@
+{
+  "batch_size": 16,
+  "epochs": 30,
+  "total_time": 48.483784198760986,
+  "best_valid_acc": 0.8292682926829268,
+  "best_epoch": 10
+}

@@ -1,0 +1,128 @@
+{
+  "baselines": [
+    {
+      "tag": "Full 全特征基线",
+      "data": "quic_vs_masque_bi_feat",
+      "acc": 1.0,
+      "weighted_f1": 1.0,
+      "cm": [
+        [
+          24,
+          0
+        ],
+        [
+          0,
+          27
+        ]
+      ]
+    },
+    {
+      "tag": "No-Sizes+No-Bytes (只剩时间)",
+      "data": "bi_abl_no_sizes_nobytes",
+      "acc": 0.9411764705882353,
+      "weighted_f1": 0.9412217717275589,
+      "cm": [
+        [
+          23,
+          1
+        ],
+        [
+          2,
+          25
+        ]
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "c1",
+      "tag": "C1 MTU 归一化 (最大包 -> 1292)",
+      "data": "bi_const_c1",
+      "acc": 1.0,
+      "weighted_f1": 1.0,
+      "cm": [
+        [
+          24,
+          0
+        ],
+        [
+          0,
+          27
+        ]
+      ]
+    },
+    {
+      "id": "c2",
+      "tag": "C2 CID 归一化 (最小包 -> 63)",
+      "data": "bi_const_c2",
+      "acc": 1.0,
+      "weighted_f1": 1.0,
+      "cm": [
+        [
+          24,
+          0
+        ],
+        [
+          0,
+          27
+        ]
+      ]
+    },
+    {
+      "id": "c3",
+      "tag": "C3 去 Retry 帧 (严谨版)",
+      "data": "bi_const_c3",
+      "acc": 1.0,
+      "weighted_f1": 1.0,
+      "cm": [
+        [
+          24,
+          0
+        ],
+        [
+          0,
+          27
+        ]
+      ]
+    },
+    {
+      "id": "c123",
+      "tag": "C123 三者同时 ★主指标",
+      "data": "bi_const_c123",
+      "acc": 0.9803921568627451,
+      "weighted_f1": 0.9803618159062464,
+      "cm": [
+        [
+          23,
+          1
+        ],
+        [
+          0,
+          27
+        ]
+      ]
+    },
+    {
+      "id": "c123_nobytes",
+      "tag": "C123 + No-Bytes (诊断字节通道)",
+      "data": "bi_const_c123_nobytes",
+      "acc": 1.0,
+      "weighted_f1": 1.0,
+      "cm": [
+        [
+          24,
+          0
+        ],
+        [
+          0,
+          27
+        ]
+      ]
+    }
+  ],
+  "unfitted_rule_reference_n504": {
+    "max_eq_1200": 0.9583,
+    "min_ge_42": 0.9504,
+    "has_retry": 0.9782
+  }
+}

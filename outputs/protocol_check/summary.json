@@ -1,0 +1,344 @@
+{
+  "A_day0_pairing": {
+    "up": {
+      "inner_n": 886,
+      "outer_n": 3258,
+      "matched": 757,
+      "overhead_hist": {
+        "30": 1,
+        "32": 1,
+        "41": 1,
+        "43": 744,
+        "44": 2,
+        "45": 1,
+        "48": 1,
+        "57": 1,
+        "58": 4,
+        "60": 1
+      },
+      "overhead_mode": 43,
+      "inner_ge1200": 27,
+      "inner_ge1200_unmatched": 0,
+      "inner_max": 1300,
+      "outer_max": 1353,
+      "inner_top": [
+        [
+          55,
+          332
+        ],
+        [
+          40,
+          111
+        ],
+        [
+          62,
+          65
+        ],
+        [
+          136,
+          52
+        ],
+        [
+          83,
+          38
+        ],
+        [
+          137,
+          34
+        ]
+      ],
+      "outer_top": [
+        [
+          46,
+          2301
+        ],
+        [
+          98,
+          298
+        ],
+        [
+          83,
+          77
+        ],
+        [
+          105,
+          61
+        ],
+        [
+          179,
+          47
+        ],
+        [
+          103,
+          45
+        ]
+      ],
+      "outer_unmatched_n": 2501,
+      "outer_unmatched_top": [
+        [
+          46,
+          2301
+        ],
+        [
+          103,
+          43
+        ],
+        [
+          104,
+          22
+        ],
+        [
+          42,
+          19
+        ]
+      ],
+      "by_inner_proto": {
+        "UDP4": {
+          "n": 594,
+          "ovh43": 511,
+          "unmatched": 76
+        },
+        "TCP4": {
+          "n": 292,
+          "ovh43": 233,
+          "unmatched": 53
+        }
+      }
+    },
+    "dn": {
+      "inner_n": 8335,
+      "outer_n": 7858,
+      "matched": 6040,
+      "overhead_hist": {
+        "30": 2,
+        "31": 2,
+        "33": 3,
+        "34": 3,
+        "35": 7,
+        "36": 7,
+        "37": 1,
+        "38": 6,
+        "39": 3,
+        "40": 6,
+        "41": 7,
+        "42": 178,
+        "43": 5736,
+        "44": 5,
+        "46": 4,
+        "47": 2,
+        "48": 2,
+        "49": 30,
+        "50": 3,
+        "51": 3,
+        "52": 5,
+        "53": 2,
+        "54": 2,
+        "55": 4,
+        "56": 4,
+        "57": 3,
+        "58": 3,
+        "59": 5,
+        "60": 2
+      },
+      "overhead_mode": 43,
+      "inner_ge1200": 280,
+      "inner_ge1200_unmatched": 12,
+      "inner_max": 1300,
+      "outer_max": 1359,
+      "inner_top": [
+        [
+          1064,
+          1698
+        ],
+        [
+          55,
+          317
+        ],
+        [
+          1300,
+          213
+        ],
+        [
+          40,
+          150
+        ],
+        [
+          90,
+          127
+        ],
+        [
+          60,
+          124
+        ]
+      ],
+      "outer_top": [
+        [
+          1107,
+          1663
+        ],
+        [
+          44,
+          765
+        ],
+        [
+          98,
+          290
+        ],
+        [
+          1343,
+          204
+        ],
+        [
+          133,
+          112
+        ],
+        [
+          83,
+          110
+        ]
+      ],
+      "outer_unmatched_n": 1818,
+      "outer_unmatched_top": [
+        [
+          44,
+          765
+        ],
+        [
+          128,
+          11
+        ],
+        [
+          1088,
+          10
+        ],
+        [
+          1066,
+          10
+        ]
+      ],
+      "by_inner_proto": {
+        "UDP4": {
+          "n": 7586,
+          "ovh43": 5184,
+          "unmatched": 2106
+        },
+        "IPv6": {
+          "n": 358,
+          "ovh43": 206,
+          "unmatched": 147
+        },
+        "TCP4": {
+          "n": 391,
+          "ovh43": 346,
+          "unmatched": 42
+        }
+      }
+    }
+  },
+  "B_transport_params": {
+    "clienthello_by_class_peer_maxudp_maxdgram": [
+      {
+        "class": "Direct",
+        "peer": "->origin",
+        "max_udp_payload_size": "1472",
+        "max_datagram_frame_size": "65536",
+        "n": 625
+      },
+      {
+        "class": "Masque",
+        "peer": "->WARP",
+        "max_udp_payload_size": "1350",
+        "max_datagram_frame_size": "65536",
+        "n": 520
+      },
+      {
+        "class": "Masque",
+        "peer": "->origin",
+        "max_udp_payload_size": "1472",
+        "max_datagram_frame_size": "65536",
+        "n": 151
+      },
+      {
+        "class": "Direct",
+        "peer": "->WARP",
+        "max_udp_payload_size": "1472",
+        "max_datagram_frame_size": "65536",
+        "n": 4
+      }
+    ],
+    "sni_to_warp": {
+      "www.quora.com": 4,
+      "consumer-masque.cloudflareclient.com": 520
+    }
+  },
+  "C_size_dist": {
+    "window_first50": {
+      "Direct": {
+        "up": {
+          "n": 4482,
+          "median": 131,
+          "pct_lt120": 45.5,
+          "pct_ge1200": 21.4,
+          "max": 1292
+        },
+        "dn": {
+          "n": 7218,
+          "median": 1242,
+          "pct_lt120": 17.3,
+          "pct_ge1200": 69.1,
+          "max": 1505
+        }
+      },
+      "Masque": {
+        "up": {
+          "n": 7358,
+          "median": 116,
+          "pct_lt120": 50.9,
+          "pct_ge1200": 22.0,
+          "max": 1365
+        },
+        "dn": {
+          "n": 6142,
+          "median": 116,
+          "pct_lt120": 53.5,
+          "pct_ge1200": 10.8,
+          "max": 1365
+        }
+      }
+    },
+    "full_session": {
+      "Direct": {
+        "up": {
+          "n": 32140,
+          "median": 87,
+          "pct_lt120": 72.9,
+          "pct_ge1200": 12.9,
+          "max": 1292
+        },
+        "dn": {
+          "n": 119296,
+          "median": 1292,
+          "pct_lt120": 4.6,
+          "pct_ge1200": 90.4,
+          "max": 1505
+        }
+      },
+      "Masque": {
+        "up": {
+          "n": 687310,
+          "median": 146,
+          "pct_lt120": 26.5,
+          "pct_ge1200": 2.7,
+          "max": 1392
+        },
+        "dn": {
+          "n": 1792843,
+          "median": 1365,
+          "pct_lt120": 11.7,
+          "pct_ge1200": 77.6,
+          "max": 1392
+        }
+      }
+    }
+  }
+}

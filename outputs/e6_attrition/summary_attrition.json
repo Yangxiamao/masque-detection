@@ -1,0 +1,38 @@
+{
+  "min_packets_filter": 50,
+  "steady_need": 100,
+  "classes": {
+    "Direct": {
+      "udp_conversations": 623,
+      "udp443_conversations": 623,
+      "ge50": 234,
+      "ge100": 189,
+      "retention_ge50_pct": 37.56,
+      "retention_ge100_pct": 30.34,
+      "median_packets_udp443": 33
+    },
+    "MASQUE": {
+      "udp_conversations": 482,
+      "udp443_conversations": 482,
+      "ge50": 270,
+      "ge100": 259,
+      "retention_ge50_pct": 56.02,
+      "retention_ge100_pct": 53.73,
+      "median_packets_udp443": 2019
+    }
+  },
+  "fisher_retention_vs_class": {
+    "table": [
+      [
+        234,
+        389
+      ],
+      [
+        270,
+        212
+      ]
+    ],
+    "odds_ratio": 0.472,
+    "p": 1.0573743454940666e-09
+  }
+}

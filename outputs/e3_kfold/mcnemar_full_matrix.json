@@ -1,0 +1,120 @@
+{
+  "baseline": "full",
+  "n": 504,
+  "family_size": 10,
+  "correction": "holm",
+  "test": "exact McNemar via scipy.stats.binomtest(b, b+c, 0.5)",
+  "comparisons": [
+    {
+      "A": "full",
+      "B": "no_intervals",
+      "acc_A": 0.9801587301587301,
+      "acc_B": 0.9801587301587301,
+      "b_only_A_correct": 1,
+      "c_only_B_correct": 1,
+      "n_discordant": 2,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "A": "full",
+      "B": "no_direction",
+      "acc_A": 0.9801587301587301,
+      "acc_B": 0.9781746031746031,
+      "b_only_A_correct": 1,
+      "c_only_B_correct": 0,
+      "n_discordant": 1,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "A": "full",
+      "B": "no_bytes",
+      "acc_A": 0.9801587301587301,
+      "acc_B": 0.9662698412698413,
+      "b_only_A_correct": 10,
+      "c_only_B_correct": 3,
+      "n_discordant": 13,
+      "p": 0.09228515625,
+      "p_holm": 0.5625
+    },
+    {
+      "A": "full",
+      "B": "no_sizes",
+      "acc_A": 0.9801587301587301,
+      "acc_B": 0.9404761904761905,
+      "b_only_A_correct": 20,
+      "c_only_B_correct": 0,
+      "n_discordant": 20,
+      "p": 1.9073486328125e-06,
+      "p_holm": 1.9073486328125e-05
+    },
+    {
+      "A": "full",
+      "B": "nosizes_nobytes",
+      "acc_A": 0.9801587301587301,
+      "acc_B": 0.9384920634920635,
+      "b_only_A_correct": 24,
+      "c_only_B_correct": 3,
+      "n_discordant": 27,
+      "p": 4.9233436584472656e-05,
+      "p_holm": 0.0004431009292602539
+    },
+    {
+      "A": "full",
+      "B": "c1",
+      "acc_A": 0.9801587301587301,
+      "acc_B": 0.9682539682539683,
+      "b_only_A_correct": 7,
+      "c_only_B_correct": 1,
+      "n_discordant": 8,
+      "p": 0.0703125,
+      "p_holm": 0.5625
+    },
+    {
+      "A": "full",
+      "B": "c2",
+      "acc_A": 0.9801587301587301,
+      "acc_B": 0.9801587301587301,
+      "b_only_A_correct": 1,
+      "c_only_B_correct": 1,
+      "n_discordant": 2,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "A": "full",
+      "B": "c3",
+      "acc_A": 0.9801587301587301,
+      "acc_B": 0.9682539682539683,
+      "b_only_A_correct": 7,
+      "c_only_B_correct": 1,
+      "n_discordant": 8,
+      "p": 0.0703125,
+      "p_holm": 0.5625
+    },
+    {
+      "A": "full",
+      "B": "c123",
+      "acc_A": 0.9801587301587301,
+      "acc_B": 0.9682539682539683,
+      "b_only_A_correct": 8,
+      "c_only_B_correct": 2,
+      "n_discordant": 10,
+      "p": 0.109375,
+      "p_holm": 0.5625
+    },
+    {
+      "A": "full",
+      "B": "c123_nobytes",
+      "acc_A": 0.9801587301587301,
+      "acc_B": 0.9682539682539683,
+      "b_only_A_correct": 8,
+      "c_only_B_correct": 2,
+      "n_discordant": 10,
+      "p": 0.109375,
+      "p_holm": 0.5625
+    }
+  ],
+  "caveat": "不显著 != 等价。discordant 数很小时检出力极低，不能反过来当作『该通道无用』的证据。"
+}

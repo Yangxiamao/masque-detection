@@ -1,0 +1,73 @@
+=== [chain] 1/4 relabel 条件 (标签改正后重训) ===
+relabel EXIT=0
+=== [chain] 2/4 重跑 full 以取回 checkpoint 与后验概率 ===
+full EXIT=0
+n = 504   旧 acc 98.0159%   新 acc 98.0159%
+prob1 字段: 504/504 条
+label 不一致: 0 条
+pred  不一致: 0 条
+
+逐条复现通过: 已发表数字未变, 且新增了后验概率。
+=== [chain] 3/4 攻防实验 5 折 ===
+adv-data EXIT=0
+造数据: 504 条流, 5 折
+  断言检查: 全部通过
+  例: advpad/fold0 train=724 valid=82 test=101
+adv-train EXIT=0
+adv-eval EXIT=0
+adv-summary EXIT=0
+  advmo|t3_noint              53.97% [49.60, 58.27]  cm=[[2, 232], [0, 270]]
+  advmo|t2_pad_mo             99.80% [98.88, 99.96]  cm=[[233, 1], [0, 270]]
+
+配对 McNemar (同一变体上 干净训练 vs 对抗训练; Holm 校正, 族大小 21):
+  t1_clean      clean  98.02% vs advpad     96.23%   b=  9 c=  0  p=3.91e-03  Holm=2.73e-02
+  t1_clean      clean  98.02% vs advshape   97.42%   b=  4 c=  1  p=3.75e-01  Holm=1.00e+00
+  t1_clean      clean  98.02% vs advmo      98.02%   b=  0 c=  0  p=1.00e+00  Holm=1.00e+00
+  t2_pad        clean  85.91% vs advpad     93.85%   b=  9 c= 49  p=8.96e-08  Holm=1.08e-06
+  t2_pad        clean  85.91% vs advshape   94.05%   b=  9 c= 50  p=5.26e-08  Holm=6.84e-07
+  t2_pad        clean  85.91% vs advmo      55.56%   b=200 c= 47  p=1.18e-23  Holm=2.13e-22
+  t2_strict     clean  78.37% vs advpad     95.24%   b=  2 c= 87  p=1.29e-23  Holm=2.20e-22
+  t2_strict     clean  78.37% vs advshape   94.25%   b=  8 c= 88  p=3.67e-18  Holm=5.88e-17
+  t2_strict     clean  78.37% vs advmo      56.75%   b=207 c= 98  p=4.10e-10  Holm=5.75e-09
+  t3_padshape   clean  59.92% vs advpad     92.26%   b= 10 c=173  p=1.56e-39  Holm=3.13e-38
+  t3_padshape   clean  59.92% vs advshape   94.25%   b= 10 c=183  p=2.63e-42  Holm=5.51e-41
+  t3_padshape   clean  59.92% vs advmo      53.57%   b=148 c=116  p=5.62e-02  Holm=3.37e-01
+  t3_absdir     clean  53.57% vs advpad     55.75%   b= 52 c= 63  p=3.51e-01  Holm=1.00e+00
+  t3_absdir     clean  53.57% vs advshape   51.19%   b=105 c= 93  p=4.34e-01  Holm=1.00e+00
+  t3_absdir     clean  53.57% vs advmo      53.57%   b=  0 c=  0  p=1.00e+00  Holm=1.00e+00
+  t3_noint      clean  65.67% vs advpad     73.41%   b= 52 c= 91  p=1.40e-03  Holm=1.26e-02
+  t3_noint      clean  65.67% vs advshape   94.44%   b=  8 c=153  p=6.77e-36  Holm=1.29e-34
+  t3_noint      clean  65.67% vs advmo      53.97%   b=216 c=157  p=2.62e-03  Holm=2.10e-02
+  t2_pad_mo     clean  90.48% vs advpad     95.04%   b= 10 c= 33  p=6.06e-04  Holm=6.06e-03
+  t2_pad_mo     clean  90.48% vs advshape   96.23%   b=  7 c= 36  p=8.96e-06  Holm=9.86e-05
+  t2_pad_mo     clean  90.48% vs advmo      99.80%   b=  0 c= 47  p=1.42e-14  Holm=2.13e-13
+
+迁移性 (T3 上 advpad vs advshape, 论文称'混淆矩阵逐格相同'):
+  逐样本预测一致 484/504 = 96.03%   b=5 c=15  p=0.041
+
+已写入 outputs/e6_adv_kfold/summary_e6_adv_kfold.json
+=== [chain] 4/4 稳态段实验 ===
+steady-data EXIT=0
+  fold0: train 322 / valid 36 / test 90 -> data/processed/e3_folds/head448/fold0
+  fold1: train 322 / valid 36 / test 90 -> data/processed/e3_folds/head448/fold1
+  fold2: train 322 / valid 36 / test 90 -> data/processed/e3_folds/head448/fold2
+  fold3: train 323 / valid 36 / test 89 -> data/processed/e3_folds/head448/fold3
+  fold4: train 323 / valid 36 / test 89 -> data/processed/e3_folds/head448/fold4
+完成: data/processed/e3_folds/head448 (metadata: {'name_to_idx': {'Direct': 0, 'Masque': 1}})
+steady-train EXIT=0
+steady-summary EXIT=0
+
+============================================================================================
+E6-C  稳态段 vs 握手段 (同一批 >= 100 包的流, 5 折 OOF)
+============================================================================================
+条件                               n   OOF Acc              95% CI    错  混淆矩阵
+--------------------------------------------------------------------------------------------
+稳态段: 第 51-100 包              448    98.44%      [96.81, 99.24]    7  [[182, 7], [0, 259]]
+对照: 同一批流的前 50 包              448    98.21%      [96.52, 99.09]    8  [[181, 8], [0, 259]]
+--------------------------------------------------------------------------------------------
+
+配对 McNemar (稳态 vs 头部, n=448): 仅稳态对 8, 仅头部对 7, p = 1.0000
+该子集的多数类基线: 57.81%
+
+已写入 outputs/e6_steady/summary_e6_steady.json
+=== [chain] 全部完成 ===

@@ -1,0 +1,4 @@
+[submodule "NetMambaPlus"]
+	path = NetMambaPlus
+	url = https://github.com/Yangxiamao/NetMambaPlus.git
+	branch = masque-detection

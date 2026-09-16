@@ -1,0 +1,174 @@
+{
+  "P_A": [
+    {
+      "cls": "Direct",
+      "dir": "up",
+      "dcid": 8,
+      "flows": 135,
+      "median_min": 31,
+      "pred": 31,
+      "resid": 0
+    },
+    {
+      "cls": "Direct",
+      "dir": "up",
+      "dcid": 14,
+      "flows": 2,
+      "median_min": 36.0,
+      "pred": 37,
+      "resid": -1.0
+    },
+    {
+      "cls": "Direct",
+      "dir": "up",
+      "dcid": 17,
+      "flows": 29,
+      "median_min": 43,
+      "pred": 40,
+      "resid": 3
+    },
+    {
+      "cls": "Direct",
+      "dir": "up",
+      "dcid": 20,
+      "flows": 68,
+      "median_min": 43.0,
+      "pred": 43,
+      "resid": 0.0
+    },
+    {
+      "cls": "Direct",
+      "dir": "dn",
+      "dcid": 0,
+      "flows": 234,
+      "median_min": 24.0,
+      "pred": 23,
+      "resid": 1.0
+    },
+    {
+      "cls": "Masque",
+      "dir": "up",
+      "dcid": 8,
+      "flows": 10,
+      "median_min": 31.0,
+      "pred": 31,
+      "resid": 0.0
+    },
+    {
+      "cls": "Masque",
+      "dir": "up",
+      "dcid": 20,
+      "flows": 260,
+      "median_min": 42.0,
+      "pred": 43,
+      "resid": -1.0
+    },
+    {
+      "cls": "Masque",
+      "dir": "dn",
+      "dcid": 0,
+      "flows": 11,
+      "median_min": 22,
+      "pred": 23,
+      "resid": -1
+    },
+    {
+      "cls": "Masque",
+      "dir": "dn",
+      "dcid": 20,
+      "flows": 259,
+      "median_min": 43,
+      "pred": 43,
+      "resid": 0
+    }
+  ],
+  "P_B": [
+    {
+      "cls": "Direct",
+      "dir": "up",
+      "flows": 234,
+      "distinct": 1,
+      "mode": 1250,
+      "mode_share": 1.0
+    },
+    {
+      "cls": "Direct",
+      "dir": "dn",
+      "flows": 234,
+      "distinct": 8,
+      "mode": 1250,
+      "mode_share": 0.42735042735042733
+    },
+    {
+      "cls": "Masque",
+      "dir": "up",
+      "flows": 270,
+      "distinct": 4,
+      "mode": 1200,
+      "mode_share": 0.9296296296296296
+    },
+    {
+      "cls": "Masque",
+      "dir": "dn",
+      "flows": 270,
+      "distinct": 4,
+      "mode": 1200,
+      "mode_share": 0.9518518518518518
+    }
+  ],
+  "P_C": [
+    {
+      "cls": "Direct",
+      "flows": 234,
+      "flows_with_retry": 0,
+      "retry_packets": 0
+    },
+    {
+      "cls": "Masque",
+      "flows": 270,
+      "flows_with_retry": 259,
+      "retry_packets": 470
+    }
+  ],
+  "rules": {
+    "max_eq_1200": {
+      "acc": 0.9583333333333334,
+      "tpr": 0.9222222222222223,
+      "fpr": 0.0,
+      "tp": 249,
+      "fp": 0,
+      "tn": 234,
+      "fn": 21
+    },
+    "min_ge_42": {
+      "acc": 0.9503968253968254,
+      "tpr": 0.9592592592592593,
+      "fpr": 0.05982905982905983,
+      "tp": 259,
+      "fp": 14,
+      "tn": 220,
+      "fn": 11
+    },
+    "has_retry": {
+      "acc": 0.9781746031746031,
+      "tpr": 0.9592592592592593,
+      "fpr": 0.0,
+      "tp": 259,
+      "fp": 0,
+      "tn": 234,
+      "fn": 11
+    },
+    "max1200_and_min42": {
+      "acc": 0.9583333333333334,
+      "tpr": 0.9222222222222223,
+      "fpr": 0.0,
+      "tp": 249,
+      "fp": 0,
+      "tn": 234,
+      "fn": 21
+    }
+  },
+  "masque_label_noise": {
+    "n_off_tunnel": 11
+  }
+}

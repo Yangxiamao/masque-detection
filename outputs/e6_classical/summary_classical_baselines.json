@@ -1,0 +1,82 @@
+{
+  "raw_first20_LogReg": {
+    "n_features": 40,
+    "cv_mean": 98.21,
+    "cv_std": 0.75,
+    "oof_acc": 98.21,
+    "auc": 0.9969,
+    "tpr": 0.9741,
+    "fpr": 0.0085
+  },
+  "raw_first20_RandomForest": {
+    "n_features": 40,
+    "cv_mean": 99.21,
+    "cv_std": 0.74,
+    "oof_acc": 99.21,
+    "auc": 0.9996,
+    "tpr": 0.9852,
+    "fpr": 0.0
+  },
+  "len24_first20_RandomForest": {
+    "n_features": 24,
+    "cv_mean": 99.01,
+    "cv_std": 0.63,
+    "oof_acc": 99.01,
+    "auc": 0.9968,
+    "tpr": 0.9815,
+    "fpr": 0.0
+  },
+  "len24_first20_LogReg": {
+    "n_features": 24,
+    "cv_mean": 97.22,
+    "cv_std": 1.72,
+    "oof_acc": 97.22,
+    "auc": 0.9962,
+    "tpr": 0.9593,
+    "fpr": 0.0128
+  },
+  "raw_first50_LogReg": {
+    "n_features": 100,
+    "cv_mean": 97.62,
+    "cv_std": 1.94,
+    "oof_acc": 97.62,
+    "auc": 0.9659,
+    "tpr": 0.9889,
+    "fpr": 0.0385
+  },
+  "raw_first50_RandomForest": {
+    "n_features": 100,
+    "cv_mean": 98.41,
+    "cv_std": 1.02,
+    "oof_acc": 98.41,
+    "auc": 0.9982,
+    "tpr": 0.9704,
+    "fpr": 0.0
+  },
+  "len24_first50_RandomForest": {
+    "n_features": 24,
+    "cv_mean": 99.01,
+    "cv_std": 1.08,
+    "oof_acc": 99.01,
+    "auc": 0.9969,
+    "tpr": 0.9926,
+    "fpr": 0.0128
+  },
+  "len24_first50_LogReg": {
+    "n_features": 24,
+    "cv_mean": 99.01,
+    "cv_std": 1.08,
+    "oof_acc": 99.01,
+    "auc": 0.9962,
+    "tpr": 0.9926,
+    "fpr": 0.0128
+  },
+  "_meta": {
+    "n": 504,
+    "n_masque": 270,
+    "n_direct": 234,
+    "cv": "StratifiedKFold(5, shuffle=True, random_state=42) over all 504 sessions",
+    "note": "每会话恰好 1 条流, 故 5 折即会话级切分; 折间站点重叠, 不度量跨站点泛化",
+    "purpose": "为论文引用的 raw-100 LogReg 与 24-stat RF 两个数字提供可复现产出"
+  }
+}

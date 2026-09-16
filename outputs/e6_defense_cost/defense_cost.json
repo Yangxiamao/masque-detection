@@ -1,0 +1,27 @@
+{
+  "pad_bytes": 1350,
+  "shape_gap_s": 0.005,
+  "window_packets": 50,
+  "classes": {
+    "Direct": {
+      "n_flows": 234,
+      "mean_abs_size_B": 778.9,
+      "padded_over_original_bytes": 1.733,
+      "per_flow_ratio_median": 1.677,
+      "window_duration_median_ms": 178.6,
+      "window_duration_mean_ms": 1786.5,
+      "shaped_window_ms": 245.0,
+      "flows_lengthened_by_shaping": 139
+    },
+    "Masque": {
+      "n_flows": 270,
+      "mean_abs_size_B": 364.6,
+      "padded_over_original_bytes": 3.702,
+      "per_flow_ratio_median": 3.784,
+      "window_duration_median_ms": 988.6,
+      "window_duration_mean_ms": 2330.1,
+      "shaped_window_ms": 245.0,
+      "flows_lengthened_by_shaping": 1
+    }
+  }
+}

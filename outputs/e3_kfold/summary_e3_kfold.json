@@ -1,0 +1,95 @@
+{
+  "generated": "2026-09-08 00:35:41",
+  "n_splits": 5,
+  "hyperparams": {
+    "num_packet": 5,
+    "num_packet_byte": 320,
+    "seq_len": 20,
+    "stride_size": 4,
+    "batch_size": 16,
+    "epochs": 30,
+    "model": "fuse3_mamba_classifier",
+    "dataset_type": "byte_size_interval",
+    "size_key": "signed_sizes",
+    "interval_encoding": "log10_decade"
+  },
+  "reference": {
+    "majority_baseline": 0.5357142857142857,
+    "label_noise_ceiling_493_of_504": 0.9781746031746031
+  },
+  "conditions": {
+    "full": {
+      "n": 504,
+      "correct": 494,
+      "acc": 0.9801587301587301,
+      "ci95": [
+        0.9638657456492782,
+        0.9891875972659327
+      ],
+      "cm": [
+        [
+          233,
+          1
+        ],
+        [
+          9,
+          261
+        ]
+      ],
+      "weighted_pre": 0.9806884649008175,
+      "weighted_rec": 0.9801587301587301,
+      "weighted_f1": 0.9801762810387313,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 100,
+          "acc": 0.9900990099009901
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 100,
+          "acc": 0.9900990099009901
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 100,
+          "acc": 0.9900990099009901
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 95,
+          "acc": 0.95
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 99,
+          "acc": 0.9801980198019802
+        }
+      ],
+      "fold_accs": [
+        0.9900990099009901,
+        0.9900990099009901,
+        0.9900990099009901,
+        0.95,
+        0.9801980198019802
+      ],
+      "fold_mean": 0.9800990099009901,
+      "fold_std": 0.01736346883531914,
+      "condition": "full",
+      "seed": 0,
+      "tag": "Full 全特征基线"
+    }
+  },
+  "mcnemar": [],
+  "caveats": [
+    "504 流 = 504 会话, 每会话恰好 1 条流 -> group 约束实际为空, 等价 StratifiedKFold",
+    "折间站点重叠 86.3%, 本实验不度量跨站点泛化 (那是 E4)",
+    "11 条标签噪声流构成 493/504 = 97.82% 的硬天花板",
+    "单次采集 2026-06-16, 单一部署 WARP 2026.6.880.0"
+  ]
+}

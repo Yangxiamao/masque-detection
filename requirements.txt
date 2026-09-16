@@ -1,0 +1,12 @@
+# Python 3.10.13. Install torch and mamba_ssm first (see README):
+#   pip install torch==2.2.0 --index-url https://download.pytorch.org/whl/cu121
+#   pip install mamba_ssm==1.1.1
+numpy
+scipy
+scikit-learn
+matplotlib
+scapy
+tqdm
+timm
+einops
+tensorboard

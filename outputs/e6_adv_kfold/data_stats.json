@@ -1,0 +1,121 @@
+{
+  "train_dirs": {
+    "advpad/fold0": {
+      "train": 724,
+      "valid": 82,
+      "test": 101
+    },
+    "advshape/fold0": {
+      "train": 724,
+      "valid": 82,
+      "test": 101
+    },
+    "advmo/fold0": {
+      "train": 724,
+      "valid": 82,
+      "test": 101
+    },
+    "advpad/fold1": {
+      "train": 724,
+      "valid": 82,
+      "test": 101
+    },
+    "advshape/fold1": {
+      "train": 724,
+      "valid": 82,
+      "test": 101
+    },
+    "advmo/fold1": {
+      "train": 724,
+      "valid": 82,
+      "test": 101
+    },
+    "advpad/fold2": {
+      "train": 724,
+      "valid": 82,
+      "test": 101
+    },
+    "advshape/fold2": {
+      "train": 724,
+      "valid": 82,
+      "test": 101
+    },
+    "advmo/fold2": {
+      "train": 724,
+      "valid": 82,
+      "test": 101
+    },
+    "advpad/fold3": {
+      "train": 726,
+      "valid": 82,
+      "test": 100
+    },
+    "advshape/fold3": {
+      "train": 726,
+      "valid": 82,
+      "test": 100
+    },
+    "advmo/fold3": {
+      "train": 726,
+      "valid": 82,
+      "test": 100
+    },
+    "advpad/fold4": {
+      "train": 724,
+      "valid": 82,
+      "test": 101
+    },
+    "advshape/fold4": {
+      "train": 724,
+      "valid": 82,
+      "test": 101
+    },
+    "advmo/fold4": {
+      "train": 724,
+      "valid": 82,
+      "test": 101
+    }
+  },
+  "eval_dirs": {
+    "t1_clean/fold0": 101,
+    "t_shape/fold0": 101,
+    "t2_pad/fold0": 101,
+    "t2_strict/fold0": 101,
+    "t3_padshape/fold0": 101,
+    "t3_absdir/fold0": 101,
+    "t3_noint/fold0": 101,
+    "t2_pad_mo/fold0": 101,
+    "t1_clean/fold1": 101,
+    "t_shape/fold1": 101,
+    "t2_pad/fold1": 101,
+    "t2_strict/fold1": 101,
+    "t3_padshape/fold1": 101,
+    "t3_absdir/fold1": 101,
+    "t3_noint/fold1": 101,
+    "t2_pad_mo/fold1": 101,
+    "t1_clean/fold2": 101,
+    "t_shape/fold2": 101,
+    "t2_pad/fold2": 101,
+    "t2_strict/fold2": 101,
+    "t3_padshape/fold2": 101,
+    "t3_absdir/fold2": 101,
+    "t3_noint/fold2": 101,
+    "t2_pad_mo/fold2": 101,
+    "t1_clean/fold3": 100,
+    "t_shape/fold3": 100,
+    "t2_pad/fold3": 100,
+    "t2_strict/fold3": 100,
+    "t3_padshape/fold3": 100,
+    "t3_absdir/fold3": 100,
+    "t3_noint/fold3": 100,
+    "t2_pad_mo/fold3": 100,
+    "t1_clean/fold4": 101,
+    "t_shape/fold4": 101,
+    "t2_pad/fold4": 101,
+    "t2_strict/fold4": 101,
+    "t3_padshape/fold4": 101,
+    "t3_absdir/fold4": 101,
+    "t3_noint/fold4": 101,
+    "t2_pad_mo/fold4": 101
+  }
+}

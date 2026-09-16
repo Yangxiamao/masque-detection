@@ -1,0 +1,158 @@
+{
+  "seq_len_conditions": {
+    "first20 (= NetMamba と同条件)": {
+      "majority_baseline": 52.94,
+      "models": {
+        "LogisticRegression": {
+          "test_acc": 96.08,
+          "test_f1": 0.9643,
+          "confusion_matrix": [
+            [
+              22,
+              2
+            ],
+            [
+              0,
+              27
+            ]
+          ],
+          "cv_mean": 93.45,
+          "cv_std": 2.41
+        },
+        "RandomForest": {
+          "test_acc": 100.0,
+          "test_f1": 1.0,
+          "confusion_matrix": [
+            [
+              24,
+              0
+            ],
+            [
+              0,
+              27
+            ]
+          ],
+          "cv_mean": 96.83,
+          "cv_std": 2.76
+        },
+        "GradientBoosting": {
+          "test_acc": 98.04,
+          "test_f1": 0.9818,
+          "confusion_matrix": [
+            [
+              23,
+              1
+            ],
+            [
+              0,
+              27
+            ]
+          ],
+          "cv_mean": 95.83,
+          "cv_std": 1.83
+        }
+      }
+    },
+    "all packets": {
+      "majority_baseline": 52.94,
+      "models": {
+        "LogisticRegression": {
+          "test_acc": 98.04,
+          "test_f1": 0.9818,
+          "confusion_matrix": [
+            [
+              23,
+              1
+            ],
+            [
+              0,
+              27
+            ]
+          ],
+          "cv_mean": 94.44,
+          "cv_std": 2.35
+        },
+        "RandomForest": {
+          "test_acc": 100.0,
+          "test_f1": 1.0,
+          "confusion_matrix": [
+            [
+              24,
+              0
+            ],
+            [
+              0,
+              27
+            ]
+          ],
+          "cv_mean": 99.01,
+          "cv_std": 0.63
+        },
+        "GradientBoosting": {
+          "test_acc": 100.0,
+          "test_f1": 1.0,
+          "confusion_matrix": [
+            [
+              24,
+              0
+            ],
+            [
+              0,
+              27
+            ]
+          ],
+          "cv_mean": 98.41,
+          "cv_std": 1.19
+        }
+      }
+    }
+  },
+  "attribution_first20": {
+    "top_features": {
+      "frac_10-100us": 0.195,
+      "frac_<10us": 0.1506,
+      "log_q25": 0.144,
+      "log_mean": 0.0753,
+      "pkt_rate": 0.063,
+      "duration": 0.0595,
+      "log_std": 0.0573,
+      "log_max": 0.0561
+    },
+    "groups": {
+      "分布の形のみ (log 統計 + 十年ビン)": {
+        "test_acc": 98.04,
+        "cv_mean": 96.43,
+        "cv_std": 2.31
+      },
+      "log 統計のみ": {
+        "test_acc": 94.12,
+        "cv_mean": 93.64,
+        "cv_std": 3.7
+      },
+      "十年ビンのみ": {
+        "test_acc": 94.12,
+        "cv_mean": 97.23,
+        "cv_std": 1.81
+      },
+      "継続時間・レートのみ": {
+        "test_acc": 78.43,
+        "cv_mean": 76.97,
+        "cv_std": 3.57
+      }
+    }
+  },
+  "median_iat_threshold": {
+    "threshold_us": 80.0,
+    "train_acc": 66.23,
+    "test_acc": 64.71
+  },
+  "encoding_note": {
+    "direct_median_us": 137.0,
+    "masque_median_us": 191.0,
+    "raw_ratio": 1.39,
+    "encoded_direct": 0.5000342476540357,
+    "encoded_masque": 0.5000477454403104,
+    "encoded_gap": 1.3497786274685453e-05,
+    "encoded_gap_as_fraction_of_range": 2.6995572549370905e-05
+  }
+}

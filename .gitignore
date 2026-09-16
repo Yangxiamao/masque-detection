@@ -1,0 +1,36 @@
+# Raw and per-flow captures: published on Zenodo, never in git
+*.pcap
+*.pcapng
+data/raw/*
+!data/raw/top_domains.txt
+
+# Derived condition datasets are regenerated from the committed features
+data/processed/*
+!data/processed/quic_vs_masque_bi_feat/
+!data/processed/e6_head448_feat/
+!data/processed/e6_steady_feat/
+
+# Model weights and training byproducts
+*.pth
+*.pt
+*.ckpt
+events.out.tfevents.*
+outputs/**/confusion_matrix.pdf
+outputs/**/_backup*/
+
+# Python / editors
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# LaTeX byproducts
+*.aux
+# (LaTeX *.log excluded per directory; outputs/*.log are run logs and are kept)
+*.fls
+*.fdb_latexmk
+*.synctex.gz
