@@ -1,0 +1,20 @@
+{
+  "hdrnorm": {
+    "distinct_headers": 1,
+    "long_header_kinds_after": {
+      "initial": 2341,
+      "0rtt": 136,
+      "handshake": 43
+    },
+    "template_violations": 0,
+    "PASS": true
+  },
+  "hdrnorm_types": {
+    "distinct_headers": 1,
+    "long_header_kinds_after": {
+      "initial": 2520
+    },
+    "template_violations": 0,
+    "PASS": true
+  }
+}

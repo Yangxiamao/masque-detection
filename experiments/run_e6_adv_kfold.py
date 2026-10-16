@@ -48,6 +48,9 @@ _ROOT = os.environ.get("MASQUE_ROOT") or os.path.dirname(os.path.dirname(os.path
 sys.path.insert(0, os.path.join(_ROOT, "pipeline", "pcap_split"))
 
 from simulate_obfuscation_bi import TRANSFORMS  # noqa: E402
+# [2026-10-12 ICOIN r2 §7.5] MASQUE_SELRULE=acc_loss -> 新选模规则, 输出 *_sel; 未设置时恒等
+sys.path.insert(0, os.path.join(_ROOT, "experiments"))
+import selrule_util  # noqa: E402
 
 PROC = os.path.join(_ROOT, "data", "processed")
 SRC = os.path.join(PROC, "quic_vs_masque_bi_feat")
@@ -256,12 +259,14 @@ def train_one(det, k, epochs):
     out_dir = os.path.join(OUT_ROOT, det, f"fold{k}")
     ckpt = os.path.join(_ROOT, "NetMambaPlus", "dataset", "checkpoints",
                         "pre-trained checkpoints", "fuse3_mamba.pth")
+    if selrule_util.SELRULE:
+        selrule_util.clear_run_dir(out_dir)   # log.txt 追加写入; 只清 *_sel 目录
     os.makedirs(out_dir, exist_ok=True)
     with open(os.path.join(data_dir, "metadata.json"), encoding="utf-8") as f:
         nb = len(json.load(f)["name_to_idx"])
 
     cmd = f"""
-python -u "{os.path.normpath(os.path.join(_ROOT, "NetMambaPlus", "src", "fine-tune.py"))}" \\
+python -u "{os.path.normpath(selrule_util.train_entry())}" \\
     --num_packet {HP['num_packet']} --num_packet_byte {HP['num_packet_byte']} \\
     --seq_len {HP['seq_len']} --stride_size {HP['stride_size']} \\
     --batch_size {HP['batch_size']} --epochs {epochs} --seed 0 --nb_classes {nb} \\
@@ -276,12 +281,20 @@ python -u "{os.path.normpath(os.path.join(_ROOT, "NetMambaPlus", "src", "fine-tu
     if p.returncode != 0:
         sys.exit(f"训练失败: {det} fold{k}")
     print(f"--- {det} fold{k} 用时 {time.time()-t0:.1f}s", flush=True)
+    if selrule_util.SELRULE:
+        # 原规则 ckpt 在本折干净 test 上 dump + 核对 test_stats.json (= 旧 preds/<det>/t1_clean,
+        # 供复现核对); eval 阶段只用 ckpt-acc_loss.pth, 其余 ckpt 现在就删
+        if not selrule_util.dump_pair(data_dir, out_dir, 0, primary_out=None):
+            sys.exit(f"!!! acc_first dump/核对失败: {det} fold{k}")
+        for name in selrule_util.all_ckpts():
+            if name != selrule_util.ckpt_name():
+                os.remove(os.path.join(out_dir, name))
 
 
 def ckpt_path(det, k):
     if det == "clean":
-        return os.path.join(E3_FULL, f"fold{k}", "checkpoint-best.pth")
-    return os.path.join(OUT_ROOT, det, f"fold{k}", "checkpoint-best.pth")
+        return os.path.join(E3_FULL, f"fold{k}", selrule_util.ckpt_name())
+    return os.path.join(OUT_ROOT, det, f"fold{k}", selrule_util.ckpt_name())
 
 
 def eval_one(det, var, k):
@@ -388,6 +401,9 @@ def summarize():
                "hyperparams": HP, "majority": MAJORITY,
                "table": table, "mcnemar_clean_vs_adv": pairs,
                "transfer_advpad_vs_advshape_on_t3": transfer}
+    if selrule_util.SELRULE:
+        summary["selection_rule"] = selrule_util.RULE_DESC
+        summary["clean_detector_ckpts"] = os.path.relpath(E3_FULL, _ROOT)
     write_json(os.path.join(OUT_ROOT, "summary_e6_adv_kfold.json"), summary)
 
     # ---- 打印 ----
@@ -436,7 +452,20 @@ def main():
     ap.add_argument("--stage", default="all",
                     choices=["all", "data", "train", "eval", "summary"])
     ap.add_argument("--epochs", type=int, default=HP["epochs"])
+    # [2026-10-12 ICOIN r2 #3] 改标重跑: 11 条流 (error_analysis_e3.json 的
+    # label_noise_flows) 标为 Direct, 其余逐字不变; 全部路径切到 e6r_* / e3r_kfold。
+    ap.add_argument("--relabel", action="store_true")
     args = ap.parse_args()
+
+    global FOLD_ROOT, EVAL_ROOT, OUT_ROOT, E3_FULL, MAJORITY
+    if args.relabel:
+        FOLD_ROOT = os.path.join(PROC, "e6r_adv_folds")
+        EVAL_ROOT = os.path.join(PROC, "e6r_adv_evals")
+        OUT_ROOT = os.path.join(_ROOT, "outputs", "e6r_adv_kfold")
+        E3_FULL = os.path.join(_ROOT, "outputs", "e3r_kfold", "full")
+    # sel 模式: 输出与 clean 检测器 (Full) 都切到同规则的 *_sel 目录
+    OUT_ROOT = selrule_util.out_dir(OUT_ROOT)
+    E3_FULL = os.path.join(selrule_util.out_dir(os.path.dirname(E3_FULL)), "full")
 
     with open(ASSIGNMENT, encoding="utf-8") as f:
         assign = json.load(f)
@@ -445,14 +474,34 @@ def main():
     by_key = load_src_items()
     if set(by_key) != set(assign["test_fold"]):
         sys.exit("源数据集与折分配的样本集合不一致")
+    if args.relabel:
+        with open(os.path.join(_ROOT, "outputs", "e3_kfold", "error_analysis_e3.json"),
+                  encoding="utf-8") as f:
+            noise = set(json.load(f)["label_noise_flows"])
+        assert len(noise) == 11 and noise <= set(by_key)
+        direct_name = next(n for n, i in meta["name_to_idx"].items() if i == 0)
+        for key in noise:
+            assert by_key[key]["label"] == 1
+            by_key[key] = dict(by_key[key], label=0, name=direct_name)
+        MAJORITY = max(sum(it["label"] == L for it in by_key.values()) for L in (0, 1)) / len(by_key)
+        print(f"[relabel] 11 条改为 {direct_name}; majority = {MAJORITY*100:.2f}%")
 
     if args.stage in ("all", "data"):
-        build_data(assign, by_key, meta)
+        have_data = all(os.path.exists(os.path.join(FOLD_ROOT, d, f"fold{k}", "data-train.json"))
+                        for d in DETECTORS for k in range(N_SPLITS)) and \
+                    all(os.path.exists(os.path.join(EVAL_ROOT, v, f"fold{k}", "data-test.json"))
+                        for v in VARIANTS for k in range(N_SPLITS))
+        if selrule_util.SELRULE and have_data:
+            # 只换选模规则: 复用原规则那次造好的折, 保证输入逐字相同 (不重写共享数据目录)
+            print(f"[sel] 复用已有数据 {FOLD_ROOT} / {EVAL_ROOT}, 不重造")
+        else:
+            build_data(assign, by_key, meta)
 
     if args.stage in ("all", "train"):
         todo = [(d, k) for d in DETECTORS for k in range(N_SPLITS)]
         for i, (det, k) in enumerate(todo, 1):
-            if os.path.exists(ckpt_path(det, k)):
+            if os.path.exists(ckpt_path(det, k)) and (not selrule_util.SELRULE or os.path.exists(
+                    os.path.join(OUT_ROOT, det, f"fold{k}", "preds_acc_first.json"))):
                 print(f"[{i}/{len(todo)}] 跳过已训练: {det} fold{k}")
                 continue
             print(f"[{i}/{len(todo)}] 训练 {det} fold{k}")

@@ -1,0 +1,4538 @@
+{
+  "class0_Direct_iter1_20260616_005750_104_18_11_207_443_192_168_31_76_53747.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.11.207",
+    "peer16": "104.18",
+    "peer24": "104.18.11",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_104_18_32_146_443_192_168_31_76_54432.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.32.146",
+    "peer16": "104.18",
+    "peer24": "104.18.32",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_104_18_3_159_443_192_168_31_76_64270.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.3.159",
+    "peer16": "104.18",
+    "peer24": "104.18.3",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_104_18_95_41_443_192_168_31_76_53331.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.95.41",
+    "peer16": "104.18",
+    "peer24": "104.18.95",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_104_18_95_41_443_192_168_31_76_61503.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.95.41",
+    "peer16": "104.18",
+    "peer24": "104.18.95",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_104_18_95_41_443_192_168_31_76_64419.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.95.41",
+    "peer16": "104.18",
+    "peer24": "104.18.95",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_121_85_57_17_443_192_168_31_76_54208.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "121.85.57.17",
+    "peer16": "121.85",
+    "peer24": "121.85.57",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_13_249_165_26_443_192_168_31_76_56740.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "13.249.165.26",
+    "peer16": "13.249",
+    "peer24": "13.249.165",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_13_35_66_154_443_192_168_31_76_56973.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "13.35.66.154",
+    "peer16": "13.35",
+    "peer24": "13.35.66",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_142_251_118_119_443_192_168_31_76_57645.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.118.119",
+    "peer16": "142.251",
+    "peer24": "142.251.118",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_142_251_118_97_443_192_168_31_76_52929.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.118.97",
+    "peer16": "142.251",
+    "peer24": "142.251.118",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_142_251_118_97_443_192_168_31_76_57550.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.118.97",
+    "peer16": "142.251",
+    "peer24": "142.251.118",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_142_251_119_94_443_192_168_31_76_52048.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.119.94",
+    "peer16": "142.251",
+    "peer24": "142.251.119",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_142_251_119_94_443_192_168_31_76_59738.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.119.94",
+    "peer16": "142.251",
+    "peer24": "142.251.119",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_142_251_150_119_443_192_168_31_76_54289.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.150.119",
+    "peer16": "142.251",
+    "peer24": "142.251.150",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_142_251_155_119_443_192_168_31_76_52289.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.155.119",
+    "peer16": "142.251",
+    "peer24": "142.251.155",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_142_251_169_84_443_192_168_31_76_57084.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.169.84",
+    "peer16": "142.251",
+    "peer24": "142.251.169",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_142_251_169_84_443_192_168_31_76_57536.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.169.84",
+    "peer16": "142.251",
+    "peer24": "142.251.169",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_151_101_89_55_443_192_168_31_76_62040.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "151.101.89.55",
+    "peer16": "151.101",
+    "peer24": "151.101.89",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_151_101_89_91_443_192_168_31_76_63555.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "151.101.89.91",
+    "peer16": "151.101",
+    "peer24": "151.101.89",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_151_101_90_114_443_192_168_31_76_59467.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "151.101.90.114",
+    "peer16": "151.101",
+    "peer24": "151.101.90",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_157_240_209_63_443_192_168_31_76_55490.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "157.240.209.63",
+    "peer16": "157.240",
+    "peer24": "157.240.209",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_157_240_209_63_443_192_168_31_76_57366.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "157.240.209.63",
+    "peer16": "157.240",
+    "peer24": "157.240.209",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_160_79_104_10_443_192_168_31_76_50815.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "160.79.104.10",
+    "peer16": "160.79",
+    "peer24": "160.79.104",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_170_114_46_1_443_192_168_31_76_55379.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "170.114.46.1",
+    "peer16": "170.114",
+    "peer24": "170.114.46",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_170_114_46_1_443_192_168_31_76_60074.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "170.114.46.1",
+    "peer16": "170.114",
+    "peer24": "170.114.46",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_172_217_209_190_443_192_168_31_76_62389.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.209.190",
+    "peer16": "172.217",
+    "peer24": "172.217.209",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_172_217_211_157_443_192_168_31_76_50786.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.211.157",
+    "peer16": "172.217",
+    "peer24": "172.217.211",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_172_217_211_157_443_192_168_31_76_54650.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.211.157",
+    "peer16": "172.217",
+    "peer24": "172.217.211",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_172_217_211_190_443_192_168_31_76_62884.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.211.190",
+    "peer16": "172.217",
+    "peer24": "172.217.211",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_172_217_211_94_443_192_168_31_76_62215.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.211.94",
+    "peer16": "172.217",
+    "peer24": "172.217.211",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_172_217_211_94_443_192_168_31_76_62641.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.211.94",
+    "peer16": "172.217",
+    "peer24": "172.217.211",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_184_28_244_68_443_192_168_31_76_64612.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "184.28.244.68",
+    "peer16": "184.28",
+    "peer24": "184.28.244",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_184_29_6_138_443_192_168_31_76_56762.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "184.29.6.138",
+    "peer16": "184.29",
+    "peer24": "184.29.6",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_185_199_111_215_443_192_168_31_76_50060.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "185.199.111.215",
+    "peer16": "185.199",
+    "peer24": "185.199.111",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_192_0_76_3_443_192_168_31_76_52118.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "192.0.76.3",
+    "peer16": "192.0",
+    "peer24": "192.0.76",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_192_168_31_76_54281_52_123_245_201_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "52.123.245.201",
+    "peer16": "52.123",
+    "peer24": "52.123.245",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_192_168_31_76_57684_99_84_61_151_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "99.84.61.151",
+    "peer16": "99.84",
+    "peer24": "99.84.61",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_192_168_31_76_58590_23_215_212_78_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "23.215.212.78",
+    "peer16": "23.215",
+    "peer24": "23.215.212",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_192_168_31_76_60042_61_205_127_82_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "61.205.127.82",
+    "peer16": "61.205",
+    "peer24": "61.205.127",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_192_168_31_76_61864_3_163_198_102_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "3.163.198.102",
+    "peer16": "3.163",
+    "peer24": "3.163.198",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_192_168_31_76_62558_23_215_212_48_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "23.215.212.48",
+    "peer16": "23.215",
+    "peer24": "23.215.212",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter1_20260616_005750_192_168_31_76_63039_99_84_61_151_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "99.84.61.151",
+    "peer16": "99.84",
+    "peer24": "99.84.61",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_104_18_11_81_443_192_168_31_76_56890.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.11.81",
+    "peer16": "104.18",
+    "peer24": "104.18.11",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_104_18_95_41_443_192_168_31_76_51099.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.95.41",
+    "peer16": "104.18",
+    "peer24": "104.18.95",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_104_18_95_41_443_192_168_31_76_54950.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.95.41",
+    "peer16": "104.18",
+    "peer24": "104.18.95",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_104_18_95_41_443_192_168_31_76_56914.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.95.41",
+    "peer16": "104.18",
+    "peer24": "104.18.95",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_104_19_219_32_443_192_168_31_76_64360.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.19.219.32",
+    "peer16": "104.19",
+    "peer24": "104.19.219",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_13_227_63_151_443_192_168_31_76_51752.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "13.227.63.151",
+    "peer16": "13.227",
+    "peer24": "13.227.63",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_13_227_63_151_443_192_168_31_76_58542.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "13.227.63.151",
+    "peer16": "13.227",
+    "peer24": "13.227.63",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_13_249_165_86_443_192_168_31_76_50323.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "13.249.165.86",
+    "peer16": "13.249",
+    "peer24": "13.249.165",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_142_251_118_156_443_192_168_31_76_63947.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.118.156",
+    "peer16": "142.251",
+    "peer24": "142.251.118",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_142_251_118_190_443_192_168_31_76_49716.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.118.190",
+    "peer16": "142.251",
+    "peer24": "142.251.118",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_142_251_118_94_443_192_168_31_76_55456.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.118.94",
+    "peer16": "142.251",
+    "peer24": "142.251.118",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_142_251_118_94_443_192_168_31_76_62717.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.118.94",
+    "peer16": "142.251",
+    "peer24": "142.251.118",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_142_251_118_95_443_192_168_31_76_60176.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.118.95",
+    "peer16": "142.251",
+    "peer24": "142.251.118",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_142_251_118_97_443_192_168_31_76_52955.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.118.97",
+    "peer16": "142.251",
+    "peer24": "142.251.118",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_142_251_119_155_443_192_168_31_76_63266.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.119.155",
+    "peer16": "142.251",
+    "peer24": "142.251.119",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_142_251_119_94_443_192_168_31_76_51303.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.119.94",
+    "peer16": "142.251",
+    "peer24": "142.251.119",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_142_251_119_94_443_192_168_31_76_59705.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.119.94",
+    "peer16": "142.251",
+    "peer24": "142.251.119",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_142_251_152_119_443_192_168_31_76_50352.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.152.119",
+    "peer16": "142.251",
+    "peer24": "142.251.152",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_142_251_156_119_443_192_168_31_76_62647.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.156.119",
+    "peer16": "142.251",
+    "peer24": "142.251.156",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_151_101_195_5_443_192_168_31_76_58539.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "151.101.195.5",
+    "peer16": "151.101",
+    "peer24": "151.101.195",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_151_101_89_91_443_192_168_31_76_52289.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "151.101.89.91",
+    "peer16": "151.101",
+    "peer24": "151.101.89",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_151_101_90_206_443_192_168_31_76_54173.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "151.101.90.206",
+    "peer16": "151.101",
+    "peer24": "151.101.90",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_151_101_90_251_443_192_168_31_76_63889.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "151.101.90.251",
+    "peer16": "151.101",
+    "peer24": "151.101.90",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_151_101_91_5_443_192_168_31_76_54756.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "151.101.91.5",
+    "peer16": "151.101",
+    "peer24": "151.101.91",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_157_240_209_63_443_192_168_31_76_52283.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "157.240.209.63",
+    "peer16": "157.240",
+    "peer24": "157.240.209",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_157_240_209_63_443_192_168_31_76_62278.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "157.240.209.63",
+    "peer16": "157.240",
+    "peer24": "157.240.209",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_160_79_104_10_443_192_168_31_76_52384.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "160.79.104.10",
+    "peer16": "160.79",
+    "peer24": "160.79.104",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_172_217_209_91_443_192_168_31_76_59190.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.209.91",
+    "peer16": "172.217",
+    "peer24": "172.217.209",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_172_217_209_93_443_192_168_31_76_59864.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.209.93",
+    "peer16": "172.217",
+    "peer24": "172.217.209",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_172_217_211_154_443_192_168_31_76_57613.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.211.154",
+    "peer16": "172.217",
+    "peer24": "172.217.211",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_172_217_211_154_443_192_168_31_76_64867.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.211.154",
+    "peer16": "172.217",
+    "peer24": "172.217.211",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_172_217_211_154_443_192_168_31_76_64944.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.211.154",
+    "peer16": "172.217",
+    "peer24": "172.217.211",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_172_217_213_119_443_192_168_31_76_54958.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.213.119",
+    "peer16": "172.217",
+    "peer24": "172.217.213",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_172_217_213_119_443_192_168_31_76_59782.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.213.119",
+    "peer16": "172.217",
+    "peer24": "172.217.213",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_172_217_213_94_443_192_168_31_76_49346.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.213.94",
+    "peer16": "172.217",
+    "peer24": "172.217.213",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_172_217_221_84_443_192_168_31_76_54650.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.221.84",
+    "peer16": "172.217",
+    "peer24": "172.217.221",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_172_64_155_110_443_192_168_31_76_60915.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.64.155.110",
+    "peer16": "172.64",
+    "peer24": "172.64.155",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_184_28_244_68_443_192_168_31_76_51085.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "184.28.244.68",
+    "peer16": "184.28",
+    "peer24": "184.28.244",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_184_29_6_138_443_192_168_31_76_58950.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "184.29.6.138",
+    "peer16": "184.29",
+    "peer24": "184.29.6",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_185_199_110_215_443_192_168_31_76_50060.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "185.199.110.215",
+    "peer16": "185.199",
+    "peer24": "185.199.110",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_185_199_110_215_443_192_168_31_76_62860.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "185.199.110.215",
+    "peer16": "185.199",
+    "peer24": "185.199.110",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_192_0_76_3_443_192_168_31_76_51981.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "192.0.76.3",
+    "peer16": "192.0",
+    "peer24": "192.0.76",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_192_168_31_76_49338_61_205_127_82_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "61.205.127.82",
+    "peer16": "61.205",
+    "peer24": "61.205.127",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_192_168_31_76_49671_23_55_51_138_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "23.55.51.138",
+    "peer16": "23.55",
+    "peer24": "23.55.51",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_192_168_31_76_50164_23_215_212_38_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "23.215.212.38",
+    "peer16": "23.215",
+    "peer24": "23.215.212",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_192_168_31_76_50586_23_215_212_46_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "23.215.212.46",
+    "peer16": "23.215",
+    "peer24": "23.215.212",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_192_168_31_76_50684_23_215_212_38_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "23.215.212.38",
+    "peer16": "23.215",
+    "peer24": "23.215.212",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_192_168_31_76_55392_99_84_61_151_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "99.84.61.151",
+    "peer16": "99.84",
+    "peer24": "99.84.61",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_192_168_31_76_56421_23_55_51_138_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "23.55.51.138",
+    "peer16": "23.55",
+    "peer24": "23.55.51",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_192_168_31_76_56451_40_99_76_98_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "40.99.76.98",
+    "peer16": "40.99",
+    "peer24": "40.99.76",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_192_168_31_76_62154_3_163_198_102_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "3.163.198.102",
+    "peer16": "3.163",
+    "peer24": "3.163.198",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter2_20260616_014546_192_168_31_76_64375_23_215_212_78_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "23.215.212.78",
+    "peer16": "23.215",
+    "peer24": "23.215.212",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_104_16_23_8_443_192_168_31_76_54244.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.16.23.8",
+    "peer16": "104.16",
+    "peer24": "104.16.23",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_104_16_23_8_443_192_168_31_76_56354.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.16.23.8",
+    "peer16": "104.16",
+    "peer24": "104.16.23",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_104_18_10_81_443_192_168_31_76_57694.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.10.81",
+    "peer16": "104.18",
+    "peer24": "104.18.10",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_104_18_11_207_443_192_168_31_76_57057.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.11.207",
+    "peer16": "104.18",
+    "peer24": "104.18.11",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_104_18_32_146_443_192_168_31_76_59468.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.32.146",
+    "peer16": "104.18",
+    "peer24": "104.18.32",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_104_18_94_41_443_192_168_31_76_52849.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.94.41",
+    "peer16": "104.18",
+    "peer24": "104.18.94",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_104_18_94_41_443_192_168_31_76_57196.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.94.41",
+    "peer16": "104.18",
+    "peer24": "104.18.94",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_104_18_95_41_443_192_168_31_76_57861.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.95.41",
+    "peer16": "104.18",
+    "peer24": "104.18.95",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_104_19_220_32_443_192_168_31_76_53783.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.19.220.32",
+    "peer16": "104.19",
+    "peer24": "104.19.220",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_13_249_165_21_443_192_168_31_76_56916.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "13.249.165.21",
+    "peer16": "13.249",
+    "peer24": "13.249.165",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_142_251_118_119_443_192_168_31_76_49759.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.118.119",
+    "peer16": "142.251",
+    "peer24": "142.251.118",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_142_251_118_119_443_192_168_31_76_54510.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.118.119",
+    "peer16": "142.251",
+    "peer24": "142.251.118",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_142_251_118_97_443_192_168_31_76_55742.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.118.97",
+    "peer16": "142.251",
+    "peer24": "142.251.118",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_142_251_118_97_443_192_168_31_76_62433.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.118.97",
+    "peer16": "142.251",
+    "peer24": "142.251.118",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_142_251_118_97_443_192_168_31_76_65441.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.118.97",
+    "peer16": "142.251",
+    "peer24": "142.251.118",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_142_251_119_155_443_192_168_31_76_54939.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.119.155",
+    "peer16": "142.251",
+    "peer24": "142.251.119",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_142_251_119_94_443_192_168_31_76_51545.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.119.94",
+    "peer16": "142.251",
+    "peer24": "142.251.119",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_142_251_119_94_443_192_168_31_76_54130.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.119.94",
+    "peer16": "142.251",
+    "peer24": "142.251.119",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_142_251_119_94_443_192_168_31_76_60561.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.119.94",
+    "peer16": "142.251",
+    "peer24": "142.251.119",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_142_251_119_94_443_192_168_31_76_62822.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.119.94",
+    "peer16": "142.251",
+    "peer24": "142.251.119",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_142_251_153_119_443_192_168_31_76_55117.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.153.119",
+    "peer16": "142.251",
+    "peer24": "142.251.153",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_142_251_156_119_443_192_168_31_76_52930.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.156.119",
+    "peer16": "142.251",
+    "peer24": "142.251.156",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_151_101_195_5_443_192_168_31_76_49969.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "151.101.195.5",
+    "peer16": "151.101",
+    "peer24": "151.101.195",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_151_101_89_91_443_192_168_31_76_63173.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "151.101.89.91",
+    "peer16": "151.101",
+    "peer24": "151.101.89",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_151_101_90_251_443_192_168_31_76_57406.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "151.101.90.251",
+    "peer16": "151.101",
+    "peer24": "151.101.90",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_157_240_209_14_443_192_168_31_76_64400.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "157.240.209.14",
+    "peer16": "157.240",
+    "peer24": "157.240.209",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_157_240_209_63_443_192_168_31_76_57055.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "157.240.209.63",
+    "peer16": "157.240",
+    "peer24": "157.240.209",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_157_240_209_63_443_192_168_31_76_60561.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "157.240.209.63",
+    "peer16": "157.240",
+    "peer24": "157.240.209",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_170_114_46_1_443_192_168_31_76_54478.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "170.114.46.1",
+    "peer16": "170.114",
+    "peer24": "170.114.46",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_170_114_46_1_443_192_168_31_76_62321.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "170.114.46.1",
+    "peer16": "170.114",
+    "peer24": "170.114.46",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_172_217_211_91_443_192_168_31_76_49671.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.211.91",
+    "peer16": "172.217",
+    "peer24": "172.217.211",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_172_217_211_91_443_192_168_31_76_53452.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.211.91",
+    "peer16": "172.217",
+    "peer24": "172.217.211",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_172_217_211_91_443_192_168_31_76_59680.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.211.91",
+    "peer16": "172.217",
+    "peer24": "172.217.211",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_172_217_213_93_443_192_168_31_76_56956.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.213.93",
+    "peer16": "172.217",
+    "peer24": "172.217.213",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_172_217_213_94_443_192_168_31_76_51077.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.213.94",
+    "peer16": "172.217",
+    "peer24": "172.217.213",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_172_217_213_94_443_192_168_31_76_59566.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.213.94",
+    "peer16": "172.217",
+    "peer24": "172.217.213",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_172_217_213_95_443_192_168_31_76_65141.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.213.95",
+    "peer16": "172.217",
+    "peer24": "172.217.213",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_172_217_221_84_443_192_168_31_76_58571.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.221.84",
+    "peer16": "172.217",
+    "peer24": "172.217.221",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_184_28_244_68_443_192_168_31_76_57316.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "184.28.244.68",
+    "peer16": "184.28",
+    "peer24": "184.28.244",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_185_199_111_215_443_192_168_31_76_50912.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "185.199.111.215",
+    "peer16": "185.199",
+    "peer24": "185.199.111",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_185_199_111_215_443_192_168_31_76_51713.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "185.199.111.215",
+    "peer16": "185.199",
+    "peer24": "185.199.111",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_192_168_31_76_53807_23_55_51_140_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "23.55.51.140",
+    "peer16": "23.55",
+    "peer24": "23.55.51",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_192_168_31_76_55823_23_61_244_11_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "23.61.244.11",
+    "peer16": "23.61",
+    "peer24": "23.61.244",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_192_168_31_76_57073_61_205_127_82_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "61.205.127.82",
+    "peer16": "61.205",
+    "peer24": "61.205.127",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter3_20260616_023319_192_168_31_76_62684_23_67_73_114_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "23.67.73.114",
+    "peer16": "23.67",
+    "peer24": "23.67.73",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_104_16_22_8_443_192_168_31_76_55133.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.16.22.8",
+    "peer16": "104.16",
+    "peer24": "104.16.22",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_104_16_22_8_443_192_168_31_76_64157.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.16.22.8",
+    "peer16": "104.16",
+    "peer24": "104.16.22",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_104_18_10_81_443_192_168_31_76_53315.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.10.81",
+    "peer16": "104.18",
+    "peer24": "104.18.10",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_104_18_11_207_443_192_168_31_76_65192.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.11.207",
+    "peer16": "104.18",
+    "peer24": "104.18.11",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_104_18_2_159_443_192_168_31_76_50103.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.2.159",
+    "peer16": "104.18",
+    "peer24": "104.18.2",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_104_18_32_146_443_192_168_31_76_52652.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.32.146",
+    "peer16": "104.18",
+    "peer24": "104.18.32",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_104_18_94_41_443_192_168_31_76_63907.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.94.41",
+    "peer16": "104.18",
+    "peer24": "104.18.94",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_104_18_95_41_443_192_168_31_76_53678.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.95.41",
+    "peer16": "104.18",
+    "peer24": "104.18.95",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_104_18_95_41_443_192_168_31_76_55623.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.95.41",
+    "peer16": "104.18",
+    "peer24": "104.18.95",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_104_18_95_41_443_192_168_31_76_57236.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.95.41",
+    "peer16": "104.18",
+    "peer24": "104.18.95",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_121_85_57_18_443_192_168_31_76_65449.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "121.85.57.18",
+    "peer16": "121.85",
+    "peer24": "121.85.57",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_142_251_118_190_443_192_168_31_76_59610.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.118.190",
+    "peer16": "142.251",
+    "peer24": "142.251.118",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_142_251_118_95_443_192_168_31_76_50499.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.118.95",
+    "peer16": "142.251",
+    "peer24": "142.251.118",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_142_251_118_97_443_192_168_31_76_59724.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.118.97",
+    "peer16": "142.251",
+    "peer24": "142.251.118",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_142_251_119_156_443_192_168_31_76_50125.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.119.156",
+    "peer16": "142.251",
+    "peer24": "142.251.119",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_142_251_119_156_443_192_168_31_76_52848.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.119.156",
+    "peer16": "142.251",
+    "peer24": "142.251.119",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_142_251_119_156_443_192_168_31_76_57149.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.119.156",
+    "peer16": "142.251",
+    "peer24": "142.251.119",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_142_251_119_94_443_192_168_31_76_58291.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.119.94",
+    "peer16": "142.251",
+    "peer24": "142.251.119",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_142_251_119_94_443_192_168_31_76_60668.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.119.94",
+    "peer16": "142.251",
+    "peer24": "142.251.119",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_142_251_153_119_443_192_168_31_76_63915.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.153.119",
+    "peer16": "142.251",
+    "peer24": "142.251.153",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_151_101_67_5_443_192_168_31_76_63553.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "151.101.67.5",
+    "peer16": "151.101",
+    "peer24": "151.101.67",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_151_101_89_55_443_192_168_31_76_55835.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "151.101.89.55",
+    "peer16": "151.101",
+    "peer24": "151.101.89",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_151_101_89_91_443_192_168_31_76_53569.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "151.101.89.91",
+    "peer16": "151.101",
+    "peer24": "151.101.89",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_151_101_90_114_443_192_168_31_76_57338.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "151.101.90.114",
+    "peer16": "151.101",
+    "peer24": "151.101.90",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_151_101_90_206_443_192_168_31_76_57907.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "151.101.90.206",
+    "peer16": "151.101",
+    "peer24": "151.101.90",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_157_240_209_63_443_192_168_31_76_50229.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "157.240.209.63",
+    "peer16": "157.240",
+    "peer24": "157.240.209",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_157_240_209_63_443_192_168_31_76_64081.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "157.240.209.63",
+    "peer16": "157.240",
+    "peer24": "157.240.209",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_160_79_104_10_443_192_168_31_76_59225.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "160.79.104.10",
+    "peer16": "160.79",
+    "peer24": "160.79.104",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_170_114_45_1_443_192_168_31_76_52456.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "170.114.45.1",
+    "peer16": "170.114",
+    "peer24": "170.114.45",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_170_114_45_1_443_192_168_31_76_58466.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "170.114.45.1",
+    "peer16": "170.114",
+    "peer24": "170.114.45",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_172_217_211_136_443_192_168_31_76_49675.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.211.136",
+    "peer16": "172.217",
+    "peer24": "172.217.211",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_172_217_213_119_443_192_168_31_76_58144.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.213.119",
+    "peer16": "172.217",
+    "peer24": "172.217.213",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_172_217_213_94_443_192_168_31_76_56167.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.213.94",
+    "peer16": "172.217",
+    "peer24": "172.217.213",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_172_217_213_94_443_192_168_31_76_56581.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.213.94",
+    "peer16": "172.217",
+    "peer24": "172.217.213",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_172_217_221_84_443_192_168_31_76_64080.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.221.84",
+    "peer16": "172.217",
+    "peer24": "172.217.221",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_172_64_144_166_443_192_168_31_76_61664.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.64.144.166",
+    "peer16": "172.64",
+    "peer24": "172.64.144",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_184_28_244_68_443_192_168_31_76_61056.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "184.28.244.68",
+    "peer16": "184.28",
+    "peer24": "184.28.244",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_185_199_109_215_443_192_168_31_76_52969.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "185.199.109.215",
+    "peer16": "185.199",
+    "peer24": "185.199.109",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_185_199_109_215_443_192_168_31_76_57404.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "185.199.109.215",
+    "peer16": "185.199",
+    "peer24": "185.199.109",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_192_168_31_76_49880_23_61_244_202_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "23.61.244.202",
+    "peer16": "23.61",
+    "peer24": "23.61.244",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_192_168_31_76_51080_23_61_244_83_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "23.61.244.83",
+    "peer16": "23.61",
+    "peer24": "23.61.244",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_192_168_31_76_51684_23_46_229_88_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "23.46.229.88",
+    "peer16": "23.46",
+    "peer24": "23.46.229",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_192_168_31_76_58411_23_55_51_140_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "23.55.51.140",
+    "peer16": "23.55",
+    "peer24": "23.55.51",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_192_168_31_76_59313_61_205_127_82_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "61.205.127.82",
+    "peer16": "61.205",
+    "peer24": "61.205.127",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_192_168_31_76_60158_23_46_229_88_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "23.46.229.88",
+    "peer16": "23.46",
+    "peer24": "23.46.229",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter4_20260616_031955_192_168_31_76_60839_23_61_244_242_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "23.61.244.242",
+    "peer16": "23.61",
+    "peer24": "23.61.244",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_104_16_22_8_443_192_168_31_76_56197.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.16.22.8",
+    "peer16": "104.16",
+    "peer24": "104.16.22",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_104_17_25_14_443_192_168_31_76_54196.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.17.25.14",
+    "peer16": "104.17",
+    "peer24": "104.17.25",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_104_18_10_81_443_192_168_31_76_59377.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.10.81",
+    "peer16": "104.18",
+    "peer24": "104.18.10",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_104_18_32_146_443_192_168_31_76_49825.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.32.146",
+    "peer16": "104.18",
+    "peer24": "104.18.32",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_104_18_32_146_443_192_168_31_76_62338.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.32.146",
+    "peer16": "104.18",
+    "peer24": "104.18.32",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_104_18_3_159_443_192_168_31_76_63224.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.3.159",
+    "peer16": "104.18",
+    "peer24": "104.18.3",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_104_18_94_41_443_192_168_31_76_59581.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.94.41",
+    "peer16": "104.18",
+    "peer24": "104.18.94",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_104_18_94_41_443_192_168_31_76_61340.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.94.41",
+    "peer16": "104.18",
+    "peer24": "104.18.94",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_104_18_94_41_443_192_168_31_76_64061.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "104.18.94.41",
+    "peer16": "104.18",
+    "peer24": "104.18.94",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_13_249_165_21_443_192_168_31_76_59442.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "13.249.165.21",
+    "peer16": "13.249",
+    "peer24": "13.249.165",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_142_251_118_157_443_192_168_31_76_58585.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.118.157",
+    "peer16": "142.251",
+    "peer24": "142.251.118",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_142_251_118_157_443_192_168_31_76_64620.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.118.157",
+    "peer16": "142.251",
+    "peer24": "142.251.118",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_142_251_118_93_443_192_168_31_76_52599.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.118.93",
+    "peer16": "142.251",
+    "peer24": "142.251.118",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_142_251_118_97_443_192_168_31_76_51661.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.118.97",
+    "peer16": "142.251",
+    "peer24": "142.251.118",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_142_251_118_97_443_192_168_31_76_62933.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.118.97",
+    "peer16": "142.251",
+    "peer24": "142.251.118",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_142_251_119_94_443_192_168_31_76_63539.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.119.94",
+    "peer16": "142.251",
+    "peer24": "142.251.119",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_142_251_151_119_443_192_168_31_76_63933.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.151.119",
+    "peer16": "142.251",
+    "peer24": "142.251.151",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_142_251_169_84_443_192_168_31_76_49815.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.169.84",
+    "peer16": "142.251",
+    "peer24": "142.251.169",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_142_251_169_84_443_192_168_31_76_51437.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "142.251.169.84",
+    "peer16": "142.251",
+    "peer24": "142.251.169",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_151_101_195_5_443_192_168_31_76_55719.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "151.101.195.5",
+    "peer16": "151.101",
+    "peer24": "151.101.195",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_151_101_89_91_443_192_168_31_76_50278.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "151.101.89.91",
+    "peer16": "151.101",
+    "peer24": "151.101.89",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_151_101_90_114_443_192_168_31_76_60277.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "151.101.90.114",
+    "peer16": "151.101",
+    "peer24": "151.101.90",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_151_101_90_251_443_192_168_31_76_63385.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "151.101.90.251",
+    "peer16": "151.101",
+    "peer24": "151.101.90",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_157_240_209_14_443_192_168_31_76_54487.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "157.240.209.14",
+    "peer16": "157.240",
+    "peer24": "157.240.209",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_157_240_209_14_443_192_168_31_76_60884.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "157.240.209.14",
+    "peer16": "157.240",
+    "peer24": "157.240.209",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_157_240_209_14_443_192_168_31_76_64515.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "157.240.209.14",
+    "peer16": "157.240",
+    "peer24": "157.240.209",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_157_240_209_63_443_192_168_31_76_57745.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "157.240.209.63",
+    "peer16": "157.240",
+    "peer24": "157.240.209",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_157_240_209_63_443_192_168_31_76_58068.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "157.240.209.63",
+    "peer16": "157.240",
+    "peer24": "157.240.209",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_170_114_46_1_443_192_168_31_76_52425.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "170.114.46.1",
+    "peer16": "170.114",
+    "peer24": "170.114.46",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_170_114_46_1_443_192_168_31_76_56877.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "170.114.46.1",
+    "peer16": "170.114",
+    "peer24": "170.114.46",
+    "is_cf": true,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_172_217_209_119_443_192_168_31_76_55540.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.209.119",
+    "peer16": "172.217",
+    "peer24": "172.217.209",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_172_217_209_156_443_192_168_31_76_62388.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.209.156",
+    "peer16": "172.217",
+    "peer24": "172.217.209",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_172_217_209_190_443_192_168_31_76_56971.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.209.190",
+    "peer16": "172.217",
+    "peer24": "172.217.209",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_172_217_209_94_443_192_168_31_76_52709.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.209.94",
+    "peer16": "172.217",
+    "peer24": "172.217.209",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_172_217_209_94_443_192_168_31_76_65337.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.209.94",
+    "peer16": "172.217",
+    "peer24": "172.217.209",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_172_217_213_102_443_192_168_31_76_56806.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.213.102",
+    "peer16": "172.217",
+    "peer24": "172.217.213",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_172_217_213_102_443_192_168_31_76_64246.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.213.102",
+    "peer16": "172.217",
+    "peer24": "172.217.213",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_172_217_213_95_443_192_168_31_76_60230.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "172.217.213.95",
+    "peer16": "172.217",
+    "peer24": "172.217.213",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_184_28_244_68_443_192_168_31_76_63823.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "184.28.244.68",
+    "peer16": "184.28",
+    "peer24": "184.28.244",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_185_199_109_215_443_192_168_31_76_52298.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "185.199.109.215",
+    "peer16": "185.199",
+    "peer24": "185.199.109",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_185_199_109_215_443_192_168_31_76_64987.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "185.199.109.215",
+    "peer16": "185.199",
+    "peer24": "185.199.109",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_192_168_31_76_49841_99_84_61_151_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "99.84.61.151",
+    "peer16": "99.84",
+    "peer24": "99.84.61",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_192_168_31_76_52205_61_205_127_82_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "61.205.127.82",
+    "peer16": "61.205",
+    "peer24": "61.205.127",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_192_168_31_76_54803_23_55_51_140_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "23.55.51.140",
+    "peer16": "23.55",
+    "peer24": "23.55.51",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_192_168_31_76_61286_23_67_73_67_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "23.67.73.67",
+    "peer16": "23.67",
+    "peer24": "23.67.73",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_192_168_31_76_64088_23_61_244_83_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "23.61.244.83",
+    "peer16": "23.61",
+    "peer24": "23.61.244",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_192_168_31_76_64792_99_84_61_151_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "99.84.61.151",
+    "peer16": "99.84",
+    "peer24": "99.84.61",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class0_Direct_iter5_20260616_040644_192_168_31_76_64829_23_67_74_201_443.pcap": {
+    "label": 0,
+    "name": "Direct",
+    "peer": "23.67.74.201",
+    "peer16": "23.67",
+    "peer24": "23.67.74",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class1_Masque_iter1_20260616_011456_160_79_104_10_443_192_168_31_76_52398.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "160.79.104.10",
+    "peer16": "160.79",
+    "peer24": "160.79.104",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_49717.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_49727.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_49956.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_50299.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_50398.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_50951.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_51059.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_51589.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_51619.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_52372.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_52401.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_52987.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_53112.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_53312.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_54108.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_54738.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_54772.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_54794.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_55208.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_55252.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_55256.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_55315.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_56386.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_56872.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_56880.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_57053.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_57118.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_57273.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_57377.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_57778.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_58586.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_58619.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_58902.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_58932.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_59092.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_59592.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_60360.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_60410.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_62209.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_62643.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_62780.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_63161.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_63255.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_63378.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_63547.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_63725.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_63792.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_64478.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_64835.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_64986.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_162_159_198_2_443_192_168_31_76_65194.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter1_20260616_011456_192_168_31_76_61319_34_195_221_192_443.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "34.195.221.192",
+    "peer16": "34.195",
+    "peer24": "34.195.221",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_49395.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_49675.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_49858.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_50120.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_50969.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_52020.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_52220.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_53166.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_53289.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_53608.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_53816.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_54023.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_54165.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_54425.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_54940.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_55237.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_55302.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_55555.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_55797.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_56830.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_57115.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_57134.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_57742.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_57757.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_58063.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_58116.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_58312.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_58375.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_59253.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_59489.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_59594.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_60005.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_60094.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_60416.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_60422.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_61175.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_61428.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_62034.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_62095.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_62472.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_62568.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_62779.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_63213.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_63324.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_63459.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_63530.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_63983.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_64000.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_64205.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_64371.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_65011.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_162_159_198_2_443_192_168_31_76_65225.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter2_20260616_020231_192_168_31_76_57190_52_192_46_121_443.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "52.192.46.121",
+    "peer16": "52.192",
+    "peer24": "52.192.46",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class1_Masque_iter2_20260616_020231_192_168_31_76_62227_54_250_40_42_443.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "54.250.40.42",
+    "peer16": "54.250",
+    "peer24": "54.250.40",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_49672.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_50061.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_50213.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_50470.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_50861.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_51302.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_51350.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_51537.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_52703.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_53096.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_53223.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_53401.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_53474.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_53614.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_53913.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_54162.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_54254.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_54306.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_54713.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_54906.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_54918.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_54946.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_55144.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_55526.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_55843.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_56063.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_56172.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_56227.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_56385.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_57207.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_57335.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_58037.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_59193.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_59462.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_60166.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_60378.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_60635.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_60846.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_61012.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_61176.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_61489.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_61549.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_61689.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_62038.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_62369.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_62601.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_63061.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_63159.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_64693.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_64979.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_65076.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_162_159_198_2_443_192_168_31_76_65477.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter3_20260616_024916_192_168_31_76_52560_35_73_126_78_443.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "35.73.126.78",
+    "peer16": "35.73",
+    "peer24": "35.73.126",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class1_Masque_iter3_20260616_024916_192_168_31_76_53622_35_74_138_212_443.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "35.74.138.212",
+    "peer16": "35.74",
+    "peer24": "35.74.138",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class1_Masque_iter3_20260616_024916_192_168_31_76_61361_52_196_128_139_443.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "52.196.128.139",
+    "peer16": "52.196",
+    "peer24": "52.196.128",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_49163.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_50238.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_50608.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_50781.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_50836.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_50841.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_50860.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_50999.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_51677.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_52394.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_52870.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_52916.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_53244.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_53288.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_54050.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_54545.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_54676.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_55102.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_55181.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_55444.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_56506.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_57075.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_57582.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_57722.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_57859.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_58150.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_58325.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_58723.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_58769.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_59209.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_59305.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_59561.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_59903.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_60413.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_60966.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_61634.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_61720.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_61780.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_62080.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_62320.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_62419.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_63291.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_63386.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_63465.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_63710.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_63918.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_64171.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_64344.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_64382.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_64425.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_64591.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_162_159_198_2_443_192_168_31_76_64797.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter4_20260616_033553_192_168_31_76_56014_52_192_46_121_443.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "52.192.46.121",
+    "peer16": "52.192",
+    "peer24": "52.192.46",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class1_Masque_iter4_20260616_033553_192_168_31_76_64341_54_250_40_42_443.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "54.250.40.42",
+    "peer16": "54.250",
+    "peer24": "54.250.40",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_49324.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_49989.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_50143.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_50195.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_50577.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_50656.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_50678.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_51023.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_51466.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_52267.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_52453.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_52602.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_52824.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_53228.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_53513.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_53535.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_53804.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_54215.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_55454.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_55528.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_55721.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_55840.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_55901.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_56134.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_57050.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_57263.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_57488.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_57797.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_57858.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_58605.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_58986.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_59098.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_59484.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_59598.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_59926.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_60332.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_60779.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_60938.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_61084.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_61280.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_61383.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_61935.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_62351.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_62901.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_62921.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_63109.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_63946.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_64670.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_64993.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_65071.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_65324.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_162_159_198_2_443_192_168_31_76_65492.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "162.159.198.2",
+    "peer16": "162.159",
+    "peer24": "162.159.198",
+    "is_cf": true,
+    "is_warp_entry": true
+  },
+  "class1_Masque_iter5_20260616_042318_192_168_31_76_51683_35_74_138_212_443.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "35.74.138.212",
+    "peer16": "35.74",
+    "peer24": "35.74.138",
+    "is_cf": false,
+    "is_warp_entry": false
+  },
+  "class1_Masque_iter5_20260616_042318_192_168_31_76_52599_35_74_58_174_443.pcap": {
+    "label": 1,
+    "name": "Masque",
+    "peer": "35.74.58.174",
+    "peer16": "35.74",
+    "peer24": "35.74.58",
+    "is_cf": false,
+    "is_warp_entry": false
+  }
+}

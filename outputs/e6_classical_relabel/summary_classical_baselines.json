@@ -1,0 +1,82 @@
+{
+  "raw_first20_LogReg": {
+    "n_features": 40,
+    "cv_mean": 99.8,
+    "cv_std": 0.4,
+    "oof_acc": 99.8,
+    "auc": 0.9975,
+    "tpr": 0.9961,
+    "fpr": 0.0
+  },
+  "raw_first20_RandomForest": {
+    "n_features": 40,
+    "cv_mean": 100.0,
+    "cv_std": 0.0,
+    "oof_acc": 100.0,
+    "auc": 1.0,
+    "tpr": 1.0,
+    "fpr": 0.0
+  },
+  "len24_first20_RandomForest": {
+    "n_features": 24,
+    "cv_mean": 100.0,
+    "cv_std": 0.0,
+    "oof_acc": 100.0,
+    "auc": 1.0,
+    "tpr": 1.0,
+    "fpr": 0.0
+  },
+  "len24_first20_LogReg": {
+    "n_features": 24,
+    "cv_mean": 100.0,
+    "cv_std": 0.0,
+    "oof_acc": 100.0,
+    "auc": 1.0,
+    "tpr": 1.0,
+    "fpr": 0.0
+  },
+  "raw_first50_LogReg": {
+    "n_features": 100,
+    "cv_mean": 98.41,
+    "cv_std": 1.02,
+    "oof_acc": 98.41,
+    "auc": 0.9792,
+    "tpr": 0.9961,
+    "fpr": 0.0286
+  },
+  "raw_first50_RandomForest": {
+    "n_features": 100,
+    "cv_mean": 100.0,
+    "cv_std": 0.0,
+    "oof_acc": 100.0,
+    "auc": 1.0,
+    "tpr": 1.0,
+    "fpr": 0.0
+  },
+  "len24_first50_RandomForest": {
+    "n_features": 24,
+    "cv_mean": 100.0,
+    "cv_std": 0.0,
+    "oof_acc": 100.0,
+    "auc": 1.0,
+    "tpr": 1.0,
+    "fpr": 0.0
+  },
+  "len24_first50_LogReg": {
+    "n_features": 24,
+    "cv_mean": 100.0,
+    "cv_std": 0.0,
+    "oof_acc": 100.0,
+    "auc": 1.0,
+    "tpr": 1.0,
+    "fpr": 0.0
+  },
+  "_meta": {
+    "n": 504,
+    "n_masque": 259,
+    "n_direct": 245,
+    "cv": "StratifiedKFold(5, shuffle=True, random_state=42) over all 504 sessions",
+    "note": "每会话恰好 1 条流, 故 5 折即会话级切分; 折间站点重叠, 不度量跨站点泛化",
+    "purpose": "为论文引用的 raw-100 LogReg 与 24-stat RF 两个数字提供可复现产出"
+  }
+}

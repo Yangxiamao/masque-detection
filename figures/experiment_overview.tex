@@ -1,0 +1,352 @@
+% =============================================================================
+%  Experimental-design overview -- paper_conf (ICOIN), full-width figure*.
+%  v3 (2026-10-12): IEEE type sizes (9 pt main, 8 pt floor), equal-size top
+%  panels with one short label each; details moved to the caption.
+%
+%  Usage (the host supplies caption + label):
+%      \begin{figure*}[t]
+%      \centering
+%      \input{../figs/experiment_overview}
+%      \caption{...}\label{fig:overview}
+%      \end{figure*}
+%
+%  Suggested caption (carries the details the drawing leaves out):
+%      Experimental design. Upper row (Sec. III): each visit, captured at the
+%      client with WARP toggled over 100 domains, becomes one bidirectional
+%      flow (first 50 packets, addresses replaced by direction tags);
+%      detectors read four channels of the first 20 packets (header bytes of
+%      the first five) and are retrained on every fold of one fixed
+%      session-level stratified 5-fold split; each condition is compared with
+%      its baseline by an exact McNemar test on the discordant sessions b, c
+%      (Holm-corrected).  Lower row: the questions of Secs. IV, V and VI;
+%      every condition changes only the dataset transform T.  Coloured cell:
+%      channel present; grey: removed.
+%
+%  Host preamble must provide:  \usepackage{tikz}  \usetikzlibrary{arrows.meta}
+%  \usepackage{amsmath} (\boldsymbol)  \usepackage{amssymb} (\checkmark,
+%  \circlearrowleft) -- all already loaded by paper_conf/masque_conf.tex.
+%
+%  TYPE SIZES (IEEE Author Center: "approximately 9-10 point at full size",
+%  consistent across graphics).  Drawn 1:1 at 18.0 cm, never scaled, so:
+%      \small       9 pt  -- titles, labels, all running text
+%      \footnotesize 8 pt -- tick-like labels only (c->s, train/test, 1, ...)
+%  Do not wrap this file in \resizebox: that would change every size above.
+%
+%  THIS IS A SCHEMATIC OF THE METHOD.  Bar heights, tick positions, dot
+%  clusters etc. are illustrative, not data.  No result numbers on purpose
+%  (the 11-flow relabel decision may still change them).  The only quantities
+%  are facts stated in Sec. III: 245 / 259 sessions, 5 folds, first 20
+%  packets, packets 51-100 (model reads 51-70, Sec. VI-A).  If those change
+%  in the text, change them here.
+%
+%  Colour roles (keep them separate):
+%    class    cfblue = Direct, tmato = MASQUE   (project palette, CLAUDE.md r.4)
+%    channel  chLen / chDir / chTime / chByte   (same hue wherever it appears)
+%    frame    xoPipe (pipeline headers), xoQ (question headers, T hub, bus)
+% =============================================================================
+\definecolor{cfblue}{RGB}{100,149,237}   % Direct
+\definecolor{tmato}{RGB}{255,99,71}      % MASQUE
+\definecolor{chLen}{RGB}{27,158,119}     % packet length      (teal)
+\definecolor{chDir}{RGB}{117,112,179}    % direction          (purple)
+\definecolor{chTime}{RGB}{222,160,0}     % inter-arrival time (amber)
+\definecolor{chByte}{RGB}{166,118,29}    % header bytes       (brown)
+\definecolor{xoPipe}{RGB}{84,110,122}    % pipeline frame     (blue-grey)
+\definecolor{xoQ}{RGB}{38,50,56}         % question frame     (charcoal)
+% panel with a coloured title bar, drawn at (0,0) of the current scope
+%   #1 width  #2 height  #3 title  #4 right-hand tag  #5 frame colour
+\newcommand{\xoPanel}[5]{%
+  \fill[white, rounded corners=2pt] (0,0) rectangle (#1,-#2);
+  \fill[#5, rounded corners=2pt] (0,0) rectangle (#1,-0.55);
+  \fill[#5] (0,-0.30) rectangle (#1,-0.55);
+  \draw[#5, line width=0.6pt, rounded corners=2pt] (0,0) rectangle (#1,-#2);
+  \node[anchor=west, text=white, font=\small\bfseries, inner sep=0pt]
+       at (0.13,-0.275) {#3};
+  \node[anchor=east, text=white, font=\small, inner sep=0pt]
+       at (#1-0.13,-0.275) {#4};}
+% the three-line description under every top-row picture: same position and
+% line count in all five panels (\strut fixes the first baseline)
+\newcommand{\xoLabel}[1]{\node[font=\small, align=center, anchor=north, inner sep=0pt]
+  at (1.575,-2.70) {\strut#1};}
+% one cell of a channel matrix: open (channel colour) or removed (grey)
+\newcommand{\xoOpen}[3]{\fill[#3!70, draw=#3!90!black, line width=0.3pt] (#1,#2) rectangle ++(0.30,-0.22);}
+\newcommand{\xoShut}[2]{\fill[black!7, draw=black!25, line width=0.3pt] (#1,#2) rectangle ++(0.30,-0.22);}
+\begin{tikzpicture}[
+  font=\small,
+  >={Stealth[length=4pt,width=3.2pt]},
+  flow/.style = {->, draw=xoPipe, line width=1pt},
+  bus/.style  = {draw=xoQ!80, line width=0.7pt},
+  txt/.style  = {anchor=north west, align=left, inner sep=0pt},
+  tick/.style = {font=\footnotesize, text=black!70},
+]
+
+% #############################################################################
+%  TOP ROW -- five equal panels (3.15 x 4.00 cm): title / picture / 3 lines
+%  picture band y = -0.70 .. -2.60, text from y = -2.70, flow arrows at -1.60
+% #############################################################################
+
+% ---------------------------------------------------------------- 1 Capture
+\begin{scope}[shift={(0,0)}]
+\xoPanel{3.15}{4.00}{1\enspace Capture}{}{xoPipe}
+% client laptop
+\fill[xoPipe!12, draw=xoPipe, line width=0.5pt, rounded corners=0.6pt]
+     (0.15,-1.08) rectangle (0.75,-1.45);
+\fill[xoPipe!45, draw=xoPipe, line width=0.5pt]
+     (0.05,-1.51) -- (0.85,-1.51) -- (0.79,-1.45) -- (0.11,-1.45) -- cycle;
+\node[tick, anchor=north] at (0.45,-1.56) {client};
+% origin server
+\foreach \yy in {-1.05,-1.20,-1.35}
+  \fill[black!15, draw=black!55, line width=0.4pt, rounded corners=0.5pt]
+       (2.45,\yy) rectangle (2.90,\yy-0.12);
+\node[tick, anchor=north] at (2.675,-1.52) {origin};
+% Direct: straight to the origin
+% (the paths are named by colour in the text below: blue Direct, red MASQUE)
+\draw[cfblue, line width=1.5pt, -{Stealth[length=5pt,width=4.5pt]}]
+     (0.82,-1.15) -- (2.40,-1.15);
+% MASQUE: through the WARP ingress
+\node[draw=tmato, fill=tmato!12, rounded corners=1pt, font=\footnotesize\bfseries,
+      text=tmato!80!black, inner sep=1.5pt] (warp) at (1.75,-2.00) {WARP};
+\draw[tmato, line width=1.5pt] (0.82,-1.42) .. controls (1.02,-2.00) .. (warp.west);
+\draw[tmato, line width=1.5pt, -{Stealth[length=5pt,width=4.5pt]}]
+     (warp.east) .. controls (2.30,-2.00) and (2.25,-1.42) .. (2.42,-1.41);
+% vantage point
+\draw[xoQ, densely dashed, line width=0.6pt] (0.98,-0.95) -- (0.98,-2.30);
+\node[tick, text=xoQ, anchor=south] at (0.98,-0.93) {tshark};
+\xoLabel{browse 100 domains\\
+         WARP off: {\color{cfblue!85!black}Direct}\\
+         WARP on: {\color{tmato!85!black}MASQUE}}
+\end{scope}
+
+% ------------------------------------------------------- 2 Bidirectional flow
+\begin{scope}[shift={(3.48,0)}]
+\xoPanel{3.15}{4.00}{2\enspace Bidirectional flow}{}{xoPipe}
+\node[tick, anchor=west] at (0.10,-0.98) {c$\to$s};
+\node[tick, anchor=west] at (0.10,-1.36) {s$\to$c};
+\foreach \x in {0.95,1.45,2.08,2.62}
+  \fill[black!60] (\x-0.045,-0.89) rectangle (\x+0.045,-1.07);
+\foreach \x in {1.14,1.28,1.70,1.84,2.36}
+  \fill[black!25] (\x-0.045,-1.27) rectangle (\x+0.045,-1.45);
+\draw[->, black!60, line width=0.6pt] (1.77,-1.55) -- (1.77,-1.82);
+\node[tick, anchor=west] at (0.10,-2.15) {flow};
+\draw[black!50, line width=0.5pt] (0.80,-2.15) -- (2.85,-2.15);
+\foreach \x in {0.95,1.45,2.08,2.62}
+  \fill[black!60] (\x-0.045,-2.15) rectangle (\x+0.045,-1.90);
+\foreach \x in {1.14,1.28,1.70,1.84,2.36}
+  \fill[black!25] (\x-0.045,-2.15) rectangle (\x+0.045,-2.40);
+\xoLabel{c$\to$s, s$\to$c merged into\\
+         one flow per session;\\
+         IPs\,$\to$\,direction tags}
+\end{scope}
+
+% ------------------------------------------------------- 3 Four input channels
+\begin{scope}[shift={(6.96,0)}]
+\xoPanel{3.15}{4.00}{3\enspace Four channels}{}{xoPipe}
+\draw[black!55, line width=0.5pt, ->] (0.10,-1.60) -- (2.36,-1.60);
+\node[tick, anchor=north] at (2.33,-1.63) {$t$};
+% signed packet sizes (illustrative): up = client->server, down = server->client
+\foreach \x/\h in {0.25/0.55, 0.42/-0.45, 0.55/-0.15, 0.85/0.14, 1.02/-0.50,
+                   1.15/-0.50, 1.47/0.13, 1.96/-0.42, 2.09/-0.14, 2.26/0.30}
+  \fill[chLen!75] (\x-0.04,-1.60) rectangle (\x+0.04,-1.60+\h);
+% time: an inter-arrival gap
+\draw[chTime, line width=0.8pt, |-|] (0.59,-1.38) -- (0.81,-1.38);
+\node[font=\small\bfseries, text=chTime!85!black, anchor=south] at (0.70,-1.34) {time};
+% len: the magnitude of one packet
+\draw[chLen!90!black, line width=0.8pt,
+      {Stealth[length=3pt]}-{Stealth[length=3pt]}] (1.26,-1.62) -- (1.26,-2.08);
+\node[font=\small\bfseries, text=chLen!85!black, anchor=west] at (1.30,-1.90) {len};
+% dir: the sign
+\draw[chDir, line width=0.9pt, -{Stealth[length=3.5pt]}] (2.55,-1.55) -- (2.55,-1.15);
+\draw[chDir, line width=0.9pt, -{Stealth[length=3.5pt]}] (2.67,-1.65) -- (2.67,-2.05);
+\node[font=\small\bfseries, text=chDir, anchor=south] at (2.61,-1.12) {dir};
+% bytes: header bytes of the first packets
+\draw[chByte, line width=0.8pt] (0.18,-2.12) -- (0.18,-2.18) -- (1.20,-2.18) -- (1.20,-2.12);
+\node[font=\small\bfseries, text=chByte!90!black, anchor=north] at (0.69,-2.20) {bytes};
+\xoLabel{first 20 packets give\\
+         {\color{chLen!85!black}len}, {\color{chDir}dir}, {\color{chTime!85!black}time}\\
+         $+$\,{\color{chByte!90!black}bytes} of 5 headers}
+\end{scope}
+
+% ------------------------------------------------------- T: the only variable
+\node[circle, fill=xoQ, text=white, minimum size=0.80cm, inner sep=0pt,
+      font=\Large] (T) at (10.735,-1.60) {$T$};
+\node[font=\footnotesize, align=center, text=xoQ, anchor=north] at (10.735,-2.06)
+     {dataset\\transform};
+
+% ------------------------------------------------------- 4 Retrain per fold
+\begin{scope}[shift={(11.36,0)}]
+\xoPanel{3.15}{4.00}{4\enspace Retrain per fold}{}{xoPipe}
+% 5-fold grid: rows = runs, diagonal = held-out fold
+\foreach \r in {0,...,4}
+  \foreach \c in {0,...,4}
+    \fill[xoPipe!22] (0.13+\c*0.18,-0.92-\r*0.17) rectangle ++(0.15,-0.13);
+\foreach \i in {0,...,4}
+  \fill[xoQ!85] (0.13+\i*0.18,-0.92-\i*0.17) rectangle ++(0.15,-0.13);
+\fill[xoPipe!22] (0.15,-2.02) rectangle ++(0.16,-0.13);
+\node[tick, anchor=west] at (0.33,-2.085) {train};
+\fill[xoQ!85] (1.02,-2.02) rectangle ++(0.16,-0.13);
+\node[tick, anchor=west] at (1.20,-2.085) {test};
+% the two detectors
+\node[draw=xoPipe, fill=xoPipe!10, rounded corners=1.5pt, inner sep=2pt,
+      minimum width=1.70cm, minimum height=0.44cm] (nm) at (2.13,-1.05) {NetMamba+};
+\node[draw=xoPipe, fill=xoPipe!10, rounded corners=1.5pt, inner sep=2pt,
+      minimum width=1.70cm, minimum height=0.44cm] (rf) at (2.13,-1.62) {RF};
+\draw[->, xoPipe, line width=0.7pt] (1.04,-1.22) -- (nm.west);
+\draw[->, xoPipe, line width=0.7pt] (1.04,-1.42) -- (rf.west);
+% 2026-10-15 prof. round 3 #1: corrected labels (11 teardown flows -> Direct).
+\xoLabel{{\color{cfblue!85!black}245} $+$ {\color{tmato!85!black}259} sessions\\
+         5 session-level folds;\\
+         fresh model per fold}
+\end{scope}
+
+% ------------------------------------------------------- 5 Paired test
+\begin{scope}[shift={(14.84,0)}]
+\xoPanel{3.15}{4.00}{5\enspace Paired test}{}{xoPipe}
+% McNemar 2x2: only the discordant cells b, c matter
+\node[tick] at (1.95,-0.86) {condition};
+\node[tick] at (1.71,-1.10) {$\checkmark$};
+\node[tick] at (2.19,-1.10) {$\times$};
+\node[tick, rotate=90] at (0.87,-1.68) {baseline};
+\node[tick] at (1.23,-1.48) {$\checkmark$};
+\node[tick] at (1.23,-1.88) {$\times$};
+\fill[xoQ!15] (1.95,-1.28) rectangle (2.43,-1.68);
+\fill[xoQ!15] (1.47,-1.68) rectangle (1.95,-2.08);
+\draw[black!45, line width=0.5pt] (1.47,-1.28) rectangle (2.43,-2.08);
+\draw[black!45, line width=0.5pt] (1.95,-1.28) -- (1.95,-2.08);
+\draw[black!45, line width=0.5pt] (1.47,-1.68) -- (2.43,-1.68);
+\node[text=black!50] at (1.71,-1.48) {$a$};
+\node at (2.19,-1.48) {$\boldsymbol{b}$};
+\node at (1.71,-1.88) {$\boldsymbol{c}$};
+\node[text=black!50] at (2.19,-1.88) {$d$};
+\xoLabel{out-of-fold accuracy;\\
+         McNemar vs.\ baseline\\
+         on $b$ and $c$ (Holm)}
+\end{scope}
+
+% ---------------------------------------------------- pipeline arrows
+\draw[flow] (3.15,-1.60) -- (3.48,-1.60);
+\draw[flow] (6.63,-1.60) -- (6.96,-1.60);
+\draw[flow] (10.11,-1.60) -- (T.west);
+\draw[flow] (T.east) -- (11.36,-1.60);
+\draw[flow] (14.51,-1.60) -- (14.84,-1.60);
+
+% #############################################################################
+%  BUS -- every condition is one T; folds and settings stay fixed
+% #############################################################################
+\draw[bus] (2.925,-4.50) -- (15.075,-4.50);
+\foreach \x in {2.925,9.0,15.075} \draw[bus] (\x,-4.85) -- (\x,-4.50);
+\draw[bus, -{Stealth[length=6pt,width=5pt]}] (10.735,-4.50) -- (10.735,-2.80);
+\node[fill=white, inner sep=2pt, font=\small\itshape, text=xoQ]
+     at (5.96,-4.50) {only $T$ changes between conditions};
+\node[fill=white, inner sep=2pt, font=\small\itshape, text=xoQ]
+     at (12.905,-4.50) {folds and settings fixed};
+
+% #############################################################################
+%  BOTTOM ROW -- the three questions (5.85 x 4.60 cm each).  Section numbers
+%  live in the caption: "Sec. V" does not fit beside the Q2 title at 9 pt.
+% #############################################################################
+
+% ---------------------------------------------------------------- Q1
+\begin{scope}[shift={(0,-4.85)}]
+\xoPanel{5.85}{4.60}{Q1\enspace Is the signal redundant?}{}{xoQ}
+% column heads (shared by both matrices)
+\foreach \x in {0.55,3.40}
+  \foreach \c/\col/\nm in {0/chLen/len,1/chDir/dir,2/chTime/time,3/chByte/bytes}
+    \node[rotate=90, anchor=west, font=\footnotesize, text=\col!85!black, inner sep=0.5pt]
+         at (\x+\c*0.34+0.15,-1.22) {\nm};
+% drop one: the diagonal is removed
+\foreach \c/\col in {0/chLen,1/chDir,2/chTime,3/chByte}
+  \foreach \r in {0,...,3}
+    {\ifnum\r=\c \xoShut{0.55+\c*0.34}{-1.27-\r*0.26}
+     \else \xoOpen{0.55+\c*0.34}{-1.27-\r*0.26}{\col}\fi}
+\node[align=center, anchor=north] at (1.21,-2.42) {drop one\\$\to$\,\emph{necessary?}};
+% keep one: only the diagonal is present
+\foreach \c/\col in {0/chLen,1/chDir,2/chTime,3/chByte}
+  \foreach \r in {0,...,3}
+    {\ifnum\r=\c \xoOpen{3.40+\c*0.34}{-1.27-\r*0.26}{\col}
+     \else \xoShut{3.40+\c*0.34}{-1.27-\r*0.26}\fi}
+\node[align=center, anchor=north] at (4.06,-2.42) {keep one\\$\to$\,\emph{sufficient?}};
+\draw[black!20, line width=0.4pt, densely dotted] (0.12,-3.28) -- (5.73,-3.28);
+% timing jitter: the client's sub-100 us structure is perturbed
+\node[tick, anchor=east] at (1.00,-3.60) {client};
+\node[tick, anchor=east] at (1.00,-4.10) {$+\sigma$};
+\draw[black!40, line width=0.5pt] (1.05,-3.72) -- (2.65,-3.72);
+\draw[black!40, line width=0.5pt] (1.05,-4.22) -- (2.65,-4.22);
+\foreach \x in {1.15,1.21,1.27,1.80,1.86,2.35,2.41}
+  \draw[chTime, line width=1pt] (\x,-3.72) -- (\x,-3.48);
+\foreach \x in {1.10,1.30,1.42,1.72,1.98,2.30,2.55}
+  \draw[chTime, line width=1pt] (\x,-4.22) -- (\x,-3.98);
+\node[txt] at (2.95,-3.52) {\emph{client-only timing?}\\add timing jitter};
+\end{scope}
+
+% ---------------------------------------------------------------- Q2
+\begin{scope}[shift={(6.075,-4.85)}]
+\xoPanel{5.85}{4.60}{Q2\enspace Does a defense survive retraining?}{}{xoQ}
+% defense ladder: row r is removed from column r+1 on
+\foreach \c/\nm in {0/none,1/pad,2/{$+$shape},3/{$-$sign},4/{$+$align}}
+  \node[tick, anchor=south] at (1.45+\c*0.85+0.385,-1.10) {\nm};
+\foreach \r/\col/\nm in {0/chLen/len,1/chTime/time,2/chDir/dir,3/chByte/handshake}
+  {\node[tick, anchor=east, text=\col!85!black] at (1.38,-1.16-\r*0.27-0.11) {\nm};
+   \foreach \c in {0,...,4}
+     {\pgfmathtruncatemacro{\shut}{\c>\r ? 1 : 0}%
+      \ifnum\shut=1
+        \fill[black!7, draw=black!25, line width=0.3pt] (1.45+\c*0.85,-1.16-\r*0.27) rectangle ++(0.77,-0.22);
+      \else
+        \fill[\col!70, draw=\col!90!black, line width=0.3pt] (1.45+\c*0.85,-1.16-\r*0.27) rectangle ++(0.77,-0.22);
+      \fi}}
+% detector: trained on clean data vs. retrained on defended data
+\node[draw=xoQ, rounded corners=3pt, inner sep=2.5pt] at (1.345,-2.75) {clean-trained};
+\node at (2.675,-2.75) {vs.};
+\node[draw=xoQ, fill=xoQ!10, rounded corners=3pt, inner sep=2.5pt, font=\small\itshape]
+     at (4.255,-2.75) {adv.\ retrained $\circlearrowleft$};
+% who is defended: both classes (padded = equal bars) vs. MASQUE only
+\foreach \k in {0,...,3}
+  {\fill[cfblue] (0.97+\k*0.12,-3.75) rectangle ++(0.08,0.32);
+   \fill[tmato]  (1.53+\k*0.12,-3.75) rectangle ++(0.08,0.32);}
+\node[align=center, anchor=north] at (1.45,-3.80) {both classes\\{\footnotesize (normalization)}};
+\node at (2.90,-3.60) {vs.};
+\foreach \k/\h in {0/0.12,1/0.30,2/0.18,3/0.32}
+  {\fill[cfblue] (3.87+\k*0.12,-3.75) rectangle ++(0.08,\h);
+   \fill[tmato]  (4.43+\k*0.12,-3.75) rectangle ++(0.08,0.32);}
+\node[align=center, anchor=north] at (4.35,-3.80) {MASQUE only\\{\footnotesize (deployment)}};
+\end{scope}
+
+% ---------------------------------------------------------------- Q3
+\begin{scope}[shift={(12.15,-4.85)}]
+\xoPanel{5.85}{4.60}{Q3\enspace Is it something else?}{}{xoQ}
+% (a) connection setup: the window is packets 51-100 and, as in every window,
+%     the model reads its first 20 (51-70).  2026-10-16 prof. round 5 #2: was
+%     "packets 51--100 only" with all five cells dark, which read as a 50-packet
+%     model input.  Now: 51-70 dark (model input), 71-100 light, window outlined.
+\foreach \k in {0,...,9}
+  \fill[black!12, draw=black!35, line width=0.3pt] (0.12+\k*0.19,-1.12) rectangle ++(0.17,-0.22);
+\foreach \k in {0,1}
+  \fill[black!50, draw=black!35, line width=0.3pt] (0.12+\k*0.19,-1.12) rectangle ++(0.17,-0.22);
+\foreach \k in {7,8,9}
+  \fill[xoQ!12, draw=xoQ!60, line width=0.3pt] (0.12+\k*0.19,-1.12) rectangle ++(0.17,-0.22);
+\foreach \k in {5,6}
+  \fill[xoQ!75, draw=xoQ, line width=0.3pt] (0.12+\k*0.19,-1.12) rectangle ++(0.17,-0.22);
+\draw[xoQ, line width=0.6pt] (1.055,-1.095) rectangle (2.025,-1.365);
+\node[tick, anchor=south west, inner sep=1pt] at (0.10,-1.10) {handshake};
+\node[tick, anchor=north] at (0.205,-1.39) {1};
+\node[tick, anchor=north, text=xoQ] at (1.25,-1.39) {51--70};
+\node[txt] at (2.25,-0.74) {\emph{connection setup?}\\window: packets 51--100,\\model reads its first 20};
+\draw[black!20, line width=0.4pt, densely dotted] (0.12,-1.95) -- (5.73,-1.95);
+% (b) destination fingerprint: hold out a destination group
+\foreach \cx/\cy in {0.30/-2.58, 0.75/-2.66, 1.21/-2.56, 1.70/-2.64}
+  \foreach \dx/\dy in {-0.09/0.06, 0.08/0.08, 0.00/-0.07, 0.11/-0.05}
+    \fill[cfblue] (\cx+\dx,\cy+\dy) circle (0.05);
+\draw[xoQ, densely dashed, line width=0.6pt, rounded corners=1pt] (1.02,-2.38) rectangle (1.42,-2.74);
+\node[tick, text=xoQ, anchor=south, inner sep=1pt] at (1.22,-2.37) {held out};
+\node[tick, anchor=north] at (1.00,-2.80) {Direct, by /16};
+\node[txt] at (2.25,-2.27) {\emph{destination fingerprint?}\\held-out destinations};
+\draw[black!20, line width=0.4pt, densely dotted] (0.12,-3.28) -- (5.73,-3.28);
+% (c) WARP constants: normalise C1-C3
+\foreach \k/\nm in {0/{C1 max size},1/{C2 min size},2/{C3 Retry}}
+  {\draw[black!40, line width=0.9pt] (1.75,-3.62-\k*0.28) -- (2.15,-3.62-\k*0.28);
+   \fill[xoQ] (1.95,-3.62-\k*0.28) circle (0.065);
+   \node[tick, anchor=west] at (0.10,-3.62-\k*0.28) {\nm};}
+\node[txt] at (2.35,-3.56) {\emph{WARP constants?}\\normalize C1--C3};
+\end{scope}
+
+\end{tikzpicture}%   <- keep the %: at 18 cm the picture nearly fills \textwidth,
+%                       and a trailing space would spill onto an empty line
+%                       (costs ~0.55 cm above the caption).

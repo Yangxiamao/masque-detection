@@ -1,0 +1,38 @@
+{
+  "threshold_s": 0.0001,
+  "n_flows": 504,
+  "window_50": {
+    "all": {
+      "gaps": 24696,
+      "below_100us": 13098,
+      "share": 0.5304
+    },
+    "Direct": {
+      "gaps": 12005,
+      "below_100us": 7153,
+      "share": 0.5958
+    },
+    "Masque": {
+      "gaps": 12691,
+      "below_100us": 5945,
+      "share": 0.4684
+    }
+  },
+  "first_20": {
+    "all": {
+      "gaps": 9576,
+      "below_100us": 4387,
+      "share": 0.4581
+    },
+    "Direct": {
+      "gaps": 4655,
+      "below_100us": 2144,
+      "share": 0.4606
+    },
+    "Masque": {
+      "gaps": 4921,
+      "below_100us": 2243,
+      "share": 0.4558
+    }
+  }
+}

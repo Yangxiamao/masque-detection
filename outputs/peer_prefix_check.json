@@ -1,0 +1,46 @@
+{
+  "WARP_off": {
+    "n": 234,
+    "peer_in_162.159": 0,
+    "peer_outside": 234,
+    "distinct_peers_in_162.159": []
+  },
+  "WARP_on": {
+    "n": 270,
+    "peer_in_162.159": 259,
+    "peer_outside": 11,
+    "distinct_peers_in_162.159": [
+      "162.159.198.2"
+    ]
+  },
+  "WARP_on_outside_equals_label_noise_flows": true,
+  "n_label_noise_flows": 11,
+  "WARP_on_outside_files": [
+    "class1_Masque_iter1_20260616_011456_160_79_104_10_443_192_168_31_76_52398.pcap",
+    "class1_Masque_iter1_20260616_011456_192_168_31_76_61319_34_195_221_192_443.pcap",
+    "class1_Masque_iter2_20260616_020231_192_168_31_76_57190_52_192_46_121_443.pcap",
+    "class1_Masque_iter2_20260616_020231_192_168_31_76_62227_54_250_40_42_443.pcap",
+    "class1_Masque_iter3_20260616_024916_192_168_31_76_52560_35_73_126_78_443.pcap",
+    "class1_Masque_iter3_20260616_024916_192_168_31_76_53622_35_74_138_212_443.pcap",
+    "class1_Masque_iter3_20260616_024916_192_168_31_76_61361_52_196_128_139_443.pcap",
+    "class1_Masque_iter4_20260616_033553_192_168_31_76_56014_52_192_46_121_443.pcap",
+    "class1_Masque_iter4_20260616_033553_192_168_31_76_64341_54_250_40_42_443.pcap",
+    "class1_Masque_iter5_20260616_042318_192_168_31_76_51683_35_74_138_212_443.pcap",
+    "class1_Masque_iter5_20260616_042318_192_168_31_76_52599_35_74_58_174_443.pcap"
+  ],
+  "note": "labels in data.json are capture-run labels (before relabeling); peer = endpoint outside 192.168.0.0/16 in the pcap file name",
+  "relabelled": {
+    "Direct": {
+      "n": 245,
+      "distinct_peers": 103,
+      "distinct_slash16": 35,
+      "peer_in_162.159": 0
+    },
+    "MASQUE": {
+      "n": 259,
+      "distinct_peers": 1,
+      "distinct_slash16": 1,
+      "peer_in_162.159": 259
+    }
+  }
+}

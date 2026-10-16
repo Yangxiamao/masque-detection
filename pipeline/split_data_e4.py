@@ -42,6 +42,10 @@ from analyze_peer_groups import load_flows  # 复用对端解析, 不复制实�
 
 FEAT_DIR = os.path.join(_ROOT, "data", "processed", "quic_vs_masque_bi_feat")
 OUT_ROOT = os.path.join(_ROOT, "data", "processed", "e4_groups")
+# [2026-10-12 ICOIN r2 #3] MASQUE_RELABEL=1 -> e4_groups_relabel / e4_cloudflare_relabel
+sys.path.insert(0, os.path.join(_ROOT, "pipeline"))
+import relabel_util  # noqa: E402
+OUT_ROOT = relabel_util.out_dir(OUT_ROOT)
 SEED = 0
 VALID_RATIO = 0.1
 MIN_GROUP = 8  # E4-B 只对 >= 8 条流的 Direct /16 组做 leave-one-group-out
@@ -170,6 +174,11 @@ def main():
     rows = load_flows()
     by_key = load_feat_items()
     assert len(rows) == len(by_key) == 504, f"流数不符: {len(rows)} / {len(by_key)}"
+    if relabel_util.RELABEL:   # [2026-10-12 ICOIN r2 #3] 11 条噪声流按 Direct 参与分组
+        for r in rows:
+            if relabel_util.is_noise(r["key"]):
+                r["label"], r["name"] = 0, "Direct"
+        relabel_util.relabel_items(list(by_key.values()))
 
     if args.all:
         d16 = collections.Counter(r["peer16"] for r in rows if r["name"] == "Direct")
@@ -182,7 +191,8 @@ def main():
 
     mans = [build(m, rows, by_key, args.out_root) for m in modes]
 
-    p = os.path.join(_ROOT, "outputs", "e4_cloudflare", "e4_datasets.json")
+    p = os.path.join(relabel_util.out_dir(os.path.join(_ROOT, "outputs", "e4_cloudflare")),
+                     "e4_datasets.json")
     os.makedirs(os.path.dirname(p), exist_ok=True)
     with open(p, "w", encoding="utf-8") as f:
         json.dump(mans, f, indent=2, ensure_ascii=False)

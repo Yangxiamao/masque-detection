@@ -9,6 +9,7 @@ data/processed/*
 !data/processed/quic_vs_masque_bi_feat/
 !data/processed/e6_head448_feat/
 !data/processed/e6_steady_feat/
+!data/processed/e6_steady_cli_feat/
 
 # Model weights and training byproducts
 *.pth

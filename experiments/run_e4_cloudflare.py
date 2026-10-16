@@ -42,6 +42,22 @@ from run_kfold_e3 import wilson_ci, prf, holm  # 复用统计工具, 不复制�
 
 DATA_ROOT = os.path.join(_ROOT, "data", "processed", "e4_groups")
 OUT_ROOT = os.path.join(_ROOT, "outputs", "e4_cloudflare")
+# [2026-10-12 ICOIN r2 #3] MASQUE_RELABEL=1 -> e4_groups_relabel / e4_cloudflare_relabel / e3r_kfold
+sys.path.insert(0, os.path.join(_ROOT, "pipeline"))
+import relabel_util  # noqa: E402
+DATA_ROOT = relabel_util.out_dir(DATA_ROOT)
+OUT_ROOT = relabel_util.out_dir(OUT_ROOT)
+E3_SUMMARY = os.path.join(_ROOT, "outputs",
+                          "e3r_kfold" if relabel_util.RELABEL else "e3_kfold", "summary_e3_kfold.json")
+# [2026-10-12 ICOIN r2 §7.5] MASQUE_SELRULE=acc_loss -> 新选模规则; 输出再加 _sel 后缀。
+# 清单 (e4_datasets.json / peer_groups.json) 由 split_data_e4.py 写在原输出目录, 照旧从那里读。
+# 未设置时 MANIFEST_ROOT == OUT_ROOT, 行为不变。
+import selrule_util  # noqa: E402
+MANIFEST_ROOT = OUT_ROOT
+OUT_ROOT = selrule_util.out_dir(OUT_ROOT)
+if selrule_util.SELRULE:
+    # Full 只以 --only full 跑过, 汇总文件名是 summary_only_full.json
+    E3_SUMMARY = os.path.join(selrule_util.out_dir(os.path.dirname(E3_SUMMARY)), "summary_only_full.json")
 
 # 超参: 与 E1/E3 (§3.4) 严格一致, 单变量只有数据集构造方式
 BYTE_PACKET_NUM = 5
@@ -55,12 +71,12 @@ SEED = 0
 INTERVAL_ENCODING = "log10_decade"   # ⚠️ 必须显式传, 默认 sigmoid_log 有缺陷
 
 CF_GROUPS = {"104.16", "104.17", "104.18", "104.19", "172.64", "170.114"}
-MAJORITY_BASELINE = 270 / 504
+MAJORITY_BASELINE = (259 if relabel_util.RELABEL else 270) / 504   # 改标后 MASQUE 259 条
 
 
 def runs_from_manifests():
     """从 pipeline/split_data_e4.py 落盘的清单读运行列表, 保证与实际造出的数据集一致。"""
-    p = os.path.join(OUT_ROOT, "e4_datasets.json")
+    p = os.path.join(MANIFEST_ROOT, "e4_datasets.json")
     if not os.path.exists(p):
         sys.exit(f"找不到 {p} —— 先跑 python pipeline/split_data_e4.py --all")
     with open(p, encoding="utf-8") as f:
@@ -77,6 +93,8 @@ def train(name, epochs, cuda_idx=0):
     output_dir = os.path.join(OUT_ROOT, name)
     ckpt_path = os.path.join(_ROOT, "NetMambaPlus", "dataset", "checkpoints",
                              "pre-trained checkpoints", "fuse3_mamba.pth")
+    if selrule_util.SELRULE:
+        selrule_util.clear_run_dir(output_dir)   # log.txt 追加写入; 只清 *_sel 目录
     os.makedirs(output_dir, exist_ok=True)
 
     with open(os.path.join(data_dir, "metadata.json"), encoding="utf-8") as f:
@@ -86,7 +104,7 @@ def train(name, epochs, cuda_idx=0):
           f"  output = {output_dir}\n{'='*74}", flush=True)
 
     cmd = f"""
-python -u "{os.path.normpath(os.path.join(_ROOT, "NetMambaPlus", "src", "fine-tune.py"))}" \\
+python -u "{os.path.normpath(selrule_util.train_entry())}" \\
     --num_packet {BYTE_PACKET_NUM} \\
     --num_packet_byte {HEADER_BYTE_NUM + PAYLOAD_BYTE_NUM} \\
     --seq_len {SEQ_PACKET_NUM} \\
@@ -121,6 +139,9 @@ def dump(name):
     光有混淆矩阵也够算, 但逐流预测能进一步看错在哪个 /16 组。"""
     d = os.path.join(DATA_ROOT, name)
     o = os.path.join(OUT_ROOT, name)
+    if selrule_util.SELRULE:
+        # test_stats.json 对应原规则 ckpt -> 先 dump 它并核对, 再 dump acc_loss 为 preds.json
+        return selrule_util.dump_pair(d, o, SEED)
     proc = subprocess.run(
         [sys.executable, os.path.join(_ROOT, "experiments", "eval_dump_preds.py"),
          "--data_dir", d, "--ckpt", os.path.join(o, "checkpoint-best.pth"),
@@ -130,9 +151,11 @@ def dump(name):
 
 
 def drop_ckpt(name, keep):
-    p = os.path.join(OUT_ROOT, name, "checkpoint-best.pth")
-    if not keep and os.path.exists(p):
-        os.remove(p)   # 22.5 MB/次
+    # keep 只保留主结果用的那一个 ckpt (sel 模式下 = ckpt-acc_loss.pth)
+    for ck in selrule_util.all_ckpts():
+        p = os.path.join(OUT_ROOT, name, ck)
+        if not (keep and ck == selrule_util.ckpt_name()) and os.path.exists(p):
+            os.remove(p)   # 22.5 MB/次
 
 
 # --------------------------------------------------------------------------- #
@@ -189,7 +212,7 @@ def analyze(name, man, peer):
 
 def e3_reference():
     """E3 的 full 条件 OOF 混淆矩阵 -> 常规随机切分下的 Direct recall, 作参照。"""
-    p = os.path.join(_ROOT, "outputs", "e3_kfold", "summary_e3_kfold.json")
+    p = E3_SUMMARY
     if not os.path.exists(p):
         return None
     with open(p, encoding="utf-8") as f:
@@ -218,7 +241,7 @@ def main():
         want = {s.strip() for s in args.only.split(",")}
         runs = [r for r in runs if r[0] in want]
 
-    with open(os.path.join(OUT_ROOT, "peer_groups.json"), encoding="utf-8") as f:
+    with open(os.path.join(MANIFEST_ROOT, "peer_groups.json"), encoding="utf-8") as f:
         peer = json.load(f)
 
     # ---------------- 训练 ----------------
@@ -227,11 +250,12 @@ def main():
         for i, (name, _man) in enumerate(runs, 1):
             o = os.path.join(OUT_ROOT, name)
             have = os.path.exists(os.path.join(o, "test_stats.json"))
-            have_preds = os.path.exists(os.path.join(o, "preds.json"))
+            have_preds = all(os.path.exists(os.path.join(o, p)) for p in selrule_util.pred_files())
             if have and have_preds and not args.force:
                 print(f"[{i}/{len(runs)}] 跳过已完成: {name}")
                 continue
-            if not (have and os.path.exists(os.path.join(o, "checkpoint-best.pth"))) or args.force:
+            if not (have and all(os.path.exists(os.path.join(o, c)) for c in selrule_util.dump_ckpts())) \
+                    or args.force:
                 print(f"[{i}/{len(runs)}] 训练 {name}")
                 train(name, args.epochs)
             if not dump(name):
@@ -308,6 +332,9 @@ def main():
             "单次采集 2026-06-16, 单一部署 WARP 2026.6.880.0",
         ],
     }
+    if selrule_util.SELRULE:
+        summary["selection_rule"] = selrule_util.RULE_DESC
+        summary["e3_full_reference_source"] = os.path.relpath(E3_SUMMARY, _ROOT)
     os.makedirs(OUT_ROOT, exist_ok=True)
     out_path = os.path.join(OUT_ROOT, "summary_e4.json")
     with open(out_path, "w", encoding="utf-8") as f:

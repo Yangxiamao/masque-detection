@@ -1,0 +1,144 @@
+{
+  "client (sigma=0)": {
+    "sigma_s": 0.0,
+    "n": 504,
+    "models": {
+      "RandomForest": {
+        "cv_mean": 97.62,
+        "cv_std": 2.31
+      },
+      "GradientBoosting": {
+        "cv_mean": 97.43,
+        "cv_std": 2.39
+      },
+      "LogisticRegression": {
+        "cv_mean": 96.23,
+        "cv_std": 1.93
+      }
+    },
+    "rf_oof_auc": 0.9986,
+    "importance_sub100us": 0.3828,
+    "top_features": {
+      "frac_10-100us": 0.223,
+      "frac_<10us": 0.1598,
+      "log_q25": 0.1458,
+      "pkt_rate": 0.0676,
+      "log_mean": 0.0674
+    }
+  },
+  "sigma=50us": {
+    "sigma_s": 5e-05,
+    "n": 504,
+    "models": {
+      "RandomForest": {
+        "cv_mean": 88.89,
+        "cv_std": 1.17
+      },
+      "GradientBoosting": {
+        "cv_mean": 89.28,
+        "cv_std": 1.18
+      },
+      "LogisticRegression": {
+        "cv_mean": 85.92,
+        "cv_std": 2.44
+      }
+    },
+    "rf_oof_auc": 0.9571,
+    "importance_sub100us": 0.0181,
+    "top_features": {
+      "log_max": 0.146,
+      "pkt_rate": 0.1429,
+      "duration": 0.1342,
+      "log_q75": 0.0787,
+      "log_mean": 0.0715
+    }
+  },
+  "sigma=200us": {
+    "sigma_s": 0.0002,
+    "n": 504,
+    "models": {
+      "RandomForest": {
+        "cv_mean": 88.5,
+        "cv_std": 1.59
+      },
+      "GradientBoosting": {
+        "cv_mean": 89.69,
+        "cv_std": 1.32
+      },
+      "LogisticRegression": {
+        "cv_mean": 84.33,
+        "cv_std": 3.01
+      }
+    },
+    "rf_oof_auc": 0.9519,
+    "importance_sub100us": 0.0204,
+    "top_features": {
+      "log_max": 0.1562,
+      "pkt_rate": 0.1505,
+      "duration": 0.1435,
+      "log_q75": 0.0834,
+      "log_q90": 0.0754
+    }
+  },
+  "sigma=1ms": {
+    "sigma_s": 0.001,
+    "n": 504,
+    "models": {
+      "RandomForest": {
+        "cv_mean": 89.49,
+        "cv_std": 3.68
+      },
+      "GradientBoosting": {
+        "cv_mean": 89.09,
+        "cv_std": 2.49
+      },
+      "LogisticRegression": {
+        "cv_mean": 85.13,
+        "cv_std": 4.83
+      }
+    },
+    "rf_oof_auc": 0.9469,
+    "importance_sub100us": 0.0091,
+    "top_features": {
+      "log_max": 0.1499,
+      "pkt_rate": 0.1465,
+      "duration": 0.1458,
+      "log_q75": 0.1079,
+      "log_mean": 0.0904
+    }
+  },
+  "sigma=5ms": {
+    "sigma_s": 0.005,
+    "n": 504,
+    "models": {
+      "RandomForest": {
+        "cv_mean": 83.13,
+        "cv_std": 2.95
+      },
+      "GradientBoosting": {
+        "cv_mean": 84.32,
+        "cv_std": 3.77
+      },
+      "LogisticRegression": {
+        "cv_mean": 85.9,
+        "cv_std": 2.96
+      }
+    },
+    "rf_oof_auc": 0.9182,
+    "importance_sub100us": 0.0092,
+    "top_features": {
+      "pkt_rate": 0.1141,
+      "log_max": 0.1116,
+      "duration": 0.11,
+      "log_q75": 0.1033,
+      "frac_1-10ms": 0.0921
+    }
+  },
+  "_meta": {
+    "note": "抖动 = 到达时刻加零均值高斯噪声后重排再差分; 见 pipeline/pcap_split/simulate_obfuscation_bi.py:make_tf_jitter",
+    "seq_len": 20,
+    "majority_baseline": 53.57,
+    "cv": "StratifiedKFold(5, shuffle=True, random_state=42) over all 504 sessions",
+    "caveat": "每会话 1 条流, 故 5 折 CV 即会话级; 但折间站点重叠, 不度量跨站点泛化"
+  }
+}

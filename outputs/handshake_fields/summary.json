@@ -1,0 +1,69 @@
+{
+  "WARP_off (capture run)": {
+    "n": 234,
+    "first_frame": [
+      [
+        1292,
+        234
+      ]
+    ],
+    "client_dcid_len": [
+      [
+        8,
+        234
+      ]
+    ],
+    "retry_first5": [
+      [
+        0,
+        234
+      ]
+    ]
+  },
+  "WARP_on, peer in 162.159 (MASQUE)": {
+    "n": 259,
+    "first_frame": [
+      [
+        1242,
+        259
+      ]
+    ],
+    "client_dcid_len": [
+      [
+        16,
+        259
+      ]
+    ],
+    "retry_first5": [
+      [
+        1,
+        258
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  "WARP_on, relabelled Direct (the 11)": {
+    "n": 11,
+    "first_frame": [
+      [
+        1292,
+        11
+      ]
+    ],
+    "client_dcid_len": [
+      [
+        8,
+        11
+      ]
+    ],
+    "retry_first5": [
+      [
+        0,
+        11
+      ]
+    ]
+  }
+}

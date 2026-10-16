@@ -34,6 +34,8 @@ import sys
 _ROOT = os.environ.get("MASQUE_ROOT") or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(_ROOT, "experiments"))
 
+import run_kfold_e3 as _e3  # noqa: E402
+import selrule_util  # noqa: E402
 from run_kfold_e3 import load_oof, summarize, train_fold, wilson_ci  # noqa: E402
 
 PROC = os.path.join(_ROOT, "data", "processed")
@@ -42,6 +44,15 @@ FOLD_ROOT = os.path.join(PROC, "e3_folds")
 ASSIGNMENT = os.path.join(_ROOT, "outputs", "e6_steady", "fold_assignment_448.json")
 SUMMARY = os.path.join(_ROOT, "outputs", "e6_steady", "summary_e6_steady.json")
 N_SPLITS = 5
+
+# [2026-10-13 ICOIN r2 §7.5] MASQUE_SELRULE=acc_loss -> 新选模规则: 训练/汇总写到 e3_kfold_sel 与
+# e6_steady_sel, 折数据与折分配照旧 (不重造)。11 条改标流都不足 100 包, 不在这 448 条里, 标签不受影响。
+# 未设置时恒等。
+OLD_OUT_ROOT = OUT_ROOT
+if selrule_util.SELRULE:
+    OUT_ROOT = selrule_util.out_dir(OUT_ROOT)
+    _e3.OUT_ROOT = OUT_ROOT   # train_fold / load_oof 读的是 run_kfold_e3 的模块全局
+    SUMMARY = os.path.join(selrule_util.out_dir(os.path.dirname(SUMMARY)), os.path.basename(SUMMARY))
 
 # (条件 id, 切流目录, 特征目录, 说明)
 CONDS = [
@@ -99,11 +110,19 @@ def stage_train(epochs):
     todo = [(cid, k) for cid, _, _, _ in CONDS for k in range(N_SPLITS)]
     for i, (cid, k) in enumerate(todo, 1):
         d = os.path.join(OUT_ROOT, cid, f"fold{k}")
-        if os.path.exists(os.path.join(d, "preds.json")):
+        if all(os.path.exists(os.path.join(d, p)) for p in selrule_util.pred_files()):
             print(f"[{i}/{len(todo)}] 跳过已完成 {cid} fold{k}")
             continue
         print(f"[{i}/{len(todo)}] 训练 {cid} fold{k}")
         train_fold(cid, k, 0, epochs)
+        if selrule_util.SELRULE:
+            # 原规则 ckpt -> preds_acc_first.json (核对 test_stats), acc_loss -> preds.json; 只留主 ckpt
+            if not selrule_util.dump_pair(os.path.join(FOLD_ROOT, cid, f"fold{k}"), d, 0):
+                sys.exit(f"!!! dump 失败: {cid} fold{k}")
+            for name in selrule_util.all_ckpts():
+                if name != selrule_util.ckpt_name():
+                    os.remove(os.path.join(d, name))
+            continue
         sh([sys.executable, os.path.join(_ROOT, "experiments", "eval_dump_preds.py"),
             "--data_dir", os.path.join(FOLD_ROOT, cid, f"fold{k}"),
             "--ckpt", os.path.join(d, "checkpoint-best.pth"),
@@ -154,6 +173,28 @@ def stage_summary():
 
     out["caveat"] = ("稳态段与头部段用同一批流、同一份折分配, 故配对; 但流集合 (448) "
                      "与主实验 (504) 不同, 不能把稳态段的数字直接与 98.02% 相减。")
+    if selrule_util.SELRULE:
+        # 旧规则对照 + 复现核对: 同一次训练里原规则 ckpt 的预测 vs 原目录 (e3_kfold/<cid>) 的预测
+        out["selection_rule"] = selrule_util.RULE_DESC
+        out["old_rule"], out["repro_acc_first_vs_old"], out["selected_epochs"] = {}, {}, {}
+        for cid, _, _, _ in CONDS:
+            old, first, sel = {}, {}, {"acc_first": [], "acc_loss": []}
+            for k in range(N_SPLITS):
+                with open(os.path.join(OLD_OUT_ROOT, cid, f"fold{k}", "preds.json"), encoding="utf-8") as f:
+                    old.update(json.load(f))
+                with open(os.path.join(OUT_ROOT, cid, f"fold{k}", "preds_acc_first.json"), encoding="utf-8") as f:
+                    first.update(json.load(f))
+                with open(os.path.join(OUT_ROOT, cid, f"fold{k}", "selrule.json"), encoding="utf-8") as f:
+                    s = json.load(f)["selected_epoch"]
+                sel["acc_first"].append(s["acc_first"])
+                sel["acc_loss"].append(s["acc_loss"])
+            out["old_rule"][cid] = summarize(old)
+            out["repro_acc_first_vs_old"][cid] = {
+                "n": len(old), "pred_mismatch": sum(first[x]["pred"] != old[x]["pred"] for x in old),
+                "max_abs_prob1_diff": max(abs(first[x]["prob1"] - old[x]["prob1"]) for x in old)}
+            out["selected_epochs"][cid] = sel
+            print(f"  [旧规则] {cid}: {out['old_rule'][cid]['acc']*100:.2f}%  复现核对 "
+                  f"{out['repro_acc_first_vs_old'][cid]}  epochs {sel}")
     os.makedirs(os.path.dirname(SUMMARY), exist_ok=True)
     with open(SUMMARY, "w", encoding="utf-8") as f:
         json.dump(out, f, indent=2, ensure_ascii=False)
@@ -166,7 +207,12 @@ def main():
     ap.add_argument("--epochs", type=int, default=30)
     args = ap.parse_args()
     if args.stage in ("all", "data"):
-        stage_data()
+        have = all(os.path.exists(os.path.join(FOLD_ROOT, c[0], f"fold{k}", "data-test.json"))
+                   for c in CONDS for k in range(N_SPLITS))
+        if selrule_util.SELRULE and have:
+            print(f"[sel] 复用已有折 {FOLD_ROOT}/{{steady,head448}}, 不重造")
+        else:
+            stage_data()
     if args.stage in ("all", "train"):
         stage_train(args.epochs)
     if args.stage in ("all", "summary"):

@@ -1,0 +1,373 @@
+{
+  "generated": "2026-10-12 21:37:03",
+  "n_splits": 5,
+  "hyperparams": {
+    "num_packet": 5,
+    "num_packet_byte": 320,
+    "seq_len": 20,
+    "stride_size": 4,
+    "batch_size": 16,
+    "epochs": 30,
+    "model": "fuse3_mamba_classifier",
+    "dataset_type": "byte_size_interval",
+    "size_key": "signed_sizes",
+    "interval_encoding": "log10_decade"
+  },
+  "reference": {
+    "fold_root": "/mnt/d/zemi/2026/dataset/data/processed/e3r_folds",
+    "majority_baseline_from_oof": 0.5138888888888888,
+    "note": "改标模式: 11 条流标为 Direct, 标签噪声天花板不适用"
+  },
+  "conditions": {
+    "c1": {
+      "n": 504,
+      "correct": 503,
+      "acc": 0.998015873015873,
+      "ci95": [
+        0.9888478085401478,
+        0.9996496669628193
+      ],
+      "cm": [
+        [
+          244,
+          1
+        ],
+        [
+          0,
+          259
+        ]
+      ],
+      "weighted_pre": 0.9980235042735042,
+      "weighted_rec": 0.9980158730158729,
+      "weighted_f1": 0.9980157557465262,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 100,
+          "acc": 0.9900990099009901
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 100,
+          "acc": 1.0
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        }
+      ],
+      "fold_accs": [
+        1.0,
+        0.9900990099009901,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fold_mean": 0.998019801980198,
+      "fold_std": 0.004427857381187707,
+      "condition": "c1",
+      "seed": 0,
+      "tag": "C1 MTU 归一化"
+    },
+    "c2": {
+      "n": 504,
+      "correct": 504,
+      "acc": 1.0,
+      "ci95": [
+        0.9924357124571619,
+        1.0000000000000002
+      ],
+      "cm": [
+        [
+          245,
+          0
+        ],
+        [
+          0,
+          259
+        ]
+      ],
+      "weighted_pre": 1.0,
+      "weighted_rec": 1.0,
+      "weighted_f1": 1.0,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 100,
+          "acc": 1.0
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        }
+      ],
+      "fold_accs": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fold_mean": 1.0,
+      "fold_std": 0.0,
+      "condition": "c2",
+      "seed": 0,
+      "tag": "C2 CID 归一化"
+    },
+    "c3": {
+      "n": 504,
+      "correct": 504,
+      "acc": 1.0,
+      "ci95": [
+        0.9924357124571619,
+        1.0000000000000002
+      ],
+      "cm": [
+        [
+          245,
+          0
+        ],
+        [
+          0,
+          259
+        ]
+      ],
+      "weighted_pre": 1.0,
+      "weighted_rec": 1.0,
+      "weighted_f1": 1.0,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 100,
+          "acc": 1.0
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        }
+      ],
+      "fold_accs": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fold_mean": 1.0,
+      "fold_std": 0.0,
+      "condition": "c3",
+      "seed": 0,
+      "tag": "C3 去 Retry 帧"
+    },
+    "c123": {
+      "n": 504,
+      "correct": 504,
+      "acc": 1.0,
+      "ci95": [
+        0.9924357124571619,
+        1.0000000000000002
+      ],
+      "cm": [
+        [
+          245,
+          0
+        ],
+        [
+          0,
+          259
+        ]
+      ],
+      "weighted_pre": 1.0,
+      "weighted_rec": 1.0,
+      "weighted_f1": 1.0,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 100,
+          "acc": 1.0
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        }
+      ],
+      "fold_accs": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fold_mean": 1.0,
+      "fold_std": 0.0,
+      "condition": "c123",
+      "seed": 0,
+      "tag": "C123 三常量全抹 ★E1 主指标"
+    },
+    "c123_nobytes": {
+      "n": 504,
+      "correct": 504,
+      "acc": 1.0,
+      "ci95": [
+        0.9924357124571619,
+        1.0000000000000002
+      ],
+      "cm": [
+        [
+          245,
+          0
+        ],
+        [
+          0,
+          259
+        ]
+      ],
+      "weighted_pre": 1.0,
+      "weighted_rec": 1.0,
+      "weighted_f1": 1.0,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 100,
+          "acc": 1.0
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        }
+      ],
+      "fold_accs": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fold_mean": 1.0,
+      "fold_std": 0.0,
+      "condition": "c123_nobytes",
+      "seed": 0,
+      "tag": "C123 + No-Bytes"
+    }
+  },
+  "mcnemar": [
+    {
+      "b_only_A_correct": 0,
+      "c_only_B_correct": 0,
+      "n_discordant": 0,
+      "p": 1.0,
+      "A": "c123",
+      "B": "c123_nobytes",
+      "acc_A": 1.0,
+      "acc_B": 1.0,
+      "p_holm": 1.0
+    }
+  ],
+  "caveats": [
+    "504 流 = 504 会话, 每会话恰好 1 条流 -> group 约束实际为空, 等价 StratifiedKFold",
+    "折间站点重叠 86.3%, 本实验不度量跨站点泛化 (那是 E4)",
+    "11 条标签噪声流构成 493/504 = 97.82% 的硬天花板",
+    "单次采集 2026-06-16, 单一部署 WARP 2026.6.880.0"
+  ],
+  "selection_rule": "acc_loss: valid acc 最高, 打平取 valid loss 最低 (experiments/finetune_selrule.py)"
+}

@@ -1,0 +1,164 @@
+{
+  "overlap_s": 19.97,
+  "up": {
+    "inner_n": 886,
+    "outer_n": 3258,
+    "matched": 757,
+    "matched_ovh43": 744,
+    "unmatched": 129,
+    "unmatched_by_reason": {
+      "edge": 1,
+      "coalesced": 87,
+      "late": 11,
+      "other": 30
+    },
+    "outer_packets_holding_coalesced_inner": 41,
+    "coalesce_k_hist": {
+      "2": 36,
+      "3": 5
+    },
+    "other_top_sizes": [
+      [
+        40,
+        12
+      ],
+      [
+        55,
+        5
+      ],
+      [
+        109,
+        4
+      ],
+      [
+        317,
+        1
+      ],
+      [
+        71,
+        1
+      ],
+      [
+        74,
+        1
+      ],
+      [
+        86,
+        1
+      ],
+      [
+        75,
+        1
+      ]
+    ],
+    "unmatched_top_peers": [
+      [
+        "170.114.191.101",
+        95,
+        714
+      ],
+      [
+        "160.79.104.10",
+        9,
+        50
+      ],
+      [
+        "162.159.36.1",
+        6,
+        18
+      ],
+      [
+        "20.27.177.113",
+        6,
+        17
+      ],
+      [
+        "182.22.24.252",
+        5,
+        13
+      ]
+    ],
+    "outer_unmatched_ack_only": 2328,
+    "outer_unmatched_non_ack": 173
+  },
+  "dn": {
+    "inner_n": 8335,
+    "outer_n": 7858,
+    "matched": 6040,
+    "matched_ovh43": 5736,
+    "unmatched": 2295,
+    "unmatched_by_reason": {
+      "edge": 20,
+      "coalesced": 1935,
+      "other": 340
+    },
+    "outer_packets_holding_coalesced_inner": 956,
+    "coalesce_k_hist": {
+      "2": 933,
+      "3": 23
+    },
+    "other_top_sizes": [
+      [
+        60,
+        76
+      ],
+      [
+        61,
+        24
+      ],
+      [
+        55,
+        12
+      ],
+      [
+        1300,
+        11
+      ],
+      [
+        72,
+        5
+      ],
+      [
+        490,
+        5
+      ],
+      [
+        517,
+        5
+      ],
+      [
+        279,
+        5
+      ]
+    ],
+    "unmatched_top_peers": [
+      [
+        "170.114.191.101",
+        2114,
+        7753
+      ],
+      [
+        "v6",
+        147,
+        358
+      ],
+      [
+        "160.79.104.10",
+        15,
+        53
+      ],
+      [
+        "34.149.66.165",
+        10,
+        39
+      ],
+      [
+        "162.159.36.1",
+        2,
+        18
+      ]
+    ],
+    "outer_unmatched_ack_only": 765,
+    "outer_unmatched_non_ack": 1053
+  }
+}

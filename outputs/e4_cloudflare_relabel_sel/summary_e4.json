@@ -1,0 +1,584 @@
+{
+  "generated": "2026-10-13 00:36:20",
+  "hyperparams": {
+    "num_packet": 5,
+    "num_packet_byte": 320,
+    "seq_len": 20,
+    "stride_size": 4,
+    "batch_size": 16,
+    "epochs": 30,
+    "seed": 0,
+    "model": "fuse3_mamba_classifier",
+    "dataset_type": "byte_size_interval",
+    "size_key": "signed_sizes",
+    "interval_encoding": "log10_decade"
+  },
+  "conditions": {
+    "cf_holdout": {
+      "name": "cf_holdout",
+      "mode": "cf_holdout",
+      "desc": "test Direct = 全部对端在 Cloudflare 段的 Direct 流",
+      "n_train": 365,
+      "n_valid": 41,
+      "n_test": 98,
+      "acc": 1.0,
+      "acc_ci95": [
+        0.9622800098783192,
+        0.9999999999999998
+      ],
+      "cm": [
+        [
+          49,
+          0
+        ],
+        [
+          0,
+          49
+        ]
+      ],
+      "weighted_f1": 1.0,
+      "weighted_pre": 1.0,
+      "weighted_rec": 1.0,
+      "direct_n": 49,
+      "direct_correct": 49,
+      "direct_recall": 1.0,
+      "direct_recall_ci95": [
+        0.9273021807795035,
+        1.0
+      ],
+      "masque_n": 49,
+      "masque_correct": 49,
+      "masque_recall": 1.0,
+      "direct_by16": {
+        "104.18": {
+          "n": 31,
+          "correct": 31,
+          "recall": 1.0
+        },
+        "170.114": {
+          "n": 8,
+          "correct": 8,
+          "recall": 1.0
+        },
+        "104.16": {
+          "n": 5,
+          "correct": 5,
+          "recall": 1.0
+        },
+        "104.19": {
+          "n": 2,
+          "correct": 2,
+          "recall": 1.0
+        },
+        "172.64": {
+          "n": 2,
+          "correct": 2,
+          "recall": 1.0
+        },
+        "104.17": {
+          "n": 1,
+          "correct": 1,
+          "recall": 1.0
+        }
+      }
+    },
+    "nocf_holdout": {
+      "name": "nocf_holdout",
+      "mode": "nocf_holdout",
+      "desc": "对照: test Direct = 随机 49 条非 Cloudflare Direct (CF 流全部留在 train)",
+      "n_train": 365,
+      "n_valid": 41,
+      "n_test": 98,
+      "acc": 1.0,
+      "acc_ci95": [
+        0.9622800098783192,
+        0.9999999999999998
+      ],
+      "cm": [
+        [
+          49,
+          0
+        ],
+        [
+          0,
+          49
+        ]
+      ],
+      "weighted_f1": 1.0,
+      "weighted_pre": 1.0,
+      "weighted_rec": 1.0,
+      "direct_n": 49,
+      "direct_correct": 49,
+      "direct_recall": 1.0,
+      "direct_recall_ci95": [
+        0.9273021807795035,
+        1.0
+      ],
+      "masque_n": 49,
+      "masque_correct": 49,
+      "masque_recall": 1.0,
+      "direct_by16": {
+        "142.251": {
+          "n": 14,
+          "correct": 14,
+          "recall": 1.0
+        },
+        "172.217": {
+          "n": 10,
+          "correct": 10,
+          "recall": 1.0
+        },
+        "151.101": {
+          "n": 5,
+          "correct": 5,
+          "recall": 1.0
+        },
+        "157.240": {
+          "n": 4,
+          "correct": 4,
+          "recall": 1.0
+        },
+        "13.249": {
+          "n": 2,
+          "correct": 2,
+          "recall": 1.0
+        },
+        "184.28": {
+          "n": 2,
+          "correct": 2,
+          "recall": 1.0
+        },
+        "160.79": {
+          "n": 1,
+          "correct": 1,
+          "recall": 1.0
+        },
+        "99.84": {
+          "n": 1,
+          "correct": 1,
+          "recall": 1.0
+        },
+        "23.215": {
+          "n": 1,
+          "correct": 1,
+          "recall": 1.0
+        },
+        "23.55": {
+          "n": 1,
+          "correct": 1,
+          "recall": 1.0
+        },
+        "121.85": {
+          "n": 1,
+          "correct": 1,
+          "recall": 1.0
+        },
+        "23.61": {
+          "n": 1,
+          "correct": 1,
+          "recall": 1.0
+        },
+        "61.205": {
+          "n": 1,
+          "correct": 1,
+          "recall": 1.0
+        },
+        "23.67": {
+          "n": 1,
+          "correct": 1,
+          "recall": 1.0
+        },
+        "34.195": {
+          "n": 1,
+          "correct": 1,
+          "recall": 1.0
+        },
+        "54.250": {
+          "n": 1,
+          "correct": 1,
+          "recall": 1.0
+        },
+        "35.73": {
+          "n": 1,
+          "correct": 1,
+          "recall": 1.0
+        },
+        "52.192": {
+          "n": 1,
+          "correct": 1,
+          "recall": 1.0
+        }
+      }
+    },
+    "groupout_142_251": {
+      "name": "groupout_142_251",
+      "mode": "groupout:142.251",
+      "desc": "留出 Direct 对端 /16 = 142.251 (50 条)",
+      "n_train": 363,
+      "n_valid": 41,
+      "n_test": 100,
+      "acc": 1.0,
+      "acc_ci95": [
+        0.9630065017930143,
+        1.0
+      ],
+      "cm": [
+        [
+          50,
+          0
+        ],
+        [
+          0,
+          50
+        ]
+      ],
+      "weighted_f1": 1.0,
+      "weighted_pre": 1.0,
+      "weighted_rec": 1.0,
+      "direct_n": 50,
+      "direct_correct": 50,
+      "direct_recall": 1.0,
+      "direct_recall_ci95": [
+        0.9286524008666414,
+        1.0000000000000002
+      ],
+      "masque_n": 50,
+      "masque_correct": 50,
+      "masque_recall": 1.0,
+      "direct_by16": {
+        "142.251": {
+          "n": 50,
+          "correct": 50,
+          "recall": 1.0
+        }
+      }
+    },
+    "groupout_172_217": {
+      "name": "groupout_172_217",
+      "mode": "groupout:172.217",
+      "desc": "留出 Direct 对端 /16 = 172.217 (36 条)",
+      "n_train": 389,
+      "n_valid": 43,
+      "n_test": 72,
+      "acc": 1.0,
+      "acc_ci95": [
+        0.9493488274035422,
+        1.0
+      ],
+      "cm": [
+        [
+          36,
+          0
+        ],
+        [
+          0,
+          36
+        ]
+      ],
+      "weighted_f1": 1.0,
+      "weighted_pre": 1.0,
+      "weighted_rec": 1.0,
+      "direct_n": 36,
+      "direct_correct": 36,
+      "direct_recall": 1.0,
+      "direct_recall_ci95": [
+        0.9035813714055363,
+        1.0
+      ],
+      "masque_n": 36,
+      "masque_correct": 36,
+      "masque_recall": 1.0,
+      "direct_by16": {
+        "172.217": {
+          "n": 36,
+          "correct": 36,
+          "recall": 1.0
+        }
+      }
+    },
+    "groupout_104_18": {
+      "name": "groupout_104_18",
+      "mode": "groupout:104.18",
+      "desc": "留出 Direct 对端 /16 = 104.18 (31 条)",
+      "n_train": 398,
+      "n_valid": 44,
+      "n_test": 62,
+      "acc": 1.0,
+      "acc_ci95": [
+        0.9416559278986275,
+        1.0
+      ],
+      "cm": [
+        [
+          31,
+          0
+        ],
+        [
+          0,
+          31
+        ]
+      ],
+      "weighted_f1": 1.0,
+      "weighted_pre": 1.0,
+      "weighted_rec": 1.0,
+      "direct_n": 31,
+      "direct_correct": 31,
+      "direct_recall": 1.0,
+      "direct_recall_ci95": [
+        0.889744604539564,
+        1.0
+      ],
+      "masque_n": 31,
+      "masque_correct": 31,
+      "masque_recall": 1.0,
+      "direct_by16": {
+        "104.18": {
+          "n": 31,
+          "correct": 31,
+          "recall": 1.0
+        }
+      }
+    },
+    "groupout_151_101": {
+      "name": "groupout_151_101",
+      "mode": "groupout:151.101",
+      "desc": "留出 Direct 对端 /16 = 151.101 (20 条)",
+      "n_train": 418,
+      "n_valid": 46,
+      "n_test": 40,
+      "acc": 1.0,
+      "acc_ci95": [
+        0.9123783988027134,
+        1.0000000000000002
+      ],
+      "cm": [
+        [
+          20,
+          0
+        ],
+        [
+          0,
+          20
+        ]
+      ],
+      "weighted_f1": 1.0,
+      "weighted_pre": 1.0,
+      "weighted_rec": 1.0,
+      "direct_n": 20,
+      "direct_correct": 20,
+      "direct_recall": 1.0,
+      "direct_recall_ci95": [
+        0.8388748419471806,
+        1.0
+      ],
+      "masque_n": 20,
+      "masque_correct": 20,
+      "masque_recall": 1.0,
+      "direct_by16": {
+        "151.101": {
+          "n": 20,
+          "correct": 20,
+          "recall": 1.0
+        }
+      }
+    },
+    "groupout_157_240": {
+      "name": "groupout_157_240",
+      "mode": "groupout:157.240",
+      "desc": "留出 Direct 对端 /16 = 157.240 (14 条)",
+      "n_train": 429,
+      "n_valid": 47,
+      "n_test": 28,
+      "acc": 1.0,
+      "acc_ci95": [
+        0.8793566952341543,
+        0.9999999999999998
+      ],
+      "cm": [
+        [
+          14,
+          0
+        ],
+        [
+          0,
+          14
+        ]
+      ],
+      "weighted_f1": 1.0,
+      "weighted_pre": 1.0,
+      "weighted_rec": 1.0,
+      "direct_n": 14,
+      "direct_correct": 14,
+      "direct_recall": 1.0,
+      "direct_recall_ci95": [
+        0.7846891972623642,
+        1.0000000000000002
+      ],
+      "masque_n": 14,
+      "masque_correct": 14,
+      "masque_recall": 1.0,
+      "direct_by16": {
+        "157.240": {
+          "n": 14,
+          "correct": 14,
+          "recall": 1.0
+        }
+      }
+    },
+    "groupout_185_199": {
+      "name": "groupout_185_199",
+      "mode": "groupout:185.199",
+      "desc": "留出 Direct 对端 /16 = 185.199 (9 条)",
+      "n_train": 437,
+      "n_valid": 49,
+      "n_test": 18,
+      "acc": 1.0,
+      "acc_ci95": [
+        0.8241207763533424,
+        1.0
+      ],
+      "cm": [
+        [
+          9,
+          0
+        ],
+        [
+          0,
+          9
+        ]
+      ],
+      "weighted_f1": 1.0,
+      "weighted_pre": 1.0,
+      "weighted_rec": 1.0,
+      "direct_n": 9,
+      "direct_correct": 9,
+      "direct_recall": 1.0,
+      "direct_recall_ci95": [
+        0.700854951580456,
+        1.0
+      ],
+      "masque_n": 9,
+      "masque_correct": 9,
+      "masque_recall": 1.0,
+      "direct_by16": {
+        "185.199": {
+          "n": 9,
+          "correct": 9,
+          "recall": 1.0
+        }
+      }
+    },
+    "groupout_170_114": {
+      "name": "groupout_170_114",
+      "mode": "groupout:170.114",
+      "desc": "留出 Direct 对端 /16 = 170.114 (8 条)",
+      "n_train": 439,
+      "n_valid": 49,
+      "n_test": 16,
+      "acc": 1.0,
+      "acc_ci95": [
+        0.8063923194655636,
+        1.0000000000000002
+      ],
+      "cm": [
+        [
+          8,
+          0
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "weighted_f1": 1.0,
+      "weighted_pre": 1.0,
+      "weighted_rec": 1.0,
+      "direct_n": 8,
+      "direct_correct": 8,
+      "direct_recall": 1.0,
+      "direct_recall_ci95": [
+        0.6755924351161198,
+        1.0
+      ],
+      "masque_n": 8,
+      "masque_correct": 8,
+      "masque_recall": 1.0,
+      "direct_by16": {
+        "170.114": {
+          "n": 8,
+          "correct": 8,
+          "recall": 1.0
+        }
+      }
+    }
+  },
+  "groupout_pooled": {
+    "cf_n": 39,
+    "cf_correct": 39,
+    "nc_n": 129,
+    "nc_correct": 129,
+    "pooled_n": 168,
+    "pooled_correct": 168,
+    "pooled_recall": 1.0,
+    "pooled_ci95": [
+      0.977645331650132,
+      1.0000000000000002
+    ]
+  },
+  "tests": [
+    {
+      "table": [
+        [
+          49,
+          0
+        ],
+        [
+          49,
+          0
+        ]
+      ],
+      "p": 1.0,
+      "what": "E4-A: Direct recall, CF 留出 vs 非 CF 留出对照",
+      "A": "cf_holdout",
+      "B": "nocf_holdout",
+      "recall_A": 1.0,
+      "recall_B": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "table": [
+        [
+          39,
+          0
+        ],
+        [
+          129,
+          0
+        ]
+      ],
+      "p": 1.0,
+      "what": "E4-B: 留出组的 Direct recall, Cloudflare 组 vs 非 Cloudflare 组",
+      "A": "CF groups",
+      "B": "non-CF groups",
+      "recall_A": 1.0,
+      "recall_B": 1.0,
+      "p_holm": 1.0
+    }
+  ],
+  "e3_full_reference": {
+    "acc": 1.0,
+    "direct_n": 245,
+    "direct_correct": 245,
+    "direct_recall": 1.0
+  },
+  "majority_baseline": 0.5138888888888888,
+  "caveats": [
+    "去偏 [relative_zero_ip, zero_port] 已抹掉真实 IP -> 模型读不到对端 IP 本身",
+    "只能写『交络因子已定量削弱』, 不可写『已排除』(handoff §7.6)",
+    "CDN 边缘 104.18 与 WARP 入口 162.159 同属 Cloudflare 但是不同服务、行为不同",
+    "MASQUE 侧 test 从 259 条 162.159 流里随机抽, 11 条标签噪声流一律留在 train",
+    "单次采集 2026-06-16, 单一部署 WARP 2026.6.880.0"
+  ],
+  "selection_rule": "acc_loss: valid acc 最高, 打平取 valid loss 最低 (experiments/finetune_selrule.py)",
+  "e3_full_reference_source": "outputs/e3r_kfold_sel/summary_only_full.json"
+}

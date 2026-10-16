@@ -18,14 +18,21 @@ intervals) 上算:
 但本脚本没有算 (需要回到 pcap)。
 
     python experiments/analyze_defense_cost.py
+    MASQUE_RELABEL=1 python experiments/analyze_defense_cost.py   # 改标版 -> outputs/e6_defense_cost_relabel
 """
 import json
 import os
 import statistics as st
+import sys as _sys
 
 _ROOT = os.environ.get("MASQUE_ROOT") or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(_ROOT, "data", "processed", "quic_vs_masque_bi_feat", "data.json")
 OUT = os.path.join(_ROOT, "outputs", "e6_defense_cost")
+
+# [2026-10-16] MASQUE_RELABEL=1 时改标 11 条并输出到 *_relabel (见 pipeline/relabel_util.py)
+_sys.path.insert(0, os.path.join(_ROOT, "pipeline"))
+import relabel_util  # noqa: E402
+OUT = relabel_util.out_dir(OUT)
 
 PAD = 1350        # simulate_obfuscation_bi.py 的 MTU padding 目标
 GAP = 0.005       # interval shaping 的恒定间隔 (s)
@@ -33,7 +40,7 @@ GAP = 0.005       # interval shaping 的恒定间隔 (s)
 
 def main():
     with open(DATA, encoding="utf-8") as f:
-        rows = json.load(f)
+        rows = relabel_util.relabel_items(json.load(f))
     result = {"pad_bytes": PAD, "shape_gap_s": GAP, "window_packets": 50, "classes": {}}
     for cls in ("Direct", "Masque"):
         sub = [r for r in rows if r["name"] == cls]
@@ -50,7 +57,9 @@ def main():
         shaped = GAP * (50 - 1)
         result["classes"][cls] = {
             "n_flows": len(sub),
-            "mean_abs_size_B": round(tot / n_pkts, 1),
+            "n_packets": n_pkts,
+            # 3 位小数: 论文直接取这里的值, 避免 361.484 -> 361.5 -> 362 的二次舍入
+            "mean_abs_size_B": round(tot / n_pkts, 3),
             "padded_over_original_bytes": round(padtot / tot, 3),
             "per_flow_ratio_median": round(st.median(ratios), 3),
             "window_duration_median_ms": round(st.median(durs) * 1000, 1),

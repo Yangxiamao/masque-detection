@@ -1,0 +1,156 @@
+{
+  "P_A": [
+    {
+      "cls": "Direct",
+      "dir": "up",
+      "dcid": 8,
+      "flows": 145,
+      "median_min": 31,
+      "pred": 31,
+      "resid": 0
+    },
+    {
+      "cls": "Direct",
+      "dir": "up",
+      "dcid": 14,
+      "flows": 2,
+      "median_min": 36.0,
+      "pred": 37,
+      "resid": -1.0
+    },
+    {
+      "cls": "Direct",
+      "dir": "up",
+      "dcid": 17,
+      "flows": 29,
+      "median_min": 43,
+      "pred": 40,
+      "resid": 3
+    },
+    {
+      "cls": "Direct",
+      "dir": "up",
+      "dcid": 20,
+      "flows": 69,
+      "median_min": 43,
+      "pred": 43,
+      "resid": 0
+    },
+    {
+      "cls": "Direct",
+      "dir": "dn",
+      "dcid": 0,
+      "flows": 245,
+      "median_min": 24,
+      "pred": 23,
+      "resid": 1
+    },
+    {
+      "cls": "Masque",
+      "dir": "up",
+      "dcid": 20,
+      "flows": 259,
+      "median_min": 42,
+      "pred": 43,
+      "resid": -1
+    },
+    {
+      "cls": "Masque",
+      "dir": "dn",
+      "dcid": 20,
+      "flows": 259,
+      "median_min": 43,
+      "pred": 43,
+      "resid": 0
+    }
+  ],
+  "P_B": [
+    {
+      "cls": "Direct",
+      "dir": "up",
+      "flows": 245,
+      "distinct": 1,
+      "mode": 1250,
+      "mode_share": 1.0
+    },
+    {
+      "cls": "Direct",
+      "dir": "dn",
+      "flows": 245,
+      "distinct": 8,
+      "mode": 1250,
+      "mode_share": 0.4489795918367347
+    },
+    {
+      "cls": "Masque",
+      "dir": "up",
+      "flows": 259,
+      "distinct": 3,
+      "mode": 1200,
+      "mode_share": 0.9691119691119691
+    },
+    {
+      "cls": "Masque",
+      "dir": "dn",
+      "flows": 259,
+      "distinct": 3,
+      "mode": 1200,
+      "mode_share": 0.9884169884169884
+    }
+  ],
+  "P_C": [
+    {
+      "cls": "Direct",
+      "flows": 245,
+      "flows_with_retry": 0,
+      "retry_packets": 0
+    },
+    {
+      "cls": "Masque",
+      "flows": 259,
+      "flows_with_retry": 259,
+      "retry_packets": 470
+    }
+  ],
+  "rules": {
+    "max_eq_1200": {
+      "acc": 0.9801587301587301,
+      "tpr": 0.9613899613899614,
+      "fpr": 0.0,
+      "tp": 249,
+      "fp": 0,
+      "tn": 245,
+      "fn": 10
+    },
+    "min_ge_42": {
+      "acc": 0.9722222222222222,
+      "tpr": 1.0,
+      "fpr": 0.05714285714285714,
+      "tp": 259,
+      "fp": 14,
+      "tn": 231,
+      "fn": 0
+    },
+    "has_retry": {
+      "acc": 1.0,
+      "tpr": 1.0,
+      "fpr": 0.0,
+      "tp": 259,
+      "fp": 0,
+      "tn": 245,
+      "fn": 0
+    },
+    "max1200_and_min42": {
+      "acc": 0.9801587301587301,
+      "tpr": 0.9613899613899614,
+      "fpr": 0.0,
+      "tp": 249,
+      "fp": 0,
+      "tn": 245,
+      "fn": 10
+    }
+  },
+  "masque_label_noise": {
+    "n_off_tunnel": 0
+  }
+}

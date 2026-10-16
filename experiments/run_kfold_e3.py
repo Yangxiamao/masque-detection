@@ -31,6 +31,9 @@ import time
 from collections import Counter
 
 _ROOT = os.environ.get("MASQUE_ROOT") or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# [2026-10-12 ICOIN r2 §7.5] MASQUE_SELRULE=acc_loss -> 训练入口 / ckpt / 输出目录切到新选模规则;
+# 未设置时恒等 (见 experiments/selrule_util.py)
+import selrule_util  # noqa: E402
 OUT_ROOT = os.path.join(_ROOT, "outputs", "e3_kfold")
 FOLD_ROOT = os.path.join(_ROOT, "data", "processed", "e3_folds")
 N_SPLITS = 5
@@ -131,6 +134,8 @@ def train_fold(cid, k, seed, epochs, cuda_idx=0):
     output_dir = os.path.join(OUT_ROOT, run_id(cid, seed), f"fold{k}")
     ckpt_path = os.path.join(_ROOT, "NetMambaPlus", "dataset", "checkpoints",
                              "pre-trained checkpoints", "fuse3_mamba.pth")
+    if selrule_util.SELRULE:
+        selrule_util.clear_run_dir(output_dir)   # log.txt 追加写入; 只清 *_sel 目录
     os.makedirs(output_dir, exist_ok=True)
 
     with open(os.path.join(data_dir, "metadata.json"), encoding="utf-8") as f:
@@ -140,7 +145,7 @@ def train_fold(cid, k, seed, epochs, cuda_idx=0):
           f"  output = {output_dir}\n{'='*74}", flush=True)
 
     cmd = f"""
-python -u "{os.path.normpath(os.path.join(_ROOT, "NetMambaPlus", "src", "fine-tune.py"))}" \\
+python -u "{os.path.normpath(selrule_util.train_entry())}" \\
     --num_packet {BYTE_PACKET_NUM} \\
     --num_packet_byte {HEADER_BYTE_NUM + PAYLOAD_BYTE_NUM} \\
     --seq_len {SEQ_PACKET_NUM} \\
@@ -174,6 +179,9 @@ def dump_fold(cid, k, seed):
     """逐样本预测落盘 (§4.1); 顺便核对 acc 与 test_stats.json 完全一致。"""
     data_dir = os.path.join(FOLD_ROOT, cid, f"fold{k}")
     out_dir = os.path.join(OUT_ROOT, run_id(cid, seed), f"fold{k}")
+    if selrule_util.SELRULE:
+        # test_stats.json 对应原规则 ckpt -> 先 dump 它并核对, 再 dump acc_loss 为 preds.json
+        return selrule_util.dump_pair(data_dir, out_dir, seed)
     proc = subprocess.run(
         [sys.executable, os.path.join(_ROOT, "experiments", "eval_dump_preds.py"),
          "--data_dir", data_dir,
@@ -185,10 +193,12 @@ def dump_fold(cid, k, seed):
 
 
 def drop_ckpt(cid, k, seed, keep):
-    p = os.path.join(OUT_ROOT, run_id(cid, seed), f"fold{k}", "checkpoint-best.pth")
-    if keep or not os.path.exists(p):
-        return
-    os.remove(p)   # 22.5 MB/折; 95 折 = 2.1 GB (§4.2)
+    # keep 只保留主结果用的那一个 ckpt (sel 模式下 = ckpt-acc_loss.pth, 其余 3 个照删)
+    for name in selrule_util.all_ckpts():
+        p = os.path.join(OUT_ROOT, run_id(cid, seed), f"fold{k}", name)
+        if (keep and name == selrule_util.ckpt_name()) or not os.path.exists(p):
+            continue
+        os.remove(p)   # 22.5 MB/折; 95 折 = 2.1 GB (§4.2)
 
 
 # --------------------------------------------------------------------------- #
@@ -296,7 +306,20 @@ def main():
     ap.add_argument("--keep-ckpt", dest="keep_ckpt", action="store_true",
                     help="保留 checkpoint (默认 dump 完就删, 每个 22.5 MB)")
     ap.add_argument("--force", action="store_true", help="忽略已有结果, 重跑")
+    # [2026-10-12 ICOIN r2 #3] 改标重跑: 指向 data/processed/e3r_folds 与 outputs/e3r_kfold。
+    # 默认值不变; 折数据集必须已由 make_relabel_folds.py 生成 (ensure_folds 不会去造)。
+    ap.add_argument("--fold_root", default=None, help="覆盖 FOLD_ROOT (默认 data/processed/e3_folds)")
+    ap.add_argument("--out_root", default=None, help="覆盖 OUT_ROOT (默认 outputs/e3_kfold)")
     args = ap.parse_args()
+
+    global FOLD_ROOT, OUT_ROOT
+    if args.fold_root:
+        FOLD_ROOT = args.fold_root if os.path.isabs(args.fold_root) else os.path.join(_ROOT, args.fold_root)
+    if args.out_root:
+        OUT_ROOT = args.out_root if os.path.isabs(args.out_root) else os.path.join(_ROOT, args.out_root)
+    OUT_ROOT = selrule_util.out_dir(OUT_ROOT)   # sel 模式: 加 _sel 后缀, 不覆盖原规则结果
+    relabel_mode = bool(args.fold_root) and os.path.abspath(FOLD_ROOT) != os.path.abspath(
+        os.path.join(_ROOT, "data", "processed", "e3_folds"))
 
     if args.only:
         want = [s.strip() for s in args.only.split(",")]
@@ -322,7 +345,12 @@ def main():
     # ---------------- 训练 ----------------
     if not args.summary:
         for cid in {r[0] for r in runs}:
-            ensure_folds(cid)
+            if relabel_mode:
+                # 改标折必须预先生成; 绝不能让 ensure_folds 从原标签源目录造折
+                assert all(os.path.exists(os.path.join(FOLD_ROOT, cid, f"fold{k}", "data-test.json"))
+                           for k in range(N_SPLITS)), f"缺改标折: {FOLD_ROOT}/{cid}"
+            else:
+                ensure_folds(cid)
         total = len(runs) * len(folds)
         done = 0
         t_all = time.time()
@@ -331,11 +359,13 @@ def main():
                 done += 1
                 out_dir = os.path.join(OUT_ROOT, run_id(cid, seed), f"fold{k}")
                 have_stats = os.path.exists(os.path.join(out_dir, "test_stats.json"))
-                have_preds = os.path.exists(os.path.join(out_dir, "preds.json"))
+                have_preds = all(os.path.exists(os.path.join(out_dir, p))
+                                 for p in selrule_util.pred_files())
                 if have_stats and have_preds and not args.force:
                     print(f"[{done}/{total}] 跳过已完成: {cid} fold{k} seed{seed}")
                     continue
-                if not (have_stats and os.path.exists(os.path.join(out_dir, "checkpoint-best.pth"))) \
+                if not (have_stats and all(os.path.exists(os.path.join(out_dir, c))
+                                           for c in selrule_util.dump_ckpts())) \
                         or args.force:
                     print(f"[{done}/{total}] 训练 {cid} fold{k} seed{seed}")
                     train_fold(cid, k, seed, args.epochs)
@@ -389,8 +419,15 @@ def main():
             "dataset_type": "byte_size_interval", "size_key": "signed_sizes",
             "interval_encoding": INTERVAL_ENCODING,
         },
-        "reference": {"majority_baseline": MAJORITY_BASELINE,
-                      "label_noise_ceiling_493_of_504": LABEL_NOISE_CEILING},
+        "reference": ({"majority_baseline": MAJORITY_BASELINE,
+                       "label_noise_ceiling_493_of_504": LABEL_NOISE_CEILING}
+                      if not relabel_mode else
+                      {"fold_root": FOLD_ROOT,
+                       "majority_baseline_from_oof": (
+                           max(sum(v["label"] == L for v in load_oof(runs[0][0], runs[0][1])[0].values())
+                               for L in (0, 1)) / 504
+                           if load_oof(runs[0][0], runs[0][1])[0] else None),
+                       "note": "改标模式: 11 条流标为 Direct, 标签噪声天花板不适用"}),
         "conditions": results,
         "mcnemar": pairs,
         "caveats": [
@@ -400,6 +437,8 @@ def main():
             "单次采集 2026-06-16, 单一部署 WARP 2026.6.880.0",
         ],
     }
+    if selrule_util.SELRULE:
+        summary["selection_rule"] = selrule_util.RULE_DESC
     os.makedirs(OUT_ROOT, exist_ok=True)
     # 汇总文件按 tier 分开写: --tier E 只跑 8 个补充条件, 若也写
     # summary_e3_kfold.json 会把论文 Table I/III 引用的那份汇总覆盖成残缺版。

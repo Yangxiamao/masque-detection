@@ -31,6 +31,19 @@ _ROOT = os.environ.get("MASQUE_ROOT") or os.path.dirname(os.path.dirname(os.path
 E3 = os.path.join(_ROOT, "outputs", "e3_kfold")
 OUT = os.path.join(_ROOT, "outputs", "e6_operating_points")
 
+# [2026-10-12 ICOIN r2 #3] MASQUE_RELABEL=1 时改标 11 条并输出到 *_relabel (见 pipeline/relabel_util.py)
+import sys as _sys  # noqa: E402
+_sys.path.insert(0, os.path.join(_ROOT, "pipeline"))
+import relabel_util  # noqa: E402
+OUT = relabel_util.out_dir(OUT)
+if relabel_util.RELABEL:
+    E3 = os.path.join(_ROOT, "outputs", "e3r_kfold")   # 改标 OOF 的 preds.json 已带新标签
+# [2026-10-12 ICOIN r2 §7.5] MASQUE_SELRULE=acc_loss -> 读同规则的 *_sel OOF, 输出加 _sel; 未设置时恒等
+_sys.path.insert(0, os.path.join(_ROOT, "experiments"))
+import selrule_util  # noqa: E402
+E3 = selrule_util.out_dir(E3)
+OUT = selrule_util.out_dir(OUT)
+
 FPR_TARGETS = [0.10, 0.05, 0.02, 0.01]
 PREVALENCES = [0.5357, 0.10, 0.01, 0.001]
 

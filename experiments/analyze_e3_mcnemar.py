@@ -56,11 +56,11 @@ CONDITIONS = [
 ]
 
 
-def load_oof(condition, n_folds=5):
+def load_oof(condition, n_folds=5, cond_dir=None):
     """把 5 折的 preds.json 拼成 {basename: (pred, label)}，即 out-of-fold 全集。"""
     oof = {}
     for k in range(n_folds):
-        path = os.path.join(E3_DIR, condition, f"fold{k}", "preds.json")
+        path = os.path.join(cond_dir or os.path.join(E3_DIR, condition), f"fold{k}", "preds.json")
         if not os.path.exists(path):
             raise FileNotFoundError(f"缺少逐样本预测：{path}")
         with open(path, "r", encoding="utf-8") as f:
@@ -96,13 +96,29 @@ def holm(pvals):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--baseline", default="full", help="配对检验的参照条件")
-    ap.add_argument("--out", default=os.path.join(E3_DIR, "mcnemar_full_matrix.json"))
+    # [2026-10-12 ICOIN r2 §7.5] 改标 + 新选模规则的族: --e3_dir 指向 outputs/e3r_kfold_sel,
+    # --extra 追加不在 e3 目录下的条件 (表 I 的 No-Length 在 icoin_r2/... 下)。默认值不变。
+    ap.add_argument("--e3_dir", default=E3_DIR, help="条件目录的根 (默认 outputs/e3_kfold)")
+    ap.add_argument("--extra", action="append", default=[],
+                    help="追加进族的条件, 形如 name=<目录>(含 fold0..4/preds.json), 可重复")
+    ap.add_argument("--out", default=None,
+                    help="默认 <e3_dir>/mcnemar_full_matrix.json")
     args = ap.parse_args()
+    e3_dir = args.e3_dir if os.path.isabs(args.e3_dir) else os.path.join(_ROOT, args.e3_dir)
+    out = args.out or os.path.join(e3_dir, "mcnemar_full_matrix.json")
+    if os.path.abspath(e3_dir) != os.path.abspath(E3_DIR) and \
+            os.path.abspath(out) == os.path.abspath(os.path.join(E3_DIR, "mcnemar_full_matrix.json")):
+        sys.exit("拒绝用其他目录的结果覆盖 outputs/e3_kfold/mcnemar_full_matrix.json")
+    extra = {}
+    for spec in args.extra:
+        name, d = spec.split("=", 1)
+        extra[name] = d if os.path.isabs(d) else os.path.join(_ROOT, d)
+    CONDITIONS.extend(extra)
 
     oofs = {}
     for cond in CONDITIONS:
         try:
-            oofs[cond] = load_oof(cond)
+            oofs[cond] = load_oof(cond, cond_dir=extra.get(cond, os.path.join(e3_dir, cond)))
         except FileNotFoundError as e:
             print(f"[skip] {e}")
 
@@ -173,9 +189,12 @@ def main():
             "不能反过来当作『该通道无用』的证据。"
         ),
     }
-    with open(args.out, "w", encoding="utf-8") as f:
+    if os.path.abspath(e3_dir) != os.path.abspath(E3_DIR) or extra:
+        payload["e3_dir"] = os.path.relpath(e3_dir, _ROOT)
+        payload["extra_conditions"] = {k: os.path.relpath(v, _ROOT) for k, v in extra.items()}
+    with open(out, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2, ensure_ascii=False)
-    print(f"\n已写出：{args.out}")
+    print(f"\n已写出：{out}")
 
 
 if __name__ == "__main__":

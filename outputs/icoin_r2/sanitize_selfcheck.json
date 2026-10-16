@@ -1,0 +1,49 @@
+{
+  "n_flows": 504,
+  "n_packets": 2520,
+  "packet_kinds": {
+    "initial": 1884,
+    "0rtt": 136,
+    "handshake": 43,
+    "retry": 457
+  },
+  "orig_header_bytes_28_80_nonzero_packets": 0,
+  "S1_distinct_headers_after": 1,
+  "S2_length_fields": 2063,
+  "S2_length_fields_nonzero_after": 0,
+  "S3_corr_L_vs_fill_zero_frac_before": -0.8524638836191482,
+  "S3_corr_L_vs_fill_zero_frac_after": -0.007727644214065842,
+  "S3_within_kind": {
+    "initial": {
+      "n": 1884,
+      "L_distinct": 7,
+      "had_zero_padding": true,
+      "r_before": -0.752617674987548,
+      "r_after": -0.012784575969381382
+    },
+    "0rtt": {
+      "n": 136,
+      "L_distinct": 39,
+      "had_zero_padding": true,
+      "r_before": -0.891598073290486,
+      "r_after": -0.07740527676009172
+    },
+    "handshake": {
+      "n": 43,
+      "L_distinct": 4,
+      "had_zero_padding": false,
+      "r_before": 0.22929220301986972,
+      "r_after": 0.22615143911375668
+    },
+    "retry": {
+      "n": 457,
+      "L_distinct": 1,
+      "had_zero_padding": true,
+      "r_before": 0.0,
+      "r_after": 0.0
+    }
+  },
+  "S4_packets_L_lt_240": 637,
+  "S4_still_zero_tail_after": 0,
+  "PASS": true
+}

@@ -1,0 +1,559 @@
+{
+  "generated": "2026-10-12 17:43:30",
+  "n_splits": 5,
+  "hyperparams": {
+    "num_packet": 5,
+    "num_packet_byte": 320,
+    "seq_len": 20,
+    "stride_size": 4,
+    "batch_size": 16,
+    "epochs": 30,
+    "model": "fuse3_mamba_classifier",
+    "dataset_type": "byte_size_interval",
+    "size_key": "signed_sizes",
+    "interval_encoding": "log10_decade"
+  },
+  "reference": {
+    "fold_root": "/mnt/d/zemi/2026/dataset/data/processed/e3r_folds",
+    "majority_baseline_from_oof": 0.5138888888888888,
+    "note": "改标模式: 11 条流标为 Direct, 标签噪声天花板不适用"
+  },
+  "conditions": {
+    "no_intervals": {
+      "n": 504,
+      "correct": 504,
+      "acc": 1.0,
+      "ci95": [
+        0.9924357124571619,
+        1.0000000000000002
+      ],
+      "cm": [
+        [
+          245,
+          0
+        ],
+        [
+          0,
+          259
+        ]
+      ],
+      "weighted_pre": 1.0,
+      "weighted_rec": 1.0,
+      "weighted_f1": 1.0,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 100,
+          "acc": 1.0
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        }
+      ],
+      "fold_accs": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fold_mean": 1.0,
+      "fold_std": 0.0,
+      "condition": "no_intervals",
+      "seed": 0,
+      "tag": "No-Intervals (遮蔽时间)"
+    },
+    "no_direction": {
+      "n": 504,
+      "correct": 504,
+      "acc": 1.0,
+      "ci95": [
+        0.9924357124571619,
+        1.0000000000000002
+      ],
+      "cm": [
+        [
+          245,
+          0
+        ],
+        [
+          0,
+          259
+        ]
+      ],
+      "weighted_pre": 1.0,
+      "weighted_rec": 1.0,
+      "weighted_f1": 1.0,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 100,
+          "acc": 1.0
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        }
+      ],
+      "fold_accs": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fold_mean": 1.0,
+      "fold_std": 0.0,
+      "condition": "no_direction",
+      "seed": 0,
+      "tag": "No-Direction (抹方向)"
+    },
+    "no_bytes": {
+      "n": 504,
+      "correct": 504,
+      "acc": 1.0,
+      "ci95": [
+        0.9924357124571619,
+        1.0000000000000002
+      ],
+      "cm": [
+        [
+          245,
+          0
+        ],
+        [
+          0,
+          259
+        ]
+      ],
+      "weighted_pre": 1.0,
+      "weighted_rec": 1.0,
+      "weighted_f1": 1.0,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 100,
+          "acc": 1.0
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        }
+      ],
+      "fold_accs": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fold_mean": 1.0,
+      "fold_std": 0.0,
+      "condition": "no_bytes",
+      "seed": 0,
+      "tag": "No-Bytes (遮蔽字节)"
+    },
+    "no_sizes": {
+      "n": 504,
+      "correct": 500,
+      "acc": 0.9920634920634921,
+      "ci95": [
+        0.9797733213657902,
+        0.9969094432745915
+      ],
+      "cm": [
+        [
+          243,
+          2
+        ],
+        [
+          2,
+          257
+        ]
+      ],
+      "weighted_pre": 0.9920634920634921,
+      "weighted_rec": 0.9920634920634921,
+      "weighted_f1": 0.9920634920634921,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 100,
+          "acc": 0.9900990099009901
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 100,
+          "acc": 0.9900990099009901
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 100,
+          "acc": 0.9900990099009901
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 100,
+          "acc": 1.0
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 100,
+          "acc": 0.9900990099009901
+        }
+      ],
+      "fold_accs": [
+        0.9900990099009901,
+        0.9900990099009901,
+        0.9900990099009901,
+        1.0,
+        0.9900990099009901
+      ],
+      "fold_mean": 0.9920792079207921,
+      "fold_std": 0.004427857381187707,
+      "condition": "no_sizes",
+      "seed": 0,
+      "tag": "No-Sizes (遮蔽长度)"
+    },
+    "suff_mag": {
+      "n": 504,
+      "correct": 504,
+      "acc": 1.0,
+      "ci95": [
+        0.9924357124571619,
+        1.0000000000000002
+      ],
+      "cm": [
+        [
+          245,
+          0
+        ],
+        [
+          0,
+          259
+        ]
+      ],
+      "weighted_pre": 1.0,
+      "weighted_rec": 1.0,
+      "weighted_f1": 1.0,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 100,
+          "acc": 1.0
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        }
+      ],
+      "fold_accs": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fold_mean": 1.0,
+      "fold_std": 0.0,
+      "condition": "suff_mag",
+      "seed": 0,
+      "tag": "仅包长幅度 (抹方向)"
+    },
+    "suff_dir": {
+      "n": 504,
+      "correct": 502,
+      "acc": 0.996031746031746,
+      "ci95": [
+        0.9856481523079429,
+        0.9989110862408289
+      ],
+      "cm": [
+        [
+          245,
+          0
+        ],
+        [
+          2,
+          257
+        ]
+      ],
+      "weighted_pre": 0.996063877642825,
+      "weighted_rec": 0.996031746031746,
+      "weighted_f1": 0.9960321211739248,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 100,
+          "acc": 0.9900990099009901
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 99,
+          "acc": 0.99
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        }
+      ],
+      "fold_accs": [
+        1.0,
+        1.0,
+        0.9900990099009901,
+        0.99,
+        1.0
+      ],
+      "fold_mean": 0.996019801980198,
+      "fold_std": 0.005450223012788428,
+      "condition": "suff_dir",
+      "seed": 0,
+      "tag": "仅方向 (|len| 恒定, 保号)"
+    },
+    "nosizes_nobytes": {
+      "n": 504,
+      "correct": 499,
+      "acc": 0.9900793650793651,
+      "ci95": [
+        0.9769892651151567,
+        0.9957552625710296
+      ],
+      "cm": [
+        [
+          243,
+          2
+        ],
+        [
+          3,
+          256
+        ]
+      ],
+      "weighted_pre": 0.9900881809205688,
+      "weighted_rec": 0.9900793650793651,
+      "weighted_f1": 0.9900798731344296,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 100,
+          "acc": 0.9900990099009901
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 99,
+          "acc": 0.9801980198019802
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 99,
+          "acc": 0.99
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 100,
+          "acc": 0.9900990099009901
+        }
+      ],
+      "fold_accs": [
+        1.0,
+        0.9900990099009901,
+        0.9801980198019802,
+        0.99,
+        0.9900990099009901
+      ],
+      "fold_mean": 0.9900792079207921,
+      "fold_std": 0.00700119725921538,
+      "condition": "nosizes_nobytes",
+      "seed": 0,
+      "tag": "No-Sizes+No-Bytes (只剩时间)"
+    },
+    "suff_bytes": {
+      "n": 504,
+      "correct": 383,
+      "acc": 0.7599206349206349,
+      "ci95": [
+        0.7207536632108696,
+        0.7951553777886866
+      ],
+      "cm": [
+        [
+          166,
+          79
+        ],
+        [
+          42,
+          217
+        ]
+      ],
+      "weighted_pre": 0.764690170940171,
+      "weighted_rec": 0.7599206349206349,
+      "weighted_f1": 0.7581187147412312,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 78,
+          "acc": 0.7722772277227723
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 80,
+          "acc": 0.7920792079207921
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 74,
+          "acc": 0.7326732673267327
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 75,
+          "acc": 0.75
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 76,
+          "acc": 0.7524752475247525
+        }
+      ],
+      "fold_accs": [
+        0.7722772277227723,
+        0.7920792079207921,
+        0.7326732673267327,
+        0.75,
+        0.7524752475247525
+      ],
+      "fold_mean": 0.7599009900990099,
+      "fold_std": 0.02282065459725964,
+      "condition": "suff_bytes",
+      "seed": 0,
+      "tag": "仅报头字节"
+    }
+  },
+  "mcnemar": [],
+  "caveats": [
+    "504 流 = 504 会话, 每会话恰好 1 条流 -> group 约束实际为空, 等价 StratifiedKFold",
+    "折间站点重叠 86.3%, 本实验不度量跨站点泛化 (那是 E4)",
+    "11 条标签噪声流构成 493/504 = 97.82% 的硬天花板",
+    "单次采集 2026-06-16, 单一部署 WARP 2026.6.880.0"
+  ],
+  "selection_rule": "acc_loss: valid acc 最高, 打平取 valid loss 最低 (experiments/finetune_selrule.py)"
+}

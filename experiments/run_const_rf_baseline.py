@@ -32,6 +32,12 @@ from analyze_header_geometry import collect          # noqa: E402
 from split_data import session_key                   # noqa: E402
 
 OUT = os.path.join(_ROOT, "outputs", "const_rf_baseline")
+
+# [2026-10-12 ICOIN r2 #3] MASQUE_RELABEL=1 时改标 11 条并输出到 *_relabel (见 pipeline/relabel_util.py)
+import sys as _sys  # noqa: E402
+_sys.path.insert(0, os.path.join(_ROOT, "pipeline"))
+import relabel_util  # noqa: E402
+OUT = relabel_util.out_dir(OUT)
 SEED = 42
 N_SPLITS = 5
 
@@ -66,7 +72,9 @@ def part_a():
         pkts = r["up"] + r["dn"]
         X.append([max(pkts), min(pkts),
                   float(any(c["ptype"] == 3 for c in r["cids"]))])
-        y.append(1 if r["cls"] == "Masque" else 0)
+        # [2026-10-12] part_a 按 pcap 目录名取类别, 不经 load_feat, 故单独接改标开关
+        is_masque = r["cls"] == "Masque" and not relabel_util.is_noise(r["file"])
+        y.append(1 if is_masque else 0)
         g.append(str(session_key({"pcap_file": r["file"]})))
     X, y, g = np.asarray(X, float), np.asarray(y), np.asarray(g)
     print(f"  n={len(y)}  Direct={int((y == 0).sum())}  Masque={int((y == 1).sum())}  "
@@ -93,7 +101,7 @@ def load_feat(dirname):
         with open(os.path.join(_ROOT, "data", "processed", dirname,
                                f"data-{sp}.json"), encoding="utf-8") as f:
             items += json.load(f)
-    return items
+    return relabel_util.relabel_items(items)
 
 
 def sizes_of(it):

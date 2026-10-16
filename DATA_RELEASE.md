@@ -42,11 +42,11 @@ needed only if others must re-derive features from packets.
   network conditions from aligning with the class label.
 - **Capture point:** client side, single vantage point
 - **Tunnel:** Cloudflare WARP (client 2026.6.880.0, MASQUE transport), toggled
-  with `warp-cli` between iterations; every outer connection terminates at a
-  WARP ingress (259 of 270 flows in the 162.159.0.0/16 prefix). The tunnel is
-  brought up before and torn down after each domain visit, with a 5 s idle
-  wait; 11 flows captured inside that disconnect window are labelled MASQUE
-  but reach a non-WARP peer (see Limitations).
+  with `warp-cli` between iterations. The tunnel is brought up before and torn
+  down after each domain visit, with a 5 s idle wait. 259 of the 270 flows of
+  the WARP-on runs reach the WARP ingress (162.159.198.2) and no WARP-off flow
+  does; the other 11 reach other addresses directly, consistent with being
+  captured while the tunnel was down between domains (see Labels).
 
 ## File inventory
 
@@ -78,10 +78,22 @@ captures are consistently larger, reflecting tunnelling overhead.
 | `data-train.json` / `data-valid.json` / `data-test.json` | the original 403 / 50 / 51 session-level split (superseded by 5-fold CV; kept for provenance) |
 | `metadata.json` | label map — `{"Direct": 0, "Masque": 1}` |
 
-**504 flows total: Direct 234, Masque 270.** Each flow is one session, so the
-counts are also session counts. The paper's headline numbers use stratified
-5-fold cross-validation over all 504 flows; the fold assignment is
+**504 flows total.** Each flow is one session, so the counts are also session
+counts. The paper's headline numbers use stratified 5-fold cross-validation
+over all 504 flows; the fold assignment is
 `outputs/e3_kfold/fold_assignment.json`.
+
+**Labels.** The `label` / `name` fields in these files are the **capture-run
+labels**: Direct 234 (WARP off), Masque 270 (WARP on). The paper labels by the
+observed peer instead: the 11 WARP-on flows whose peer is outside the WARP
+ingress prefix (listed in `outputs/e3_kfold/error_analysis_e3.json`,
+`label_noise_flows`) become Direct, giving **Direct 245 / MASQUE 259**. Their
+handshakes match Direct's (1250 B Initial, 8-byte client connection ID, no
+Retry; `outputs/handshake_fields/summary.json`). The files are left unchanged
+and the relabelling is applied at run time, by
+`pipeline/pcap_split/make_relabel_folds.py` for fold datasets and by
+`MASQUE_RELABEL=1` for the analysis scripts, so results under both label sets
+stay pairwise comparable.
 
 Per-flow fields: `data` (first 5 packets x 320 bytes, hex, addresses and ports
 replaced by direction sentinels), `signed_sizes` (50 Ethernet frame lengths,
@@ -104,8 +116,8 @@ Packets 1-50 and 51-100 of the 448 flows that have at least 100 packets
    bidirectional flow, then sorted by timestamp to preserve the real
    client<->server interaction order. Only UDP/443 is kept. Flows shorter than
    50 packets are dropped; longer ones are truncated to 50, so every flow has
-   identical length. The filter is not class-neutral: 234 of 623 Direct and
-   270 of 482 MASQUE conversations survive it.
+   identical length. The filter is not class-neutral: by capture run, 234 of
+   623 WARP-off and 270 of 482 WARP-on conversations survive it.
 
 2. **Feature extraction.** Per flow: first 5 packets × 320 header/payload bytes,
    a 50-step packet-size sequence, and inter-arrival times. Sizes are stored as
@@ -129,13 +141,15 @@ State these alongside any result derived from this data.
 
 - **Sample size.** 504 sessions; one misclassification is 0.2 pp. Quote the
   pooled out-of-fold accuracy with its Wilson interval, not single-fold values.
-- **Provider confounder.** All MASQUE traffic terminates at Cloudflare WARP;
-  Direct traffic reaches 96 peers in 29 /16 prefixes. The hold-out controls of
-  Section VI-B weaken but do not exclude a destination explanation; a
-  same-origin campaign is the proper control.
-- **Label noise.** 11 of the 270 MASQUE-labelled flows were captured in the
-  tunnel's disconnect window and are direct by address. They are kept with
-  their original labels; `outputs/e3_kfold/error_analysis_e3.json` lists them.
+- **Provider confounder.** Every MASQUE flow reaches one WARP ingress address;
+  Direct traffic reaches 103 peers in 35 /16 prefixes (peer-based labels). The
+  hold-out controls of Section VI-B weaken but do not exclude a destination
+  explanation, and no split of this data can hold out the MASQUE-side
+  destination; a same-origin campaign is the proper control.
+- **Labels.** The peer-based labels rest on an observable criterion (the
+  peer), but the disconnect window that explains the 11 relabelled flows is
+  inferred, not logged. Under the capture-run labels the full model scores
+  98.81% [97.43, 99.45], with five of its six errors among the 11.
 - **Asymmetric procedure.** The tunnel is set up and torn down around each
   MASQUE domain with no matching operation on the Direct side.
 - **Class-dependent attrition.** The 50-packet filter keeps 37.6% of Direct and

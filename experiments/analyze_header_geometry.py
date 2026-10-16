@@ -39,6 +39,12 @@ _ROOT = os.environ.get("MASQUE_ROOT") or os.path.dirname(
 FLOW_DIR = os.path.join(_ROOT, "data", "processed", "quic_vs_masque_bi")
 OUT_DIR = os.path.join(_ROOT, "outputs", "header_geometry")
 
+# [2026-10-12 ICOIN r2 #3] MASQUE_RELABEL=1 时改标 11 条并输出到 *_relabel (见 pipeline/relabel_util.py)
+import sys as _sys  # noqa: E402
+_sys.path.insert(0, os.path.join(_ROOT, "pipeline"))
+import relabel_util  # noqa: E402
+OUT_DIR = relabel_util.out_dir(OUT_DIR)
+
 FNAME_RE = re.compile(r"_(\d+_\d+_\d+_\d+)_(\d+)_(\d+_\d+_\d+_\d+)_(\d+)\.pcap$")
 
 
@@ -373,6 +379,10 @@ def main():
         return
 
     rows = collect()
+    for r in rows:   # [2026-10-12] MASQUE_RELABEL=1: 11 条噪声流按 Direct 计
+        if relabel_util.is_noise(r["file"]):
+            assert r["cls"] == "Masque", r["file"]
+            r["cls"] = "Direct"
     print("flows parsed: %d (Direct %d / Masque %d)\n"
           % (len(rows),
              sum(1 for r in rows if r["cls"] == "Direct"),

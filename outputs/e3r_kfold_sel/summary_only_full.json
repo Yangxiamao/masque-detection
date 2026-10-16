@@ -1,0 +1,97 @@
+{
+  "generated": "2026-10-12 16:52:21",
+  "n_splits": 5,
+  "hyperparams": {
+    "num_packet": 5,
+    "num_packet_byte": 320,
+    "seq_len": 20,
+    "stride_size": 4,
+    "batch_size": 16,
+    "epochs": 30,
+    "model": "fuse3_mamba_classifier",
+    "dataset_type": "byte_size_interval",
+    "size_key": "signed_sizes",
+    "interval_encoding": "log10_decade"
+  },
+  "reference": {
+    "fold_root": "/mnt/d/zemi/2026/dataset/data/processed/e3r_folds",
+    "majority_baseline_from_oof": 0.5138888888888888,
+    "note": "改标模式: 11 条流标为 Direct, 标签噪声天花板不适用"
+  },
+  "conditions": {
+    "full": {
+      "n": 504,
+      "correct": 504,
+      "acc": 1.0,
+      "ci95": [
+        0.9924357124571619,
+        1.0000000000000002
+      ],
+      "cm": [
+        [
+          245,
+          0
+        ],
+        [
+          0,
+          259
+        ]
+      ],
+      "weighted_pre": 1.0,
+      "weighted_rec": 1.0,
+      "weighted_f1": 1.0,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 100,
+          "acc": 1.0
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        }
+      ],
+      "fold_accs": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fold_mean": 1.0,
+      "fold_std": 0.0,
+      "condition": "full",
+      "seed": 0,
+      "tag": "Full 全特征基线"
+    }
+  },
+  "mcnemar": [],
+  "caveats": [
+    "504 流 = 504 会话, 每会话恰好 1 条流 -> group 约束实际为空, 等价 StratifiedKFold",
+    "折间站点重叠 86.3%, 本实验不度量跨站点泛化 (那是 E4)",
+    "11 条标签噪声流构成 493/504 = 97.82% 的硬天花板",
+    "单次采集 2026-06-16, 单一部署 WARP 2026.6.880.0"
+  ],
+  "selection_rule": "acc_loss: valid acc 最高, 打平取 valid loss 最低 (experiments/finetune_selrule.py)"
+}

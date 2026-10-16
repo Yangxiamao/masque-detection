@@ -37,12 +37,21 @@ def main():
                     help="data/processed/ 下的切流目录名")
     ap.add_argument("--save_dir", default="quic_vs_masque_bi_feat",
                     help="data/processed/ 下的特征输出目录名")
+    # [2026-10-16 ICOIN r4 #1] first = 原行为 (正 = 窗口第一个包的发送方);
+    # client = 正 = 真实 client->server, 见 client_anchor.py。不从会话开头切的窗口必须用 client。
+    ap.add_argument("--anchor", default="first", choices=["first", "client"])
     args = ap.parse_args()
 
     pcap_dir = os.path.join(_ROOT, "data", "processed", args.pcap_dir)
     save_dir = os.path.join(_ROOT, "data", "processed", args.save_dir)
 
     debias_strategy = [relative_zero_ip, zero_port]  # 保留方向的去偏
+    if args.anchor == "client":
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import client_anchor
+        client_anchor.install()
+        debias_strategy = [client_anchor.client_zero_ip, zero_port]
+    print(f"direction anchor: {args.anchor}")
 
     print(f"Extracting BI features from {pcap_dir} -> {save_dir}")
     pcap_to_pt_json(

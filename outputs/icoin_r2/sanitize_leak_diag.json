@@ -1,0 +1,135 @@
+{
+  "raw": {
+    "pkt_direction": {
+      "acc": 1.0,
+      "balanced_acc": 1.0,
+      "n": 2520,
+      "class_counts": {
+        "0": 973,
+        "1": 1547
+      }
+    },
+    "pkt_direction_within_Direct": {
+      "acc": 1.0,
+      "balanced_acc": 1.0,
+      "n": 1170,
+      "class_counts": {
+        "0": 485,
+        "1": 685
+      }
+    },
+    "pkt_direction_within_MASQUE": {
+      "acc": 1.0,
+      "balanced_acc": 1.0,
+      "n": 1350,
+      "class_counts": {
+        "0": 488,
+        "1": 862
+      }
+    },
+    "pkt_length_bucket": {
+      "acc": 0.9992063492063492,
+      "balanced_acc": 0.989247311827957,
+      "n": 2520,
+      "class_counts": {
+        "0": 637,
+        "1": 62,
+        "2": 1821
+      }
+    },
+    "pkt_header_region_only_direction": {
+      "acc": 1.0,
+      "balanced_acc": 1.0,
+      "n": 2520,
+      "class_counts": {
+        "0": 973,
+        "1": 1547
+      }
+    },
+    "pkt_payload_region_only_direction": {
+      "acc": 0.9992063492063492,
+      "balanced_acc": 0.9993535875888817,
+      "n": 2520,
+      "class_counts": {
+        "0": 973,
+        "1": 1547
+      }
+    },
+    "flow_class": {
+      "acc": 0.9781746031746031,
+      "balanced_acc": 0.9796296296296296,
+      "n": 504,
+      "class_counts": {
+        "0": 234,
+        "1": 270
+      }
+    }
+  },
+  "sanitized": {
+    "pkt_direction": {
+      "acc": 0.996031746031746,
+      "balanced_acc": 0.9967679379444085,
+      "n": 2520,
+      "class_counts": {
+        "0": 973,
+        "1": 1547
+      }
+    },
+    "pkt_direction_within_Direct": {
+      "acc": 0.9914529914529915,
+      "balanced_acc": 0.9927007299270073,
+      "n": 1170,
+      "class_counts": {
+        "0": 485,
+        "1": 685
+      }
+    },
+    "pkt_direction_within_MASQUE": {
+      "acc": 1.0,
+      "balanced_acc": 1.0,
+      "n": 1350,
+      "class_counts": {
+        "0": 488,
+        "1": 862
+      }
+    },
+    "pkt_length_bucket": {
+      "acc": 0.9305555555555556,
+      "balanced_acc": 0.6127286163006143,
+      "n": 2520,
+      "class_counts": {
+        "0": 637,
+        "1": 62,
+        "2": 1821
+      }
+    },
+    "pkt_header_region_only_direction": {
+      "acc": 0.6138888888888889,
+      "balanced_acc": 0.5,
+      "n": 2520,
+      "class_counts": {
+        "0": 973,
+        "1": 1547
+      }
+    },
+    "pkt_payload_region_only_direction": {
+      "acc": 0.996031746031746,
+      "balanced_acc": 0.9967679379444085,
+      "n": 2520,
+      "class_counts": {
+        "0": 973,
+        "1": 1547
+      }
+    },
+    "flow_class": {
+      "acc": 0.9781746031746031,
+      "balanced_acc": 0.9796296296296296,
+      "n": 504,
+      "class_counts": {
+        "0": 234,
+        "1": 270
+      }
+    }
+  },
+  "note": "RF(300) 逐包 5 折 (按流分组, 复用 e3 fold_assignment 的 test 划分)。within_* 的 mask 只作用于评估, 训练仍用全部包。sanitized = pipeline/pcap_split/sanitize_bytes.tf_sanitize_bytes"
+}

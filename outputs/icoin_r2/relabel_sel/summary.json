@@ -1,0 +1,698 @@
+{
+  "generated": "2026-10-12 20:34:14",
+  "labels": "relabel",
+  "base_folds": "data/processed/e3r_folds/full",
+  "majority_rate": 0.5138888888888888,
+  "n": 504,
+  "n_masque": 259,
+  "full_baseline_acc": 1.0,
+  "conditions": {
+    "t3dir_raw": {
+      "n": 504,
+      "correct": 371,
+      "acc": 0.7361111111111112,
+      "ci95": [
+        0.6959510923569076,
+        0.7726991051923079
+      ],
+      "cm": [
+        [
+          187,
+          58
+        ],
+        [
+          75,
+          184
+        ]
+      ],
+      "weighted_pre": 0.7376826032707364,
+      "weighted_rec": 0.7361111111111112,
+      "weighted_f1": 0.7360581270069985,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 83,
+          "acc": 0.8217821782178217
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 72,
+          "acc": 0.7128712871287128
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 77,
+          "acc": 0.7623762376237624
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 71,
+          "acc": 0.71
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 68,
+          "acc": 0.6732673267326733
+        }
+      ],
+      "transforms": [
+        "pad",
+        "shape",
+        "absdir"
+      ],
+      "note": "T3-dir raw: 字节通道原样"
+    },
+    "t3dir_san": {
+      "n": 504,
+      "correct": 253,
+      "acc": 0.501984126984127,
+      "ci95": [
+        0.45848300193191693,
+        0.5454552350222781
+      ],
+      "cm": [
+        [
+          74,
+          171
+        ],
+        [
+          80,
+          179
+        ]
+      ],
+      "weighted_pre": 0.4964033189033189,
+      "weighted_rec": 0.501984126984127,
+      "weighted_f1": 0.4824009256858622,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 48,
+          "acc": 0.4752475247524752
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 48,
+          "acc": 0.4752475247524752
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 52,
+          "acc": 0.5148514851485149
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 49,
+          "acc": 0.49
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 56,
+          "acc": 0.5544554455445545
+        }
+      ],
+      "transforms": [
+        "pad",
+        "shape",
+        "absdir",
+        "sanitize"
+      ],
+      "note": "T3-dir sanitized: IP/UDP 头钉为模板, Length 清零, 补零区随机"
+    },
+    "t3dir_strict": {
+      "n": 504,
+      "correct": 254,
+      "acc": 0.503968253968254,
+      "ci95": [
+        0.4604531398335089,
+        0.5474233340748813
+      ],
+      "cm": [
+        [
+          48,
+          197
+        ],
+        [
+          53,
+          206
+        ]
+      ],
+      "weighted_pre": 0.4937057601541792,
+      "weighted_rec": 0.503968253968254,
+      "weighted_f1": 0.45469684710119196,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 53,
+          "acc": 0.5247524752475248
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 48,
+          "acc": 0.4752475247524752
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 52,
+          "acc": 0.5148514851485149
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 49,
+          "acc": 0.49
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 52,
+          "acc": 0.5148514851485149
+        }
+      ],
+      "transforms": [
+        "pad",
+        "shape",
+        "absdir",
+        "nobytes"
+      ],
+      "note": "T3-dir strict: 字节全零 (输入完全相同 -> trivial 下界)"
+    },
+    "nolen_pad": {
+      "n": 504,
+      "correct": 496,
+      "acc": 0.9841269841269841,
+      "ci95": [
+        0.9689943804110155,
+        0.9919354364125856
+      ],
+      "cm": [
+        [
+          242,
+          3
+        ],
+        [
+          5,
+          254
+        ]
+      ],
+      "weighted_pre": 0.9841609911239237,
+      "weighted_rec": 0.9841269841269841,
+      "weighted_f1": 0.9841284846956997,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 100,
+          "acc": 0.9900990099009901
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 98,
+          "acc": 0.9702970297029703
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 100,
+          "acc": 0.9900990099009901
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 100,
+          "acc": 1.0
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 98,
+          "acc": 0.9702970297029703
+        }
+      ],
+      "transforms": [
+        "pad"
+      ],
+      "note": "No-Length: 仅 pad (字节通道仍含长度)"
+    },
+    "nolen_pad_nobytes": {
+      "n": 504,
+      "correct": 502,
+      "acc": 0.996031746031746,
+      "ci95": [
+        0.9856481523079429,
+        0.9989110862408289
+      ],
+      "cm": [
+        [
+          244,
+          1
+        ],
+        [
+          1,
+          258
+        ]
+      ],
+      "weighted_pre": 0.9960317460317459,
+      "weighted_rec": 0.9960317460317459,
+      "weighted_f1": 0.9960317460317459,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 100,
+          "acc": 0.9900990099009901
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 100,
+          "acc": 0.9900990099009901
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 100,
+          "acc": 1.0
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 101,
+          "acc": 1.0
+        }
+      ],
+      "transforms": [
+        "pad",
+        "nobytes"
+      ],
+      "note": "No-Length strict: pad + 字节全零 (主数字)"
+    },
+    "nolen_pad_san": {
+      "n": 504,
+      "correct": 497,
+      "acc": 0.9861111111111112,
+      "ci95": [
+        0.9716117657029125,
+        0.9932562880748839
+      ],
+      "cm": [
+        [
+          242,
+          3
+        ],
+        [
+          4,
+          255
+        ]
+      ],
+      "weighted_pre": 0.9861203020944938,
+      "weighted_rec": 0.986111111111111,
+      "weighted_f1": 0.9861118223882014,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 100,
+          "acc": 0.9900990099009901
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 99,
+          "acc": 0.9801980198019802
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 100,
+          "acc": 0.9900990099009901
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 100,
+          "acc": 1.0
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 98,
+          "acc": 0.9702970297029703
+        }
+      ],
+      "transforms": [
+        "pad",
+        "sanitize"
+      ],
+      "note": "No-Length sanitized: pad + sanitize"
+    },
+    "t3dir_c123_san": {
+      "n": 504,
+      "correct": 236,
+      "acc": 0.46825396825396826,
+      "ci95": [
+        0.4250947243891612,
+        0.5118934843437174
+      ],
+      "cm": [
+        [
+          72,
+          173
+        ],
+        [
+          95,
+          164
+        ]
+      ],
+      "weighted_pre": 0.4596632649636434,
+      "weighted_rec": 0.46825396825396826,
+      "weighted_f1": 0.45271424744611677,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 42,
+          "acc": 0.4158415841584158
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 46,
+          "acc": 0.45544554455445546
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 52,
+          "acc": 0.5148514851485149
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 49,
+          "acc": 0.49
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 47,
+          "acc": 0.46534653465346537
+        }
+      ],
+      "transforms": [
+        "pad",
+        "shape",
+        "absdir",
+        "sanitize"
+      ],
+      "note": "C0: C123 基底 + T3-dir sanitized (只删 Retry 的对照)"
+    },
+    "t3dir_c123_hdr": {
+      "n": 504,
+      "correct": 228,
+      "acc": 0.4523809523809524,
+      "ci95": [
+        0.4094508683398252,
+        0.4960314447594927
+      ],
+      "cm": [
+        [
+          80,
+          165
+        ],
+        [
+          111,
+          148
+        ]
+      ],
+      "weighted_pre": 0.4465957434945274,
+      "weighted_rec": 0.45238095238095233,
+      "weighted_f1": 0.44431791450140073,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 42,
+          "acc": 0.4158415841584158
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 43,
+          "acc": 0.42574257425742573
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 42,
+          "acc": 0.4158415841584158
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 49,
+          "acc": 0.49
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 52,
+          "acc": 0.5148514851485149
+        }
+      ],
+      "transforms": [
+        "pad",
+        "shape",
+        "absdir",
+        "hdrnorm"
+      ],
+      "note": "C1: + CID 长度 8/0、token 去掉, 包类型保留"
+    },
+    "t3dir_c123_hdrtype": {
+      "n": 504,
+      "correct": 227,
+      "acc": 0.4503968253968254,
+      "ci95": [
+        0.4074984788198987,
+        0.49404559732522413
+      ],
+      "cm": [
+        [
+          94,
+          151
+        ],
+        [
+          126,
+          133
+        ]
+      ],
+      "weighted_pre": 0.448361253378859,
+      "weighted_rec": 0.45039682539682535,
+      "weighted_f1": 0.44827455329148425,
+      "per_fold": [
+        {
+          "fold": 0,
+          "n": 101,
+          "correct": 46,
+          "acc": 0.45544554455445546
+        },
+        {
+          "fold": 1,
+          "n": 101,
+          "correct": 41,
+          "acc": 0.40594059405940597
+        },
+        {
+          "fold": 2,
+          "n": 101,
+          "correct": 45,
+          "acc": 0.44554455445544555
+        },
+        {
+          "fold": 3,
+          "n": 100,
+          "correct": 45,
+          "acc": 0.45
+        },
+        {
+          "fold": 4,
+          "n": 101,
+          "correct": 50,
+          "acc": 0.49504950495049505
+        }
+      ],
+      "transforms": [
+        "pad",
+        "shape",
+        "absdir",
+        "hdrnorm_types"
+      ],
+      "note": "C2: + 包类型也统一 (近平凡下界)"
+    }
+  },
+  "mcnemar_families": {
+    "t3dir": [
+      {
+        "b_only_A_correct": 187,
+        "c_only_B_correct": 75,
+        "n_discordant": 262,
+        "p": 3.2802306016414648e-12,
+        "A": "t3dir_raw",
+        "B": "majority",
+        "p_holm_within_family": 1.3120922406565859e-11
+      },
+      {
+        "b_only_A_correct": 74,
+        "c_only_B_correct": 80,
+        "n_discordant": 154,
+        "p": 0.6871492187686523,
+        "A": "t3dir_san",
+        "B": "majority",
+        "p_holm_within_family": 1.0
+      },
+      {
+        "b_only_A_correct": 48,
+        "c_only_B_correct": 53,
+        "n_discordant": 101,
+        "p": 0.6908264239959597,
+        "A": "t3dir_strict",
+        "B": "majority",
+        "p_holm_within_family": 1.0
+      },
+      {
+        "b_only_A_correct": 183,
+        "c_only_B_correct": 65,
+        "n_discordant": 248,
+        "p": 3.5337222207216896e-14,
+        "A": "t3dir_raw",
+        "B": "t3dir_san",
+        "p_holm_within_family": 1.766861110360845e-13
+      },
+      {
+        "b_only_A_correct": 177,
+        "c_only_B_correct": 60,
+        "n_discordant": 237,
+        "p": 1.3888356554645208e-14,
+        "A": "t3dir_raw",
+        "B": "t3dir_strict",
+        "p_holm_within_family": 8.333013932787124e-14
+      },
+      {
+        "b_only_A_correct": 82,
+        "c_only_B_correct": 83,
+        "n_discordant": 165,
+        "p": 1.0,
+        "A": "t3dir_san",
+        "B": "t3dir_strict",
+        "p_holm_within_family": 1.0
+      }
+    ],
+    "nolen_vs_full": [
+      {
+        "b_only_A_correct": 8,
+        "c_only_B_correct": 0,
+        "n_discordant": 8,
+        "p": 0.0078125,
+        "A": "full",
+        "B": "nolen_pad",
+        "p_holm_within_family": 0.0234375
+      },
+      {
+        "b_only_A_correct": 2,
+        "c_only_B_correct": 0,
+        "n_discordant": 2,
+        "p": 0.5,
+        "A": "full",
+        "B": "nolen_pad_nobytes",
+        "p_holm_within_family": 0.5
+      },
+      {
+        "b_only_A_correct": 7,
+        "c_only_B_correct": 0,
+        "n_discordant": 7,
+        "p": 0.015625,
+        "A": "full",
+        "B": "nolen_pad_san",
+        "p_holm_within_family": 0.03125
+      }
+    ],
+    "c123_hdrnorm": [
+      {
+        "b_only_A_correct": 72,
+        "c_only_B_correct": 95,
+        "n_discordant": 167,
+        "p": 0.08837580839996556,
+        "A": "t3dir_c123_san",
+        "B": "majority",
+        "p_holm_within_family": 0.35350323359986224
+      },
+      {
+        "b_only_A_correct": 85,
+        "c_only_B_correct": 68,
+        "n_discordant": 153,
+        "p": 0.1956675474691039,
+        "A": "t3dir_san",
+        "B": "t3dir_c123_san",
+        "p_holm_within_family": 0.35350323359986224
+      },
+      {
+        "b_only_A_correct": 80,
+        "c_only_B_correct": 111,
+        "n_discordant": 191,
+        "p": 0.02968511637840341,
+        "A": "t3dir_c123_hdr",
+        "B": "majority",
+        "p_holm_within_family": 0.17811069827042048
+      },
+      {
+        "b_only_A_correct": 116,
+        "c_only_B_correct": 91,
+        "n_discordant": 207,
+        "p": 0.09505503368014902,
+        "A": "t3dir_san",
+        "B": "t3dir_c123_hdr",
+        "p_holm_within_family": 0.35350323359986224
+      },
+      {
+        "b_only_A_correct": 94,
+        "c_only_B_correct": 126,
+        "n_discordant": 220,
+        "p": 0.03637576472187175,
+        "A": "t3dir_c123_hdrtype",
+        "B": "majority",
+        "p_holm_within_family": 0.18187882360935875
+      },
+      {
+        "b_only_A_correct": 130,
+        "c_only_B_correct": 104,
+        "n_discordant": 234,
+        "p": 0.10199143403277074,
+        "A": "t3dir_san",
+        "B": "t3dir_c123_hdrtype",
+        "p_holm_within_family": 0.35350323359986224
+      }
+    ]
+  },
+  "note": "p_holm_within_family 只在本文件声明的族内校正; 论文表 I 的族需另算。",
+  "selection_rule": "acc_loss: valid acc 最高, 打平取 valid loss 最低 (experiments/finetune_selrule.py)",
+  "full_baseline_dir": "outputs/e3r_kfold_sel"
+}

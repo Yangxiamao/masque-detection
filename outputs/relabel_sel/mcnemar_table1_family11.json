@@ -1,0 +1,135 @@
+{
+  "baseline": "full",
+  "n": 504,
+  "family_size": 11,
+  "correction": "holm",
+  "test": "exact McNemar via scipy.stats.binomtest(b, b+c, 0.5)",
+  "comparisons": [
+    {
+      "A": "full",
+      "B": "no_intervals",
+      "acc_A": 1.0,
+      "acc_B": 1.0,
+      "b_only_A_correct": 0,
+      "c_only_B_correct": 0,
+      "n_discordant": 0,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "A": "full",
+      "B": "no_direction",
+      "acc_A": 1.0,
+      "acc_B": 1.0,
+      "b_only_A_correct": 0,
+      "c_only_B_correct": 0,
+      "n_discordant": 0,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "A": "full",
+      "B": "no_bytes",
+      "acc_A": 1.0,
+      "acc_B": 1.0,
+      "b_only_A_correct": 0,
+      "c_only_B_correct": 0,
+      "n_discordant": 0,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "A": "full",
+      "B": "no_sizes",
+      "acc_A": 1.0,
+      "acc_B": 0.9920634920634921,
+      "b_only_A_correct": 4,
+      "c_only_B_correct": 0,
+      "n_discordant": 4,
+      "p": 0.125,
+      "p_holm": 1.0
+    },
+    {
+      "A": "full",
+      "B": "nosizes_nobytes",
+      "acc_A": 1.0,
+      "acc_B": 0.9900793650793651,
+      "b_only_A_correct": 5,
+      "c_only_B_correct": 0,
+      "n_discordant": 5,
+      "p": 0.0625,
+      "p_holm": 0.6875
+    },
+    {
+      "A": "full",
+      "B": "c1",
+      "acc_A": 1.0,
+      "acc_B": 0.998015873015873,
+      "b_only_A_correct": 1,
+      "c_only_B_correct": 0,
+      "n_discordant": 1,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "A": "full",
+      "B": "c2",
+      "acc_A": 1.0,
+      "acc_B": 1.0,
+      "b_only_A_correct": 0,
+      "c_only_B_correct": 0,
+      "n_discordant": 0,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "A": "full",
+      "B": "c3",
+      "acc_A": 1.0,
+      "acc_B": 1.0,
+      "b_only_A_correct": 0,
+      "c_only_B_correct": 0,
+      "n_discordant": 0,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "A": "full",
+      "B": "c123",
+      "acc_A": 1.0,
+      "acc_B": 1.0,
+      "b_only_A_correct": 0,
+      "c_only_B_correct": 0,
+      "n_discordant": 0,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "A": "full",
+      "B": "c123_nobytes",
+      "acc_A": 1.0,
+      "acc_B": 1.0,
+      "b_only_A_correct": 0,
+      "c_only_B_correct": 0,
+      "n_discordant": 0,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "A": "full",
+      "B": "nolen_pad_nobytes",
+      "acc_A": 1.0,
+      "acc_B": 0.996031746031746,
+      "b_only_A_correct": 2,
+      "c_only_B_correct": 0,
+      "n_discordant": 2,
+      "p": 0.5,
+      "p_holm": 1.0
+    }
+  ],
+  "caveat": "不显著 != 等价。discordant 数很小时检出力极低，不能反过来当作『该通道无用』的证据。",
+  "e3_dir": "outputs/e3r_kfold_sel",
+  "extra_conditions": {
+    "nolen_pad_nobytes": "outputs/icoin_r2/relabel_sel/nolen_pad_nobytes"
+  }
+}

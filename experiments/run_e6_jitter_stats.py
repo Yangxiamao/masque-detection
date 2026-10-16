@@ -39,6 +39,12 @@ _ROOT = os.environ.get("MASQUE_ROOT") or os.path.abspath(
 )
 PROC = os.path.join(_ROOT, "data", "processed")
 OUT = os.path.join(_ROOT, "outputs", "e6_jitter")
+
+# [2026-10-12 ICOIN r2 #3] MASQUE_RELABEL=1 时改标 11 条并输出到 *_relabel (见 pipeline/relabel_util.py)
+import sys as _sys  # noqa: E402
+_sys.path.insert(0, os.path.join(_ROOT, "pipeline"))
+import relabel_util  # noqa: E402
+OUT = relabel_util.out_dir(OUT)
 os.makedirs(OUT, exist_ok=True)
 
 SEED = 42
@@ -79,7 +85,7 @@ def load_all(name):
         with open(os.path.join(PROC, name, f"data-{sp}.json"), encoding="utf-8") as f:
             items += json.load(f)
     items.sort(key=lambda it: os.path.basename(it["pcap_file"]))
-    return items
+    return relabel_util.relabel_items(items)
 
 
 def featurize(item, limit=SEQ_LEN):
